@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Buttons &middot; HappyLucky UI
+    </title>
+
+    <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
+    <link rel="stylesheet" href="/HappyLucky-UI/css/hl-ui.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/HappyLucky-UI/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/HappyLucky-UI/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/HappyLucky-UI/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          HappyLucky UI
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/HappyLucky-UI/scaffolding">Docs</a>
+          <a  href="/HappyLucky-UI/about">About</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git" target="_blank">GitHub</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/typography/">
+    Typography
+  </a>
+  <a class="menu-item selected" href="/HappyLucky-UI/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/blankslate/">
+    Blankslate
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/avatars/">
+    Avatars
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/states/">
+    States
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Buttons
+    </h1>
+    <div class="markdown-body">
+      <p>Buttons are used for <strong>actions</strong>, like in forms, while textual hyperlinks are used for <strong>destinations</strong>, or moving from one page to another.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#default-buttons" id="markdown-toc-default-buttons">Default buttons</a>    <ul>
+      <li><a href="#primary--plain--success--info--warning--danger-buttons" id="markdown-toc-primary--plain--success--info--warning--danger-buttons">Primary / Plain / Success / Info / Warning / Danger buttons</a></li>
+      <li><a href="#outline-buttons" id="markdown-toc-outline-buttons">Outline buttons</a></li>
+    </ul>
+  </li>
+  <li><a href="#button-size" id="markdown-toc-button-size">Button Size</a>    <ul>
+      <li><a href="#large--normal-small-buttons" id="markdown-toc-large--normal-small-buttons">Large / Normal /Small buttons</a></li>
+      <li><a href="#block-buttons" id="markdown-toc-block-buttons">Block buttons</a></li>
+    </ul>
+  </li>
+  <li><a href="#button-states" id="markdown-toc-button-states">Button states</a></li>
+  <li><a href="#button-groups" id="markdown-toc-button-groups">Button groups</a></li>
+  <li><a href="#toggle-button" id="markdown-toc-toggle-button">Toggle button</a></li>
+</ul>
+
+<h2 id="default-buttons">Default buttons</h2>
+
+<p>Use the standard—yet classy—<code class="highlighter-rouge">.hl-btn</code> for form actions and primary page actions. These are used extensively around the site.</p>
+
+<!-- When using a `<button>` element, **always specify a `type`**. When using a `<a>` element, **always add `role="button"` for accessibility**. -->
+
+<div class="docs-example clearfix"><button class="hl-btn">Button button</button>
+<div class="hl-btn">DIV button</div>
+<a class="hl-btn" href="#">Link button</a></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn"</span><span class="nt">&gt;</span>Button button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-btn"</span><span class="nt">&gt;</span>DIV button<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-btn"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link button<span class="nt">&lt;/a&gt;</span></code></pre></div>
+
+<p><strong>Heads up!</strong> Always use <code class="highlighter-rouge">&lt;button&gt;</code> element for button.</p>
+
+<h3 id="primary--plain--success--info--warning--danger-buttons">Primary / Plain / Success / Info / Warning / Danger buttons</h3>
+
+<p>Primary buttons are blue and are used to indicate the <em>primary</em> action on a page. When you need your buttons to stand out, use <code class="highlighter-rouge">.hl-btn.hl-btn-primary</code>.</p>
+
+<p>Similarly, use <code class="highlighter-rouge">.hl-btn-plain</code> for plain button, use <code class="highlighter-rouge">.hl-btn-success</code> for success button, use <code class="highlighter-rouge">.hl-btn-info</code> for info button, use <code class="highlighter-rouge">.hl-btn-warning</code> for warning button, use <code class="highlighter-rouge">.hl-btn-danger</code> for danger button.</p>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-primary">Primary button</button>
+<button class="hl-btn hl-btn-plain">Plain button</button>
+<button class="hl-btn hl-btn-success">Success button</button>
+<button class="hl-btn hl-btn-info">Info button</button>
+<button class="hl-btn hl-btn-warning">Warning button</button>
+<button class="hl-btn hl-btn-danger">Danger button</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-plain"</span><span class="nt">&gt;</span>Plain button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-success"</span><span class="nt">&gt;</span>Success button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-info"</span><span class="nt">&gt;</span>Info button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-warning"</span><span class="nt">&gt;</span>Warning button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-danger"</span><span class="nt">&gt;</span>Danger button<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h3 id="outline-buttons">Outline buttons</h3>
+
+<p>Outline buttons downplay an action as they appear like boxy links. Just add <code class="highlighter-rouge">.hl-btn-xxx-outline</code> and go.</p>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-primary-outline">primary</button>
+<button class="hl-btn hl-btn-plain-outline">plain</button>
+<button class="hl-btn hl-btn-success-outline">success</button>
+<button class="hl-btn hl-btn-info-outline">info</button>
+<button class="hl-btn hl-btn-warning-outline">warning</button>
+<button class="hl-btn hl-btn-danger-outline">danger</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary-outline"</span><span class="nt">&gt;</span>primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-plain-outline"</span><span class="nt">&gt;</span>plain<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-success-outline"</span><span class="nt">&gt;</span>success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-info-outline"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-warning-outline"</span><span class="nt">&gt;</span>warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-danger-outline"</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="button-size">Button Size</h2>
+
+<h3 id="large--normal-small-buttons">Large / Normal /Small buttons</h3>
+
+<p>Use <code class="highlighter-rouge">.hl-btn-lg</code> for large buttons, use <code class="highlighter-rouge">.hl-btn-sm</code> for small buttons</p>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-primary hl-btn-lg">Large Button</button>
+<button class="hl-btn hl-btn-primary">Button</button>
+<button class="hl-btn hl-btn-primary hl-btn-sm">Small Button</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary hl-btn-lg"</span><span class="nt">&gt;</span>Large Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary hl-btn-sm"</span><span class="nt">&gt;</span>Small Button<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h3 id="block-buttons">Block buttons</h3>
+
+<p>Make any button full-width by adding <code class="highlighter-rouge">.hl-btn-block</code>. It adds <code class="highlighter-rouge">width: 100%;</code>, changes the <code class="highlighter-rouge">display</code> from <code class="highlighter-rouge">inline-block</code> to <code class="highlighter-rouge">block</code>.</p>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-block hl-btn-primary">Block button</button>
+<button class="hl-btn hl-btn-block hl-btn-primary-outline">Block button</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-block hl-btn-primary"</span><span class="nt">&gt;</span>Block button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-block hl-btn-primary-outline"</span><span class="nt">&gt;</span>Block button<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="button-states">Button states</h2>
+
+<p>Buttons has three states: normal, <code class="highlighter-rouge">.hl-active</code> , <code class="highlighter-rouge">.hl-disabled</code>.</p>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-primary">button</button>
+<button class="hl-btn hl-btn-primary hl-active">active button</button>
+<button class="hl-btn hl-btn-primary hl-disabled">disabled button</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary hl-active"</span><span class="nt">&gt;</span>active button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary hl-disabled"</span><span class="nt">&gt;</span>disabled button<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<p>Similar styles are applied to plain, success, danger, and outline buttons:</p>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-success">button</button>
+<button class="hl-btn hl-btn-success hl-active">active button</button>
+<button class="hl-btn hl-btn-success hl-disabled">disabled button</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-success"</span><span class="nt">&gt;</span>button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-success hl-active"</span><span class="nt">&gt;</span>active button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-success hl-disabled"</span><span class="nt">&gt;</span>disabled button<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-danger-outline">button</button>
+<button class="hl-btn hl-btn-danger-outline hl-active">active button</button>
+<button class="hl-btn hl-btn-danger-outline hl-disabled">disabled button</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-danger-outline"</span><span class="nt">&gt;</span>button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-danger-outline hl-active"</span><span class="nt">&gt;</span>active button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-danger-outline hl-disabled"</span><span class="nt">&gt;</span>disabled button<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="button-groups">Button groups</h2>
+
+<p>Have a hankering for a series of buttons that are attached to one another? Wrap them in a <code class="highlighter-rouge">.hl-btn-group</code> and the buttons will be rounded and spaced automatically.</p>
+
+<div class="docs-example clearfix"><div class="hl-btn-group">
+  <button class="hl-btn hl-btn-plain">Button</button>
+  <button class="hl-btn hl-btn-plain">Button</button>
+  <button class="hl-btn hl-btn-plain">Button</button>
+</div>
+
+<div class="hl-btn-group">
+  <button class="hl-btn hl-btn-primary-outline">Button</button>
+  <button class="hl-btn hl-btn-primary-outline">Button</button>
+  <button class="hl-btn hl-btn-primary-outline">Button</button>
+</div>
+
+<div class="hl-btn-group">
+  <button class="hl-btn hl-btn-sm hl-btn-info-outline">Button</button>
+  <button class="hl-btn hl-btn-sm hl-btn-info-outline">Button</button>
+  <button class="hl-btn hl-btn-sm hl-btn-info-outline">Button</button>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-plain"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-plain"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-plain"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-sm hl-btn-info-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-sm hl-btn-info-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-sm hl-btn-info-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="toggle-button">Toggle button</h2>
+
+<p>Use <code class="highlighter-rouge">.hl-btn-toggle</code> for toggle button, and <code class="highlighter-rouge">.hl-active</code> for its ative state.</p>
+
+<div class="docs-example clearfix"><button class="hl-btn hl-btn-toggle"></button>
+<button class="hl-btn hl-btn-toggle hl-active"></button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-toggle"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-toggle hl-active"</span><span class="nt">&gt;&lt;/button&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Happy Tech Inc 2016.<br>
+        Created and maintained by the CSS team at 航班管家. <strong>Currently v2.3.5.</strong>
+      </footer>
+    </div>
+
+    <script src="/HappyLucky-UI/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

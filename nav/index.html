@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Navigation &middot; HappyLucky UI
+    </title>
+
+    <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
+    <link rel="stylesheet" href="/HappyLucky-UI/css/hl-ui.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/HappyLucky-UI/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/HappyLucky-UI/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/HappyLucky-UI/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          HappyLucky UI
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/HappyLucky-UI/scaffolding">Docs</a>
+          <a  href="/HappyLucky-UI/about">About</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git" target="_blank">GitHub</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/typography/">
+    Typography
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/forms/">
+    Forms
+  </a>
+  <a class="menu-item selected" href="/HappyLucky-UI/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/blankslate/">
+    Blankslate
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/avatars/">
+    Avatars
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/states/">
+    States
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Navigation
+    </h1>
+    <div class="markdown-body">
+      <p>HappyLucky UI comes with several navigation components. Some were designed with singular purposes, while others were design to be more flexible and appear quite frequently.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#nav-underline" id="markdown-toc-nav-underline">Nav-Underline</a></li>
+  <li><a href="#nav-pointer" id="markdown-toc-nav-pointer">Nav-Pointer</a></li>
+  <li><a href="#nav-tabs" id="markdown-toc-nav-tabs">Nav-Tabs</a></li>
+  <li><a href="#pagination" id="markdown-toc-pagination">Pagination</a></li>
+  <li><a href="#breadcrumb" id="markdown-toc-breadcrumb">Breadcrumb</a></li>
+</ul>
+
+<h2 id="nav-underline">Nav-Underline</h2>
+
+<p>The nav-underline is a list of navigational links. The active item has an underline.</p>
+
+<div class="docs-example clearfix"><nav class="hl-nav hl-nav-underline hl-row">
+  <a class="hl-nav-item hl-col-3 hl-active" href="#">Account</a>
+  <a class="hl-nav-item hl-col-3" href="#">Profile</a>
+  <a class="hl-nav-item hl-col-3" href="#">Emails</a>
+  <a class="hl-nav-item hl-col-3" href="#">Notifications</a>
+</nav></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"hl-nav hl-nav-underline hl-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3 hl-active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="nav-pointer">Nav-Pointer</h2>
+
+<p>The active item has a pointer.</p>
+
+<div class="docs-example clearfix"><nav class="hl-nav hl-nav-pointer hl-row">
+  <a class="hl-nav-item hl-col-3 hl-active" href="#">Account</a>
+  <a class="hl-nav-item hl-col-3" href="#">Profile</a>
+  <a class="hl-nav-item hl-col-3" href="#">Emails</a>
+  <a class="hl-nav-item hl-col-3" href="#">Notifications</a>
+</nav></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"hl-nav hl-nav-pointer hl-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3 hl-active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="nav-tabs">Nav-Tabs</h2>
+
+<p>When you need to toggle between different views, consider using a nav-tab.</p>
+
+<div class="docs-example clearfix"><nav class="hl-nav hl-nav-tabs hl-row">
+  <a class="hl-nav-item hl-col-3">经济型</a>
+  <a class="hl-nav-item hl-col-3 hl-active">舒适型</a>
+  <a class="hl-nav-item hl-col-3">商务型</a>
+  <a class="hl-nav-item hl-col-3 nav-item-last">豪华型</a>
+</nav>
+<div>
+  <p>这个是占位文字,图片文字可以放这里里面,哈哈哈哈</p>
+  <p>这个是占位文字,图片文字可以放这里里面,哈哈哈哈</p>
+  <p>这个是占位文字,图片文字可以放这里里面,哈哈哈哈</p>
+  <p>这个是占位文字,图片文字可以放这里里面,哈哈哈哈</p>
+  <p>这个是占位文字,图片文字可以放这里里面,哈哈哈哈</p>
+  <p>这个是占位文字,图片文字可以放这里里面,哈哈哈哈</p>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"hl-nav hl-nav-tabs hl-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span><span class="nt">&gt;</span>经济型<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3 hl-active"</span><span class="nt">&gt;</span>舒适型<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3"</span><span class="nt">&gt;</span>商务型<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-col-3 nav-item-last"</span><span class="nt">&gt;</span>豪华型<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;p&gt;</span>这个是占位文字,图片文字可以放这里里面,哈哈哈哈<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>这个是占位文字,图片文字可以放这里里面,哈哈哈哈<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>这个是占位文字,图片文字可以放这里里面,哈哈哈哈<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>这个是占位文字,图片文字可以放这里里面,哈哈哈哈<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>这个是占位文字,图片文字可以放这里里面,哈哈哈哈<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>这个是占位文字,图片文字可以放这里里面,哈哈哈哈<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="pagination">Pagination</h2>
+
+<div class="docs-example clearfix"><nav class="hl-nav hl-nav-pagination">
+  <div class="hl-row">
+    <div class="hl-col-4 hl-text-left">
+      <a class="hl-nav-item">
+        <span class="hl-inline-block hl-icon-arrow-left"></span>
+        <span class="hl-inline-block">
+          <div class="hl-text-sm">前一天</div>
+          <div class="hl-text-sm">$250</div>
+        </span>
+      </a>
+    </div>
+    <div class="hl-col-4 hl-text-center">
+      <a class="hl-nav-item hl-text-normal">
+        <div class="hl-text-sm">10-09 星期五</div>
+        <div class="hl-text-sm">
+          <span class="hl-inline-block">$200</span>
+          <span class="hl-inline-block hl-icon-arrow-dropdown hl-text-blue"></span>
+        </div>
+      </a>
+    </div>
+    <div class="hl-col-4 hl-text-right">
+      <a class="hl-nav-item">
+        <span class="hl-inline-block">
+          <div class="hl-text-sm">后一天</div>
+          <div class="hl-text-sm">$250</div>
+        </span>
+        <span class="hl-inline-block hl-icon-arrow-right"></span>
+      </a>
+    </div>
+  </div>
+</nav></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"hl-nav hl-nav-pagination"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4 hl-text-left"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-inline-block hl-icon-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-inline-block"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>前一天<span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>$250<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4 hl-text-center"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item hl-text-normal"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>10-09 星期五<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-inline-block"</span><span class="nt">&gt;</span>$200<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-inline-block hl-icon-arrow-dropdown hl-text-blue"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4 hl-text-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"hl-nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-inline-block"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>后一天<span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>$250<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-inline-block hl-icon-arrow-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="breadcrumb">Breadcrumb</h2>
+
+<p><em>Coming soon…</em></p>
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Happy Tech Inc 2016.<br>
+        Created and maintained by the CSS team at 航班管家. <strong>Currently v2.3.5.</strong>
+      </footer>
+    </div>
+
+    <script src="/HappyLucky-UI/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

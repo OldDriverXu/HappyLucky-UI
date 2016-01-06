@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Utilities &middot; HappyLucky UI
+    </title>
+
+    <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
+    <link rel="stylesheet" href="/HappyLucky-UI/css/hl-ui.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/HappyLucky-UI/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/HappyLucky-UI/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/HappyLucky-UI/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          HappyLucky UI
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/HappyLucky-UI/scaffolding">Docs</a>
+          <a  href="/HappyLucky-UI/about">About</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git" target="_blank">GitHub</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/typography/">
+    Typography
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/blankslate/">
+    Blankslate
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/avatars/">
+    Avatars
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/states/">
+    States
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item selected" href="/HappyLucky-UI/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Utilities
+    </h1>
+    <div class="markdown-body">
+      <p>There are a handful of utilities in Primer for quick behaviors, floats, colors, alignment, and more.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#truncation" id="markdown-toc-truncation">Truncation</a></li>
+  <li><a href="#counter" id="markdown-toc-counter">Counter</a></li>
+  <li><a href="#floats" id="markdown-toc-floats">Floats</a></li>
+  <li><a href="#centering-content" id="markdown-toc-centering-content">Centering content</a></li>
+  <li><a href="#text-alignment" id="markdown-toc-text-alignment">Text alignment</a></li>
+  <li><a href="#text-color" id="markdown-toc-text-color">Text color</a></li>
+  <li><a href="#muted-link" id="markdown-toc-muted-link">Muted link</a></li>
+  <li><a href="#flex-table" id="markdown-toc-flex-table">Flex table</a></li>
+</ul>
+
+<h2 id="truncation">Truncation</h2>
+
+<p><code class="highlighter-rouge">.css-truncate</code> will shorten text with an ellipsis. The maximum width of the truncated text can be changed by overriding the max-width of the .css-truncate-target.</p>
+
+<div class="docs-example clearfix"><span class="branch-ref css-truncate css-truncate-target">
+  really-long-branch-name
+</span></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"branch-ref css-truncate css-truncate-target"</span><span class="nt">&gt;</span>
+  really-long-branch-name
+<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+<p>You can reveal the entire string on hover with the addition of <code class="highlighter-rouge">.expandable</code>.</p>
+
+<div class="docs-example clearfix"><span class="css-truncate expandable">
+  <span class="branch-ref css-truncate-target">this-is-a-really-long-branch-name</span>
+</span></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"css-truncate expandable"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"branch-ref css-truncate-target"</span><span class="nt">&gt;</span>this-is-a-really-long-branch-name<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+<h2 id="counter">Counter</h2>
+
+<p>Add a number or unread indicator to navs and more with a counter.</p>
+
+<div class="docs-example clearfix"><span class="counter">9</span></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"counter"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+<h2 id="floats">Floats</h2>
+
+<p>Quickly float something to the left or right, and clear them later.</p>
+
+<div class="docs-example clearfix"><div class="clearfix">
+  <code class="left">.left</code>
+  <code class="right">.right</code>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>.left<span class="nt">&lt;/code&gt;</span>
+  <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>.right<span class="nt">&lt;/code&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="centering-content">Centering content</h2>
+
+<p>Easily center <strong>block level content</strong> if it’s not taking up the full width of the parent. Can be used <a href="/layout/#centered">on grid columns</a> or any other elements.</p>
+
+<div class="docs-example clearfix"><nav class="menu centered">
+  <a class="menu-item selected" href="#">Account</a>
+  <a class="menu-item" href="#">Profile</a>
+  <a class="menu-item" href="#">Emails</a>
+  <a class="menu-item" href="#">Notifications</a>
+</nav></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu centered"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item selected"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="text-alignment">Text alignment</h2>
+
+<p>Change the <code class="highlighter-rouge">text-align</code> on elements with a class.</p>
+
+<div class="docs-example clearfix"><p class="text-left">Left aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+<p class="text-center">Center aligned text.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-left"</span><span class="nt">&gt;</span>Left aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-right"</span><span class="nt">&gt;</span>Right aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Center aligned text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="text-color">Text color</h2>
+
+<p>Change the <code class="highlighter-rouge">color</code> of elements with a class.</p>
+
+<div class="docs-example clearfix"><p class="text-open">Green/open text</p>
+<p class="text-closed">Red/closed text</p>
+<p class="text-merged">Merged text</p>
+<p class="text-pending">Pending text</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-open"</span><span class="nt">&gt;</span>Green/open text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-closed"</span><span class="nt">&gt;</span>Red/closed text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-merged"</span><span class="nt">&gt;</span>Merged text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-pending"</span><span class="nt">&gt;</span>Pending text<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<p><code class="highlighter-rouge">.text-closed</code> and <code class="highlighter-rouge">.text-failure</code> are the same, as well as <code class="highlighter-rouge">.text-open</code> and <code class="highlighter-rouge">.text-success</code>.</p>
+
+<h2 id="muted-link">Muted link</h2>
+
+<p>When you need a hyperlink to not be <code class="highlighter-rouge">$brand-blue</code>, use a <code class="highlighter-rouge">.muted-link</code>.</p>
+
+<div class="docs-example clearfix">Here is some example text. <a class="muted-link" href="#">And a muted link.</a></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html">Here is some example text. <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"muted-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>And a muted link.<span class="nt">&lt;/a&gt;</span></code></pre></div>
+
+<h2 id="flex-table">Flex table</h2>
+
+<p>Flex table is a module for creating dynamically resizable elements that always sit on the same horizontal line (e.g., they never break to a new line). Using table styles in our CSS means it’s cross browser friendly back to at least IE9.</p>
+
+<p>Additional <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> may be required to properly space content.</p>
+
+<div class="docs-example clearfix"><div class="flex-table">
+  <div class="flex-table-item flex-table-item-primary">
+    <input class="input-block" type="text" placeholder="Long flexible input form" />
+  </div>
+  <div class="flex-table-item">
+    <button class="btn" type="button">Button</button>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table-item flex-table-item-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-block"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Long flexible input form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Happy Tech Inc 2016.<br>
+        Created and maintained by the CSS team at 航班管家. <strong>Currently v2.3.5.</strong>
+      </footer>
+    </div>
+
+    <script src="/HappyLucky-UI/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

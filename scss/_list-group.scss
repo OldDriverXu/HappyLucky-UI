@@ -1,0 +1,125 @@
+@import "variables";
+@import "mixins";
+
+.list-group {
+  @include border(top-bottom, $list-group-border-color);
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 0;
+  background-color: $list-group-bg;
+}
+
+// Has margin
+.list-group-pl {
+  padding-left: $list-group-spacer-x;
+
+  .list-group-item {
+    padding-left: 0;
+  }
+}
+.list-group-pr {
+  padding-right: $list-group-spacer-x;
+
+  .list-group-item {
+    padding-right: 0;
+  }
+}
+.list-group-pb {
+  padding-left: $list-group-spacer-x;
+  padding-right: $list-group-spacer-x;
+
+  .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Has icon
+.list-group-indent {
+  padding-left: 3rem;
+
+  .list-group-item {
+    padding-left: 0;
+  }
+
+  .indent-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-2.2rem, -50%);
+    font-size: 1.5rem;
+  }
+}
+
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+  @include border(bottom, $list-group-border-color);
+  position: relative;
+  display: block;
+  // background-color: $list-group-bg;
+  padding: $list-group-spacer-y $list-group-spacer-x;
+
+  // &:first-child {
+  //   @include border(top-bottom, $list-group-border-color);
+  // }
+
+  &:last-child {
+    background-image: none;
+  }
+
+  // Disabled state
+  &.disabled {
+    @include plain-hover-focus {
+      color: $list-group-disabled-color;
+      background-color: $list-group-disabled-bg;
+    }
+
+    // Force color to inherit for custom content
+    .list-group-item-header,
+    .list-group-item-footer {
+      color: inherit;
+    }
+  }
+
+  // only disabled text
+  &.disabled-text {
+    @include plain-hover-focus {
+      color: $list-group-disabled-color;
+    }
+
+    // Force color to inherit for custom content
+    .list-group-item-header,
+    .list-group-item-footer {
+      color: inherit;
+    }
+  }
+
+  // Active state
+  &.active {
+    @include plain-hover-focus {
+      z-index: 2; // Place active items above their siblings for proper border styling
+      color: $list-group-active-color;
+      background-color: $list-group-active-bg;
+    }
+
+    // Force color to inherit for custom content
+    .list-group-item-header,
+    .list-group-item-footer {
+      color: inherit;
+    }
+  }
+}
+
+// Contextual variants
+//
+// Add modifier classes to change text and background color on individual items.
+// Organizationally, this must come after the `:hover` states.
+
+//@include list-group-item-variant(success, $state-success-bg, $state-success-text);
+//@include list-group-item-variant(info, $state-info-bg, $state-info-text);
+//@include list-group-item-variant(warning, $state-warning-bg, $state-warning-text);
+//@include list-group-item-variant(danger, $state-danger-bg, $state-danger-text);

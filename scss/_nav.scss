@@ -1,0 +1,119 @@
+@import "variables";
+@import "mixins";
+
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  a {
+    color: inherit;
+  }
+}
+
+.nav-underline {
+  @include clearfix();
+  text-align: center;
+  color: $nav-item-color;
+  background-color: $nav-item-bg;
+
+  .nav-item {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+
+    text-align: center;
+
+    &.active {
+      color: $blue;
+      border-bottom: 2px solid $blue;
+    }
+  }
+}
+
+.nav-pointer {
+  @include clearfix();
+  text-align: center;
+  color: $nav-item-color;
+  background-color: $nav-item-bg;
+
+  .nav-item {
+    @include border(bottom, $nav-item-border);
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 0.7rem 0;
+    text-align: center;
+    overflow: hidden;
+
+    &.active {
+      color: $nav-pointer-active-color;
+    }
+
+    &.active:after {
+      content: '';
+      width: 0.6rem;
+      height: 0.6rem;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -0.3rem;
+      margin-left: -0.3rem;
+      background-color: $nav-pointer-active-bg;
+      box-shadow: 0 0 1px 0 gray;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav-pagination {
+  @include border(top-bottom, $nav-item-border);
+  @include clearfix();
+  text-align: center;
+  color: $nav-pagination-color;
+  background-color: $nav-pagination-bg;
+
+  .nav-item {
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+.nav-tabs {
+  @include border(top-bottom, $nav-item-border);
+  @include clearfix();
+  text-align: center;
+  color: $nav-tabs-color;
+  background-color: $nav-tabs-bg;
+  padding: 1px 0;
+
+  .nav-item {
+    @include border(right, $nav-item-border);
+    padding: 0.625rem 0;
+
+    &.active {
+      color: $nav-tabs-active-color;
+      background-color: $nav-tabs-active-bg;
+      position: relative;
+    }
+
+    &.active:after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      height: 1px;
+      left: 0px;
+      bottom: -1px;
+      background-color: #fff;
+    }
+
+    &:last-child {
+      background-image:none;
+    }
+  }
+}

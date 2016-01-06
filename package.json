@@ -1,0 +1,34 @@
+{
+  "name": "HappyLucky-UI",
+  "version": "1.0.0",
+  "homepage": "http://fatsheepcn.github.io/HappyLucky-UI/",
+  "description": "HappyLucky UI is a set of UI components for mobile device.",
+  "author": "fatsheepcn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatsheepcn/HappyLucky-UI.git"
+  },
+  "keywords": [
+    "css",
+    "bootstrap"
+  ],
+  "bugs": {
+    "url": "https://github.com/fatsheepcn/HappyLucky-UI/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-css-class-prefix": "^0.0.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-size": "^2.0.0",
+    "run-sequence": "^1.1.4"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}

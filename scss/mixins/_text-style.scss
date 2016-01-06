@@ -1,0 +1,10 @@
+// Text style
+
+@mixin text-color-variant($color) {
+  color: $color;
+}
+
+@mixin text-size-variant($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}

@@ -1,0 +1,95 @@
+@import "variables";
+@import "mixins";
+
+// Display & Hide
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+// Float
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+// Clear floats
+.clearfix {
+  @include clearfix();
+}
+
+// Position
+.relative {
+  position: relative;
+}
+
+// Centers content horizontally. Can be used inside or outside the grid.
+.centered {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.full-height {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.full-height-R {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+// Centers content vertically. Must have a relative parent.
+.middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.middle-R {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+// Fix
+.fix-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.fix-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+// Separator
+.separator {
+  min-height: 1.2rem;
+  background-color: $gray-lightest;
+  color: $gray-lighter;
+}
+
+.separator-blank {
+  height: 1.2rem;
+}

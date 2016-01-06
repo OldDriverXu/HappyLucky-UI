@@ -1,0 +1,35 @@
+{
+  "name": "HappyLucky-UI's gh-pages",
+  "version": "1.0.0",
+  "homepage": "http://fatsheepcn.github.io/HappyLucky-UI/",
+  "author": "fatsheepcn",
+  "scss": "./scss/primer.scss",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-core": "~5.2.1",
+    "grunt": "~0.4.5",
+    "grunt-build-control": "~0.2.0",
+    "grunt-jekyll": "~0.4.2",
+    "grunt-parker": "~0.1.0",
+    "grunt-sass": "~1.0.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-postcss": "~0.5.1"
+  },
+  "description": "gh-pages",
+  "main": "css/primer.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "grunt-jekyll": "^0.4.2",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.0.0",
+    "grunt-parker": "^0.1.3",
+    "grunt": "^0.4.5",
+    "grunt-build-control": "^0.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

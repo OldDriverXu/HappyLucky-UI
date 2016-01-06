@@ -1,0 +1,43 @@
+@import "variables";
+@import "mixins";
+
+.bar-header {
+  position: relative;
+  height: $fix-bar-header-height;
+  line-height: $fix-bar-header-height;
+  color: white;
+  background-color: $fix-bar-header-bg;
+  font-size: 1.2rem;
+
+  .bar-title{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+  }
+
+  .bar-back {
+    position: absolute;
+    padding: 0 .5rem;
+    font-size: 1.5rem;
+    line-height: $fix-bar-header-height;
+    z-index: 100;
+  }
+}
+
+.bar-header-placeholder{
+  height: $fix-bar-header-height;
+}
+
+.bar-footer {
+  @include border(top, $list-group-border-color);
+  height: $fix-bar-footer-height;
+  padding: .4rem .8rem;
+  background-color: $fix-bar-footer-bg;
+  font-size: 1.2rem;
+}
+
+.bar-footer-placeholder {
+  height: $fix-bar-footer-height + 0.8rem;
+}

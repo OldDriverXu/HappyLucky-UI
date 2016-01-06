@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixins";
+
+.tips {
+  font-size: .8rem;
+  padding: .5rem .5rem 1rem .5rem;
+  color: $gray-light;
+
+  .tips-icon {
+    color: $green-light;
+    font-size: .6rem;
+    margin-right: .5rem;
+  }
+}
+
+.icon-dot {
+  &:before {
+    display: inline-block;
+    width: .4rem;
+    height: .4rem;
+    border-radius: .2rem;
+    vertical-align: top;
+    margin-top: .4rem;
+
+    content: "";
+    background-color: $green-light;
+  }
+}

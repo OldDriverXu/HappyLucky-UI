@@ -1,0 +1,76 @@
+@import "variables";
+@import "mixins";
+
+// Text Styles
+
+// Generate contextual modifier classes for font size and weight.
+// 5 Grades: Extra large, Large, Medium, Small, Extra small
+.text-xl {
+  @include text-size-variant(1.4rem, 2rem);
+}
+.text-lg {
+  @include text-size-variant(1.2rem, 1.5rem);
+}
+.text-md {
+  @include text-size-variant(1rem, 1.3rem);
+}
+.text-sm {
+  @include text-size-variant(.9rem, 1.1rem);
+}
+.text-xs {
+  @include text-size-variant(.75rem, 0.9rem);
+}
+
+// Text alignment
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+
+// ellipsis
+.text-ellipsis{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Generate contextual modifier classes for colorizing the text.
+.text-black {
+  @include text-color-variant($black);
+}
+.text-blacklight {
+  @include text-color-variant($black-light);
+}
+.text-white {
+  @include text-color-variant($white);
+}
+.text-gray {
+  @include text-color-variant($gray);
+}
+.text-graylight {
+  @include text-color-variant($gray-light);
+}
+.text-blue {
+  @include text-color-variant($blue);
+}
+.text-bluelight {
+  @include text-color-variant($blue-light);
+}
+.text-red {
+  @include text-color-variant($red);
+}
+.text-orange {
+  @include text-color-variant($orange);
+}
+.text-green {
+  @include text-color-variant($green);
+}
+.text-greenlight {
+  @include text-color-variant($green-light);
+}

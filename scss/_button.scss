@@ -1,0 +1,175 @@
+@import "variables";
+@import "mixins";
+
+//
+// Base styles
+//
+.btn {
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $border-width solid transparent;
+
+  :active {
+    border: none;
+  }
+
+  &.active {
+    background-image: none;
+    outline: 0;
+  }
+
+  &.disabled {
+    background: $gray-lighter;
+    border-color: $gray-lighter;
+    opacity: .65;
+  }
+}
+
+
+// Alternate buttons
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-plain {
+  @include button-variant($btn-plain-color, $btn-plain-bg, $btn-plain-border);
+}
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+
+// Remove all backgrounds
+.btn-primary-outline {
+  @include button-outline-variant($btn-primary-bg);
+}
+.btn-plain-outline {
+  @include button-outline-variant($btn-plain-border);
+}
+.btn-info-outline {
+  @include button-outline-variant($btn-info-bg);
+}
+.btn-success-outline {
+  @include button-outline-variant($btn-success-bg);
+}
+.btn-warning-outline {
+  @include button-outline-variant($btn-warning-bg);
+}
+.btn-danger-outline {
+  @include button-outline-variant($btn-danger-bg);
+}
+
+
+// Button Sizes
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}
+
+// Submit button
+.btn-submit {
+  display: block;
+  padding: 1.5rem 2rem;
+  font-size: $font-size-lg;
+}
+.btn-submit + .btn-submit {
+  margin-top: 1rem;
+}
+
+// Block button
+.btn-block {
+  display: block;
+  width: 100%;
+}
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 1rem;
+}
+
+
+// Button group
+.btn-group {
+  display: inline-block;
+  vertical-align: middle;
+
+  .btn {
+    position: relative;
+    float: left;
+  }
+
+  .btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+
+  .btn:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .btn + .btn {
+    margin-left: -1px;
+  }
+
+  @include clearfix();
+}
+
+
+// Toggle button
+.btn-toggle {
+  position: relative;
+  width: 3.3125rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: white;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(211, 211, 211, 0.8);
+  transition: .25s ease-in-out;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: inset 0 0 0 1px rgba(211, 211, 211, 0.8), 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: .25s ease-in-out;
+  }
+
+  &.active {
+    background: $btn-toggle-active-color;
+    box-shadow: 0 0 0 1px $btn-toggle-active-color;
+  }
+
+  &.active:after {
+    top: 0;
+    left: 1.3125rem;
+    box-shadow: inset 0 0 0 1px $btn-toggle-active-color, 0 1px 2px rgba(0, 0, 0, 0.2)
+  }
+}

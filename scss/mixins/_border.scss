@@ -1,0 +1,49 @@
+/**
+ * 1px border
+ * @param  $direction [top, right, bottom, left, top-bottom, left-right] 6个方向
+ * @param  $color     border颜色
+ */
+@mixin border($direction, $color) {
+
+  $angle: 180deg !default;
+  $bgs: 100% 1px !default;
+  $bgp: center top !default;
+
+  @if ($direction==top) or ($direction==bottom) {
+    $bgs: 100% 1px;
+  }
+  @if ($direction==right) or ($direction==left) {
+    $bgs: 1px 100%;
+  }
+  @if $direction==top {
+    $angle: 180deg;
+    $bgp: center top;
+  }
+  @if $direction==right {
+    $angle: 270deg;
+    $bgp: right center;
+  }
+  @if $direction==bottom {
+    $angle: 0deg;
+    $bgp: center bottom;
+  }
+  @if $direction==left {
+    $angle: 90deg;
+    $bgp: left center;
+  }
+
+  @if ($direction==top-bottom) {
+    background-image: linear-gradient(180deg, $color 51%, transparent 49%), linear-gradient(0deg, $color 51%, transparent 49%);
+    background-size: 100% 1px, 100% 1px;
+    background-position: center top, center bottom;
+  } @else if ($direction==left-right) {
+    background-image: linear-gradient(90deg, $color 51%, transparent 49%), linear-gradient(270deg, $color 51%, transparent 49%);
+    background-size: 1px 100%, 1px 100%;
+    background-position: left center, right center;
+  } @else {
+    background-image: linear-gradient($angle, $color 51%, transparent 49%);
+    background-size: $bgs;
+    background-position: $bgp;
+  }
+  background-repeat: no-repeat;
+}

@@ -74,6 +74,31 @@ Make any button full-width by adding `.hl-btn-block`. It adds `width: 100%;`, ch
 <button class="hl-btn hl-btn-block hl-btn-primary-outline">Block button</button>
 {% endexample %}
 
+### Submit buttons
+
+Make a submit button by adding `.hl-btn-submit`. It adds 'margin', changes the `display` from `inline-block` to `block`, and `font-size`.
+
+Use **`<div>`** tag for submit button, do not use **`<button>`** tag
+
+Here the reason goes:
+
+[why does displayblock not stretch buttons or input elements](http://stackoverflow.com/questions/16584890/why-does-displayblock-not-stretch-buttons-or-input-elements?rq=1)
+
+[input with displayblock is not a block](http://stackoverflow.com/questions/1030793/input-with-displayblock-is-not-a-block-why-not?lq=1)
+
+{% example html %}
+<div class="hl-btn hl-btn-submit hl-btn-primary">Submit button</div>
+{% endexample %}
+
+If you want use `<button>` tag, please do add a `<div>` wrapper.
+
+{% example html %}
+<div class="hl-btn-submit">
+  <button class="hl-btn hl-btn-block hl-btn-primary">Submit button</button>
+</div>
+{% endexample %}
+
+
 ## Button states
 
 Buttons has three states: normal, `.hl-active` , `.hl-disabled`.

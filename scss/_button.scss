@@ -85,10 +85,15 @@
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
 
-// Submit button
+/* Submit button
+   do always use <div class="btn-submit"></div>
+   do not use <button> element
+   http://stackoverflow.com/questions/16584890/why-does-displayblock-not-stretch-buttons-or-input-elements?rq=1
+   http://stackoverflow.com/questions/1030793/input-with-displayblock-is-not-a-block-why-not?lq=1
+*/
 .btn-submit {
   display: block;
-  padding: 1.5rem 2rem;
+  margin: 1.5rem 2rem;
   font-size: $font-size-lg;
 }
 .btn-submit + .btn-submit {
@@ -144,7 +149,7 @@
   width: 3.3125rem;
   height: 2rem;
   border-radius: 1rem;
-  background: white;
+  background-color: $btn-toggle-bg;
   border: none;
   box-shadow: 0 0 0 1px rgba(211, 211, 211, 0.8);
   transition: .25s ease-in-out;
@@ -157,13 +162,13 @@
     width: 2rem;
     height: 2rem;
     border-radius: 1rem;
-    background: white;
+    background-color: $btn-toggle-dot-bg;
     box-shadow: inset 0 0 0 1px rgba(211, 211, 211, 0.8), 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: .25s ease-in-out;
   }
 
   &.active {
-    background: $btn-toggle-active-color;
+    background-color: $btn-toggle-active-color;
     box-shadow: 0 0 0 1px $btn-toggle-active-color;
   }
 

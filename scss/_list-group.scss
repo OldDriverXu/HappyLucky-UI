@@ -77,24 +77,12 @@
       color: $list-group-disabled-color;
       background-color: $list-group-disabled-bg;
     }
-
-    // Force color to inherit for custom content
-    .list-group-item-header,
-    .list-group-item-footer {
-      color: inherit;
-    }
   }
 
   // only disabled text
   &.disabled-text {
     @include plain-hover-focus {
       color: $list-group-disabled-color;
-    }
-
-    // Force color to inherit for custom content
-    .list-group-item-header,
-    .list-group-item-footer {
-      color: inherit;
     }
   }
 
@@ -104,12 +92,6 @@
       z-index: 2; // Place active items above their siblings for proper border styling
       color: $list-group-active-color;
       background-color: $list-group-active-bg;
-    }
-
-    // Force color to inherit for custom content
-    .list-group-item-header,
-    .list-group-item-footer {
-      color: inherit;
     }
   }
 }

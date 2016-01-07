@@ -30,8 +30,8 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./css'));
 });
 
-// Prefix class in css file
-gulp.task('prefix', function() {
+// Add custom prefix class in css file
+gulp.task('customPrefix', function() {
   return gulp.src('./css/*.css')
     .pipe(cssClassPrefix(PREFIX))
     .pipe(gulp.dest('./css'));
@@ -45,8 +45,17 @@ gulp.task('styles', function() {
     // Concatenate and Minify Styles
     .pipe(gulpif('*.css', csso(true)))
     .pipe(gulp.dest('./css'))
-    .pipe(gulp.dest('./example/docs/css'))
     .pipe(size({title: 'styles'}));
+});
+
+// Copy to docs directory
+gulp.task('copy', function() {
+  return gulp.src([
+    './css/*.css',
+    './fonts/**'])
+  .pipe(gulpif('*.css', gulp.dest('./example/docs/css')))
+  .pipe(gulpif(['*.eot', '*.svg', '*.ttf', '*.woff'], gulp.dest('./example/docs/fonts')))
+  .pipe(size({title: 'copy'}));
 });
 
 // Static server
@@ -62,26 +71,25 @@ gulp.task('serve', function() {
 
   gulp.watch("./scss/*.scss", ['sass']);
   if (ENABLE_PREFIX) {
-    gulp.watch("./css/*.css", ['prefix']);
+    gulp.watch("./css/*.css", ['customPrefix']);
   }
   gulp.watch("./example/*.html").on('change', browserSync.reload);
-
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['build']);
 
 gulp.task('build', function() {
   if (ENABLE_PREFIX) {
-    runSequence('sass', 'prefix', 'styles');
+    runSequence('sass', 'customPrefix', 'styles', 'copy');
   } else {
-    runSequence('sass', 'styles');
+    runSequence('sass', 'styles', 'copy');
   }
 });
 
 gulp.task('dev', function() {
   if (ENABLE_PREFIX) {
-    runSequence('sass', 'prefix');
+    runSequence('sass', 'customPrefix', 'copy');
   } else {
-    runSequence('sass');
+    runSequence('sass', 'copy');
   }
 });

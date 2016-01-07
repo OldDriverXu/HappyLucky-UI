@@ -78,8 +78,8 @@
   <a class="menu-item " href="/HappyLucky-UI/states/">
     States
   </a>
-  <a class="menu-item " href="/HappyLucky-UI/tooltips/">
-    Tooltips
+  <a class="menu-item " href="/HappyLucky-UI/tips/">
+    Tips
   </a>
   <a class="menu-item " href="/HappyLucky-UI/utilities/">
     Utilities
@@ -119,6 +119,7 @@
   <li><a href="#button-size" id="markdown-toc-button-size">Button Size</a>    <ul>
       <li><a href="#large--normal-small-buttons" id="markdown-toc-large--normal-small-buttons">Large / Normal /Small buttons</a></li>
       <li><a href="#block-buttons" id="markdown-toc-block-buttons">Block buttons</a></li>
+      <li><a href="#submit-buttons" id="markdown-toc-submit-buttons">Submit buttons</a></li>
     </ul>
   </li>
   <li><a href="#button-states" id="markdown-toc-button-states">Button states</a></li>
@@ -198,6 +199,30 @@
 <button class="hl-btn hl-btn-block hl-btn-primary-outline">Block button</button></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-block hl-btn-primary"</span><span class="nt">&gt;</span>Block button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-block hl-btn-primary-outline"</span><span class="nt">&gt;</span>Block button<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h3 id="submit-buttons">Submit buttons</h3>
+
+<p>Make a submit button by adding <code class="highlighter-rouge">.hl-btn-submit</code>. It adds ‘margin’, changes the <code class="highlighter-rouge">display</code> from <code class="highlighter-rouge">inline-block</code> to <code class="highlighter-rouge">block</code>, and <code class="highlighter-rouge">font-size</code>.</p>
+
+<p>Use <strong><code class="highlighter-rouge">&lt;div&gt;</code></strong> tag for submit button, do not use <strong><code class="highlighter-rouge">&lt;button&gt;</code></strong> tag</p>
+
+<p>Here the reason goes:</p>
+
+<p><a href="http://stackoverflow.com/questions/16584890/why-does-displayblock-not-stretch-buttons-or-input-elements?rq=1">why does displayblock not stretch buttons or input elements</a></p>
+
+<p><a href="http://stackoverflow.com/questions/1030793/input-with-displayblock-is-not-a-block-why-not?lq=1">input with displayblock is not a block</a></p>
+
+<div class="docs-example clearfix"><div class="hl-btn hl-btn-submit hl-btn-primary">Submit button</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-submit hl-btn-primary"</span><span class="nt">&gt;</span>Submit button<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>If you want use <code class="highlighter-rouge">&lt;button&gt;</code> tag, please do add a <code class="highlighter-rouge">&lt;div&gt;</code> wrapper.</p>
+
+<div class="docs-example clearfix"><div class="hl-btn-submit">
+  <button class="hl-btn hl-btn-block hl-btn-primary">Submit button</button>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-btn-submit"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-block hl-btn-primary"</span><span class="nt">&gt;</span>Submit button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h2 id="button-states">Button states</h2>
 

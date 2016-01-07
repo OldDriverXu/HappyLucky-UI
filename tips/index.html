@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Tooltips &middot; HappyLucky UI
+      Tips &middot; HappyLucky UI
     </title>
 
     <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
@@ -78,8 +78,8 @@
   <a class="menu-item " href="/HappyLucky-UI/states/">
     States
   </a>
-  <a class="menu-item selected" href="/HappyLucky-UI/tooltips/">
-    Tooltips
+  <a class="menu-item selected" href="/HappyLucky-UI/tips/">
+    Tips
   </a>
   <a class="menu-item " href="/HappyLucky-UI/utilities/">
     Utilities
@@ -102,32 +102,24 @@
   </div>
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
-      Tooltips
+      Tips
     </h1>
     <div class="markdown-body">
-      <p>Add tooltips built entirely in CSS to nearly any element. Just add a few classes and an <code class="highlighter-rouge">aria-label</code> attribute.</p>
+      <p>Use <code class="highlighter-rouge">.hl-tips</code> as a wrapper element, and add your icons (eg. <code class="highlighter-rouge">.hl-icon-dot</code>) in it.</p>
 
-<p>In addition, you’ll want to specify a direction:</p>
+<div class="docs-example clearfix"><div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 填写银行卡预留的身份信息
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-tips"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-tips-icon hl-icon-dot"</span><span class="nt">&gt;&lt;/span&gt;</span> 填写银行卡预留的身份信息
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<ul>
-  <li><code class="highlighter-rouge">.tooltipped-n</code></li>
-  <li><code class="highlighter-rouge">.tooltipped-ne</code></li>
-  <li><code class="highlighter-rouge">.tooltipped-e</code></li>
-  <li><code class="highlighter-rouge">.tooltipped-se</code></li>
-  <li><code class="highlighter-rouge">.tooltipped-s</code></li>
-  <li><code class="highlighter-rouge">.tooltipped-sw</code></li>
-  <li><code class="highlighter-rouge">.tooltipped-w</code></li>
-  <li><code class="highlighter-rouge">.tooltipped-nw</code></li>
-</ul>
-
-<p>Remember, <code class="highlighter-rouge">aria-label</code> and tooltip classes must go directly on <code class="highlighter-rouge">&lt;button&gt;</code> and <code class="highlighter-rouge">&lt;a&gt;</code> elements. Tooltip classes also conflict with Octicon classes, and as such, must go on a parent element instead of the icon.</p>
-
-<div class="docs-example clearfix"><span class="tooltipped tooltipped-n" aria-label="This is the tooltip.">
-  Text with a tooltip
-</span></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tooltipped tooltipped-n"</span> <span class="na">aria-label=</span><span class="s">"This is the tooltip."</span><span class="nt">&gt;</span>
-  Text with a tooltip
-<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<div class="docs-example clearfix"><div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-asterisk"></span> 您可以前往机场指定地点领取行程单
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-tips"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-tips-icon hl-icon-asterisk"</span><span class="nt">&gt;&lt;/span&gt;</span> 您可以前往机场指定地点领取行程单
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
     </div>

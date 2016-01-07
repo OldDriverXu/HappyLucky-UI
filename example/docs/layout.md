@@ -69,9 +69,11 @@ In practice, your columns will look like the example below.
 Columns can be [centered](/utilities/#centering-content) by adding `.hl-centered` to the `.hl-col-x` class.
 
 {% example html %}
-<div class="hl-row">
-  <div class="hl-col-6 hl-centered">
-    .hl-centered
+<div class="container grid-color">
+  <div class="hl-row">
+    <div class="hl-col-6 hl-centered">
+      .hl-centered
+    </div>
   </div>
 </div>
 {% endexample %}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Text &middot; HappyLucky UI
+    </title>
+
+    <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
+    <link rel="stylesheet" href="/HappyLucky-UI/css/hl-ui.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/HappyLucky-UI/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/HappyLucky-UI/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/HappyLucky-UI/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          HappyLucky UI
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/HappyLucky-UI/scaffolding">Docs</a>
+          <a  href="/HappyLucky-UI/about">About</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git" target="_blank">GitHub</a>
+          <a href="http://jp.rsscc.com/hangban/flights" target="_blank">Application</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/typography/">
+    Typography
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item selected" href="/HappyLucky-UI/text/">
+    Text
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/list-group/">
+    List Group
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/blankslate/">
+    Blankslate
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/states/">
+    States
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Text
+    </h1>
+    <div class="markdown-body">
+      <p>We defined several dimensions for textual styles.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#textual-size" id="markdown-toc-textual-size">Textual Size</a></li>
+  <li><a href="#textual-colors" id="markdown-toc-textual-colors">Textual Colors</a></li>
+  <li><a href="#textual-alignment" id="markdown-toc-textual-alignment">Textual Alignment</a></li>
+  <li><a href="#textual-ellipsis" id="markdown-toc-textual-ellipsis">Textual Ellipsis</a></li>
+</ul>
+
+<h2 id="textual-size">Textual Size</h2>
+
+<p>Textual size has 5 grades: <strong>extra large</strong>, <strong>large</strong>, <strong>middle</strong>, <strong>small</strong>, <strong>extra small</strong>, which can almost cover all kinds of size in mobile device.</p>
+
+<div class="docs-example clearfix"><p class="hl-text-xl">This is hl-text-xl size.</p>
+<p class="hl-text-lg">This is hl-text-lg size.</p>
+<p class="hl-text-md">This is hl-text-md size.</p>
+<p class="hl-text-sm">This is hl-text-sm size.</p>
+<p class="hl-text-xs">This is hl-text-xs size.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-xl"</span><span class="nt">&gt;</span>This is hl-text-xl size.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-lg"</span><span class="nt">&gt;</span>This is hl-text-lg size.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-md"</span><span class="nt">&gt;</span>This is hl-text-md size.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>This is hl-text-sm size.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-xs"</span><span class="nt">&gt;</span>This is hl-text-xs size.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="textual-colors">Textual Colors</h2>
+
+<p>This part is based on your project.</p>
+
+<div class="docs-example clearfix"><p class="hl-text-black">This is hl-text-black.</p>
+<p class="hl-text-blacklight">This is hl-text-blacklight.</p>
+<p class="hl-text-gray">This is hl-text-gray.</p>
+<p class="hl-text-graylight">This is hl-text-graylight.</p>
+<p class="hl-text-blue">This is hl-text-blue.</p>
+<p class="hl-text-bluelight">This is hl-text-bluelight.</p>
+<p class="hl-text-red">This is hl-text-red.</p>
+<p class="hl-text-orange">This is hl-text-orange.</p>
+<p class="hl-text-green">This is hl-text-green.</p>
+<p class="hl-text-greenlight">This is hl-text-greenlight.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-black"</span><span class="nt">&gt;</span>This is hl-text-black.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-blacklight"</span><span class="nt">&gt;</span>This is hl-text-blacklight.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-gray"</span><span class="nt">&gt;</span>This is hl-text-gray.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-graylight"</span><span class="nt">&gt;</span>This is hl-text-graylight.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-blue"</span><span class="nt">&gt;</span>This is hl-text-blue.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-bluelight"</span><span class="nt">&gt;</span>This is hl-text-bluelight.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-red"</span><span class="nt">&gt;</span>This is hl-text-red.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-orange"</span><span class="nt">&gt;</span>This is hl-text-orange.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-green"</span><span class="nt">&gt;</span>This is hl-text-green.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-greenlight"</span><span class="nt">&gt;</span>This is hl-text-greenlight.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="textual-alignment">Textual Alignment</h2>
+
+<p>Textual alignment has 3 mode: <strong>left</strong>, <strong>center</strong>, <strong>right</strong>.</p>
+
+<div class="docs-example clearfix"><p class="hl-text-left">This is hl-text-left.</p>
+<p class="hl-text-right">This is hl-text-right.</p>
+<p class="hl-text-center">This is hl-text-center.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-left"</span><span class="nt">&gt;</span>This is hl-text-left.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-right"</span><span class="nt">&gt;</span>This is hl-text-right.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hl-text-center"</span><span class="nt">&gt;</span>This is hl-text-center.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="textual-ellipsis">Textual Ellipsis</h2>
+
+<p>If you want to hide textual content because of textual length, use <code class="highlighter-rouge">.hl-text-ellipsis</code> to decorate your textual element.</p>
+
+<div class="docs-example clearfix"><div class="hl-text-ellipsis">
+  长太息以掩涕兮,哀民生之多艰.余虽好修姱以鞿羁兮,謇朝谇而夕替.既替余以蕙纕兮,又申之以揽茝.亦余心之所善兮,虽九死其犹未悔.怨灵修之浩荡兮,终不察夫民心.众女嫉余之蛾眉兮,谣诼谓余以善淫.固时俗之工巧兮,偭规矩而改错.背绳墨以追曲兮,竞周容以为度.忳郁邑余佗傺兮,吾独穷困乎此时也.宁溘死以流亡兮,余不忍为此态也.鸷鸟之不群兮,自前世而固然.何方圜之能周兮,夫孰异道而相安?屈心而抑志兮,忍尤而攘诟.伏清白以死直兮,固前圣之所厚.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-ellipsis"</span><span class="nt">&gt;</span>
+  长太息以掩涕兮,哀民生之多艰.余虽好修姱以鞿羁兮,謇朝谇而夕替.既替余以蕙纕兮,又申之以揽茝.亦余心之所善兮,虽九死其犹未悔.怨灵修之浩荡兮,终不察夫民心.众女嫉余之蛾眉兮,谣诼谓余以善淫.固时俗之工巧兮,偭规矩而改错.背绳墨以追曲兮,竞周容以为度.忳郁邑余佗傺兮,吾独穷困乎此时也.宁溘死以流亡兮,余不忍为此态也.鸷鸟之不群兮,自前世而固然.何方圜之能周兮,夫孰异道而相安?屈心而抑志兮,忍尤而攘诟.伏清白以死直兮,固前圣之所厚.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Happy Tech Inc 2016.<br>
+        Created and maintained by the CSS team at 航班管家. <strong>Currently v1.0.0.</strong>
+      </footer>
+    </div>
+
+    <script src="/HappyLucky-UI/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      List-Group &middot; HappyLucky UI
+    </title>
+
+    <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
+    <link rel="stylesheet" href="/HappyLucky-UI/css/hl-ui.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/HappyLucky-UI/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/HappyLucky-UI/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/HappyLucky-UI/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          HappyLucky UI
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/HappyLucky-UI/scaffolding">Docs</a>
+          <a  href="/HappyLucky-UI/about">About</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git" target="_blank">GitHub</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/typography/">
+    Typography
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item selected" href="/HappyLucky-UI/list-group/">
+    List Group
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/blankslate/">
+    Blankslate
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/states/">
+    States
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      List-Group
+    </h1>
+    <div class="markdown-body">
+      <p>List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#basic-example" id="markdown-toc-basic-example">Basic example</a></li>
+  <li><a href="#padding-with-list-item" id="markdown-toc-padding-with-list-item">Padding with list item</a>    <ul>
+      <li><a href="#padding-left" id="markdown-toc-padding-left">Padding Left</a></li>
+      <li><a href="#padding-right" id="markdown-toc-padding-right">Padding Right</a></li>
+      <li><a href="#padding-both" id="markdown-toc-padding-both">Padding Both</a></li>
+    </ul>
+  </li>
+  <li><a href="#indent-for-spacing" id="markdown-toc-indent-for-spacing">Indent for Spacing</a></li>
+  <li><a href="#states" id="markdown-toc-states">States</a></li>
+  <li><a href="#with-iconfonts" id="markdown-toc-with-iconfonts">With Iconfonts</a></li>
+</ul>
+
+<h2 id="basic-example">Basic example</h2>
+
+<p>The most basic list group is simply an unordered list with list items, and the proper classes. Build upon it with the options that follow, or your own CSS as needed.</p>
+
+<div class="docs-example clearfix"><ul class="hl-list-group">
+  <li class="hl-list-group-item">Cras justo odio</li>
+  <li class="hl-list-group-item">Dapibus ac facilisis in</li>
+  <li class="hl-list-group-item">Morbi leo risus</li>
+  <li class="hl-list-group-item">Porta ac consectetur ac</li>
+  <li class="hl-list-group-item">Vestibulum at eros</li>
+</ul></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"hl-list-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>Cras justo odio<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<div class="docs-example clearfix"><ul class="hl-list-group">
+  <li class="hl-list-group-item">
+    <div class="hl-row">
+      <div class="hl-col-6 hl-text-left">
+        <div class="hl-text-lg">0:35-08:40</div>
+        <div class="hl-text-sm">南航CZ6412</div>
+        <div class="hl-text-xs hl-text-green"> 773(大)</div>
+      </div>
+      <div class="hl-col-6 hl-text-right">
+        <div class="hl-text-lg hl-text-orange">$860</div>
+        <div class="hl-text-sm">超值公务舱 全价</div>
+        <div class="hl-text-xs">仅剩4张</div>
+      </div>
+    </div>
+  </li>
+  <li class="hl-list-group-item">
+    <div class="hl-row">
+      <div class="hl-col-6 hl-text-left">
+        <div class="hl-text-lg">3:35-11:21</div>
+        <div class="hl-text-sm">南航CZ6002</div>
+        <div class="hl-text-xs hl-text-green"> 787(大)</div>
+      </div>
+      <div class="hl-col-6 hl-text-right">
+        <div class="hl-text-lg hl-text-orange">$2480</div>
+        <div class="hl-text-sm">超值公务舱 全价</div>
+        <div class="hl-text-xs hl-text-bluelight">惠享头等舱$1360</div>
+      </div>
+    </div>
+  </li>
+</ul></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"hl-list-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-lg"</span><span class="nt">&gt;</span>0:35-08:40<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>南航CZ6412<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xs hl-text-green"</span><span class="nt">&gt;</span> 773(大)<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-lg hl-text-orange"</span><span class="nt">&gt;</span>$860<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>超值公务舱 全价<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xs"</span><span class="nt">&gt;</span>仅剩4张<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-lg"</span><span class="nt">&gt;</span>3:35-11:21<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>南航CZ6002<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xs hl-text-green"</span><span class="nt">&gt;</span> 787(大)<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-lg hl-text-orange"</span><span class="nt">&gt;</span>$2480<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-sm"</span><span class="nt">&gt;</span>超值公务舱 全价<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xs hl-text-bluelight"</span><span class="nt">&gt;</span>惠享头等舱$1360<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h2 id="padding-with-list-item">Padding with list item</h2>
+
+<h3 id="padding-left">Padding Left</h3>
+
+<p><code class="highlighter-rouge">.hl-list-group-pl</code> stands for ‘padding left’</p>
+
+<div class="docs-example clearfix"><div class="hl-list-group hl-list-group-pl">
+  <div class="hl-list-group-item">账户余额</div>
+  <div class="hl-list-group-item">建设银行(尾号1234)</div>
+  <div class="hl-list-group-item">招商银行(尾号8888)</div>
+  <div class="hl-list-group-item hl-disabled-text">工商银行(尾号6666) 外币卡</div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>账户余额<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>建设银行(尾号1234)<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>招商银行(尾号8888)<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-disabled-text"</span><span class="nt">&gt;</span>工商银行(尾号6666) 外币卡<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="padding-right">Padding Right</h3>
+
+<p><code class="highlighter-rouge">.hl-list-group-pr</code> stands for ‘padding right’</p>
+
+<div class="docs-example clearfix"><div class="hl-list-group hl-list-group-pr">
+  <div class="hl-list-group-item">
+    <div class="hl-row">
+      <div class="hl-col-6 hl-text-left">
+        <div class="hl-text-md">经济舱 <span class="hl-text-green">4.8折</span></div>
+        <div class="hl-text-xs hl-text-graylight">仅剩3张</div>
+      </div>
+      <div class="hl-col-6 hl-text-right">
+        <div class="hl-inline-block hl-text-xl hl-text-orange">$2480</div>
+        <button class="hl-btn hl-btn-primary">预订</button>
+      </div>
+    </div>
+  </div>
+  <div class="hl-list-group-item">
+    <div class="hl-row">
+      <div class="hl-col-6 hl-text-left">
+        <div class="hl-text-md">经济舱 <span class="hl-text-green">4.2折</span></div>
+        <div class="hl-text-xs hl-text-graylight">仅剩3张</div>
+      </div>
+      <div class="hl-col-6 hl-text-right">
+        <div class="hl-inline-block hl-text-xl hl-text-orange">$2580</div>
+        <button class="hl-btn hl-btn-primary">预订</button>
+      </div>
+    </div>
+  </div>
+  <div class="hl-list-group-item">
+    <div class="hl-row">
+      <div class="hl-col-6 hl-text-left">
+        <div class="hl-text-md">经济舱 <span class="hl-text-green">6.8折</span></div>
+        <div class="hl-text-xs hl-text-graylight">仅剩1张</div>
+      </div>
+      <div class="hl-col-6 hl-text-right">
+        <div class="hl-inline-block hl-text-xl hl-text-orange">$2880</div>
+        <button class="hl-btn hl-btn-primary">预订</button>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pr"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-md"</span><span class="nt">&gt;</span>经济舱 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-text-green"</span><span class="nt">&gt;</span>4.8折<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xs hl-text-graylight"</span><span class="nt">&gt;</span>仅剩3张<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-inline-block hl-text-xl hl-text-orange"</span><span class="nt">&gt;</span>$2480<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>预订<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-md"</span><span class="nt">&gt;</span>经济舱 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-text-green"</span><span class="nt">&gt;</span>4.2折<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xs hl-text-graylight"</span><span class="nt">&gt;</span>仅剩3张<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-inline-block hl-text-xl hl-text-orange"</span><span class="nt">&gt;</span>$2580<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>预订<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-md"</span><span class="nt">&gt;</span>经济舱 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-text-green"</span><span class="nt">&gt;</span>6.8折<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xs hl-text-graylight"</span><span class="nt">&gt;</span>仅剩1张<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-inline-block hl-text-xl hl-text-orange"</span><span class="nt">&gt;</span>$2880<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>预订<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="padding-both">Padding Both</h3>
+
+<p><code class="highlighter-rouge">.hl-list-group-pb</code> stands for ‘padding both’</p>
+
+<div class="docs-example clearfix"><div class="hl-list-group hl-list-group-pb">
+  <div class="hl-list-group-item">
+    <div class="hl-row">
+      <div class="hl-col-6 hl-text-left">
+        <div class="hl-text-gray"><span class="hl-icon-flight-takeoff"></span> 出发地</div>
+        <div class="hl-text-xl">北京</div>
+      </div>
+      <div class="hl-col-6 hl-text-right">
+        <div class="hl-text-gray">到达地 <span class="hl-icon-flight-land"></span></div>
+        <div class="hl-text-xl">上海</div>
+      </div>
+    </div>
+  </div>
+  <div class="hl-list-group-item">
+    <div class="hl-row">
+      <div class="hl-col-6 hl-text-left">
+        <div class="hl-text-gray"><span class="hl-icon-calendar"></span> 出发日期</div>
+        <div class="hl-text-xl">10-20</div>
+      </div>
+      <div class="hl-col-6 hl-text-right">
+        <div class="hl-text-gray">返回日期 <span class="hl-icon-calendar"></span></div>
+        <div class="hl-text-xl">10-30</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-gray"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-flight-takeoff"</span><span class="nt">&gt;&lt;/span&gt;</span> 出发地<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xl"</span><span class="nt">&gt;</span>北京<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-gray"</span><span class="nt">&gt;</span>到达地 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-flight-land"</span><span class="nt">&gt;&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xl"</span><span class="nt">&gt;</span>上海<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-gray"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-calendar"</span><span class="nt">&gt;&lt;/span&gt;</span> 出发日期<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xl"</span><span class="nt">&gt;</span>10-20<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-text-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-gray"</span><span class="nt">&gt;</span>返回日期 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-calendar"</span><span class="nt">&gt;&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-xl"</span><span class="nt">&gt;</span>10-30<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="indent-for-spacing">Indent for Spacing</h2>
+
+<p>Add <code class="highlighter-rouge">.hl-list-group-indent</code> to the list group element.</p>
+
+<div class="docs-example clearfix"><div class="hl-list-group hl-list-group-indent">
+  <div class="hl-list-group-item">
+    <span class="hl-indent-icon hl-icon-airplane"></span>
+    <span>机票订单</span>
+    <span class="hl-icon-arrow-right hl-right"></span>
+  </div>
+  <div class="hl-list-group-item">
+    <span class="hl-indent-icon hl-icon-coupon"></span>
+    <span>优惠券</span>
+    <span class="hl-icon-arrow-right hl-right"></span>
+  </div>
+  <div class="hl-list-group-item">
+    <span class="hl-indent-icon hl-icon-mail"></span>
+    <span>邮寄订单</span>
+    <span class="hl-icon-arrow-right hl-right"></span>
+  </div>
+  <div class="hl-list-group-item">
+    <span class="hl-indent-icon hl-icon-payment"></span>
+    <span>其他订单</span>
+    <span class="hl-icon-arrow-right hl-right"></span>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-indent"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-indent-icon hl-icon-airplane"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span>机票订单<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-arrow-right hl-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-indent-icon hl-icon-coupon"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span>优惠券<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-arrow-right hl-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-indent-icon hl-icon-mail"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span>邮寄订单<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-arrow-right hl-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-indent-icon hl-icon-payment"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span>其他订单<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-arrow-right hl-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="states">States</h2>
+
+<p>An list-group-item element has three states: <strong>active</strong>, <strong>disabled</strong>, <strong>disabled-text</strong>, and the corresponding css class names are <code class="highlighter-rouge">hl-active</code>, <code class="highlighter-rouge">hl-disabled</code>, <code class="highlighter-rouge">hl-disabled-text</code>.</p>
+
+<div class="docs-example clearfix"><ul class="hl-list-group">
+  <li class="hl-list-group-item hl-active">账户余额</li>
+  <li class="hl-list-group-item">建设银行(尾号1234)</li>
+  <li class="hl-list-group-item hl-disabled-text">招商银行(尾号8888)</li>
+  <li class="hl-list-group-item hl-disabled">工商银行(尾号6666) 外币卡</li>
+</ul></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"hl-list-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-active"</span><span class="nt">&gt;</span>账户余额<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>建设银行(尾号1234)<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-disabled-text"</span><span class="nt">&gt;</span>招商银行(尾号8888)<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-disabled"</span><span class="nt">&gt;</span>工商银行(尾号6666) 外币卡<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h2 id="with-iconfonts">With Iconfonts</h2>
+
+<div class="docs-example clearfix"><div class="hl-list-group hl-list-group-pl">
+  <div class="hl-list-group-item">
+    <span class="hl-icon-person-outline hl-text-gray"></span>
+    <span> 联系人姓名</span>
+  </div>
+  <div class="hl-list-group-item">
+    <span class="hl-icon-phone hl-text-gray"></span>
+    <span> 联系人电话</span>
+  </div>
+  <div class="hl-list-group-item">
+    <span class="hl-icon-email hl-text-gray"></span>
+    <span> 添加邮寄地址</span>
+    <span class="hl-icon-angle-right hl-right hl-text-gray"></span>
+  </div>
+  <div class="hl-list-group-item">
+    <span class="hl-icon-location hl-text-gray"></span>
+    <span> 行程单自取点</span>
+    <span class="hl-icon-angle-right hl-right hl-text-gray"></span>
+  </div>
+</div>
+<div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-asterisk"></span>
+  <span>您可以前往机场指定地点领取行程单</span>
+</div>
+<div class="hl-list-group hl-list-group-pl">
+  <div class="hl-list-group-item">
+    <span class="hl-icon-payment hl-text-gray"></span>
+    <span>邮寄报销凭证</span>
+  </div>
+  <div class="hl-list-group-item">行程单</div>
+  <div class="hl-list-group-item">航意险发票</div>
+  <div class="hl-list-group-item">人保延误险发票</div>
+  <div class="hl-list-group-item">配送方式</div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-person-outline hl-text-gray"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span> 联系人姓名<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-phone hl-text-gray"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span> 联系人电话<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-email hl-text-gray"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span> 添加邮寄地址<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-angle-right hl-right hl-text-gray"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-location hl-text-gray"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span> 行程单自取点<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-angle-right hl-right hl-text-gray"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-tips"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-tips-icon hl-icon-asterisk"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span&gt;</span>您可以前往机场指定地点领取行程单<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-payment hl-text-gray"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;</span>邮寄报销凭证<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>行程单<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>航意险发票<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>人保延误险发票<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>配送方式<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Happy Tech Inc 2016.<br>
+        Created and maintained by the CSS team at 航班管家. <strong>Currently v1.0.0.</strong>
+      </footer>
+    </div>
+
+    <script src="/HappyLucky-UI/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

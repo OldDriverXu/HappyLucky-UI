@@ -78,7 +78,9 @@ Make any button full-width by adding `.hl-btn-block`. It adds `width: 100%;`, ch
 
 Make a submit button by adding `.hl-btn-submit`. It adds 'margin', changes the `display` from `inline-block` to `block`, and `font-size`.
 
-Use **`<div>`** tag for submit button, do not use **`<button>`** tag
+<div class="flash flash-error">
+  <strong>Heads up!</strong> Use <strong>&#60;div&#62;</strong> tag for submit button, do not use <strong>&#60;button&#62;</strong> tag
+</div>
 
 Here the reason goes:
 

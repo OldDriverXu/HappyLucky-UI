@@ -6,19 +6,19 @@
 // Generate contextual modifier classes for font size and weight.
 // 5 Grades: Extra large, Large, Medium, Small, Extra small
 .text-xl {
-  @include text-size-variant(1.4rem, 2rem);
+  @include text-size-variant($font-size-xl, $line-height-lg);
 }
 .text-lg {
-  @include text-size-variant(1.2rem, 1.5rem);
+  @include text-size-variant($font-size-lg, $line-height);
 }
 .text-md {
-  @include text-size-variant(1rem, 1.3rem);
+  @include text-size-variant($font-size-base, $line-height);
 }
 .text-sm {
-  @include text-size-variant(.9rem, 1.1rem);
+  @include text-size-variant($font-size-sm, $line-height);
 }
 .text-xs {
-  @include text-size-variant(.75rem, 0.9rem);
+  @include text-size-variant($font-size-xs, $line-height-sm);
 }
 
 // Text alignment

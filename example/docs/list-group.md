@@ -30,12 +30,12 @@ The most basic list group is simply an unordered list with list items, and the p
     <div class="hl-row">
       <div class="hl-col-6 hl-text-left">
         <div class="hl-text-lg">0:35-08:40</div>
-        <div class="hl-text-sm">南航CZ6412</div>
+        <div class="hl-text-md">南航CZ6412</div>
         <div class="hl-text-xs hl-text-green"> 773(大)</div>
       </div>
       <div class="hl-col-6 hl-text-right">
         <div class="hl-text-lg hl-text-orange">$860</div>
-        <div class="hl-text-sm">超值公务舱 全价</div>
+        <div class="hl-text-md">超值公务舱 全价</div>
         <div class="hl-text-xs">仅剩4张</div>
       </div>
     </div>
@@ -44,12 +44,12 @@ The most basic list group is simply an unordered list with list items, and the p
     <div class="hl-row">
       <div class="hl-col-6 hl-text-left">
         <div class="hl-text-lg">3:35-11:21</div>
-        <div class="hl-text-sm">南航CZ6002</div>
+        <div class="hl-text-md">南航CZ6002</div>
         <div class="hl-text-xs hl-text-green"> 787(大)</div>
       </div>
       <div class="hl-col-6 hl-text-right">
         <div class="hl-text-lg hl-text-orange">$2480</div>
-        <div class="hl-text-sm">超值公务舱 全价</div>
+        <div class="hl-text-md">超值公务舱 全价</div>
         <div class="hl-text-xs hl-text-bluelight">惠享头等舱$1360</div>
       </div>
     </div>

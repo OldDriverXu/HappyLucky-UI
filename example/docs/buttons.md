@@ -55,7 +55,7 @@ Outline buttons downplay an action as they appear like boxy links. Just add `.hl
 
 ## Button Size
 
-### Large / Normal /Small buttons
+### Large / Normal / Small buttons
 
 Use `.hl-btn-lg` for large buttons, use `.hl-btn-sm` for small buttons
 

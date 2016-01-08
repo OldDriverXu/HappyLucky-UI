@@ -1,0 +1,175 @@
+@import "variables";
+@import "mixins";
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin: 0;
+  padding: $input-padding-y $input-padding-x;
+  border: none;
+  border-radius: .25rem;
+  outline: 0;
+  line-height: inherit;
+  vertical-align: middle;
+  background-color: $input-bg;
+  -webkit-appearance: none;  // fix ios input box-shadow bug
+  box-shadow: inset 0 0 1px 0 $input-border;
+
+  &:focus {
+    box-shadow: inset 0 0 1px $input-border-focus, 0 0 2px 0 $input-border-focus;
+  }
+}
+
+// Size
+.input-lg,
+.select-lg {
+  font-size: $font-size-lg;
+}
+
+.input-sm,
+.select-sm {
+  padding: $input-padding-y/2 $input-padding-x;
+  font-size: $font-size-sm;
+}
+
+.input-inline {
+  display: inline-block;
+  width: auto;
+}
+
+// States
+.input-disabled {
+  background-color: $input-bg-disabled;
+
+  &:focus {
+    box-shadow: 0 0 1px 0 $input-border;
+  }
+}
+
+.input-noborder,
+.select-noborder {
+  border: none;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.input-nopadding,
+.select-nopadding {
+  padding: 0;
+}
+
+
+// for select icon style
+.select-icon {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: $spacer-x;
+    width: 0;
+    height: 0;
+    color: $blue;
+    content: "";
+    border-top: .4rem solid;
+    border-right: .4rem solid transparent;
+    border-left: .4rem solid transparent;
+    z-index: 10;
+  }
+}
+
+// for transparent select wrapper
+.select-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+// input with a search icon
+// example:
+// <div class="input-search">
+//   <input>
+// </div>
+.input-search {
+  @include border(top-bottom, $list-group-border-color);
+  position: relative;
+  padding: .4rem .75rem;
+  background-color: #F5F9FA;
+
+  input {
+    box-sizing: border-box;
+    box-shadow: 0 0 1px 0 $gray;
+    border-radius: 1rem;
+    width: 100%;
+    height: 2rem;
+    font-size: .9rem;
+    padding-left: 2rem;
+    overflow: hidden;
+  }
+
+  &:after {
+    position: absolute;
+    top: .8rem;
+    left: 1rem;
+    font-family: 'icomoon';
+    content: "\e838";
+    font-size: 1.4rem;
+    color: #2190e7;
+  }
+}
+
+// Input groups
+.input-group {
+  display: table;
+
+  input {
+    position: relative;
+    min-height: 2.375rem;
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+  input + .btn {
+    margin-left: 0;
+  }
+}
+
+.input-group input,
+.input-group-button {
+  display: table-cell;
+}
+
+.input-group-button {
+  width: 1%;
+  vertical-align: middle; // Match the inputs
+}
+
+.input-group input:first-child,
+.input-group-button:first-child .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-button:first-child .btn {
+  margin-right: -1px;
+}
+
+.input-group input:last-child,
+.input-group-button:last-child .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group-button:last-child .btn {
+  margin-left: -1px;
+}

@@ -3,10 +3,10 @@ layout: page
 title: Forms
 ---
 
-Style individual form controls and utilize common layouts.
+Style individual form controls and utilize common layouts. We reset several elements' default styles for cross browser consistency and easier manipulation later.
 
 <div class="flash">
-  <strong>Heads up!</strong> Forms need some reworking to clean up the specificity and required markup. We'll get to that soon!
+  <strong>Heads up!</strong> We focus on mobile device, so the 'width' of `input` and `select` tags are set to '100%' and 'div'.
 </div>
 
 ## Contents
@@ -14,82 +14,67 @@ Style individual form controls and utilize common layouts.
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Overview
-
-- We reset several elements' default styles for cross browser consistency and easier manipulation later. This includes `<fieldset>`s, WebKit validation bubbles, and most textual `<input>`s.
-- Specific types of textual `<input>`s are styled automatically, but `.form-control` is available should you need it.
-- Always declare a `type` on your `<button>`s.
-- Form layouts rely on form groups.
-
-## Example form
-
-Form controls in Primer currently have no basic layout specified (this is by design). You'll need to use `<fieldset>`s, `<div>`s, or other elements and styles to rearrange them.
+## Input
 
 {% example html %}
 <form>
-  <label for="name">Name</label>
-  <input type="text" id="name">
-
-  <label for="email">Email address</label>
-  <input type="email" id="email">
-
-  <label>
-    <input type="checkbox"> Remember me
-  </label>
-
-  <label>
-    <input type="radio" id="herp" name="herpderp" checked> Herp
-  </label>
-  <label>
-    <input type="radio" id="derp" name="herpderp"> Derp
-  </label>
-
-  <button class="btn" type="submit">Submit</button>
+  <p>请输入您的手机号，我们会通过短信向您发送验证码来确认您的身份。</p>
+  <input placeholder="您的手机号码" type="tel">
+  <div class="hl-separator-blank"></div>
+  <input placeholder="输入验证码" type="tel">
+  <div class="hl-btn hl-btn-submit hl-btn-primary hl-disabled">验证</div>
 </form>
 {% endexample %}
 
-## Form contrast
+### Sizing
 
-Textual form controls have a white background by default. You can change this to a light gray with `.input-contrast`.
+Make inputs smaller, larger, or inline-block with an additional class.
+
+- Large `.hl-input-lg`
+- Small `.hl-input-sm`
 
 {% example html %}
 <form>
-  <input type="text" placeholder="Default input">
-  <input class="input-contrast" type="text" placeholder="Input with contrast">
+  <input class="hl-input-lg" type="text" placeholder="Large Input">
+</form>
+
+<form>
+  <input class="hl-input-sm" type="text" placeholder="Small Input">
 </form>
 {% endexample %}
 
-## Sizing
+- Inline `.hl-input-line`
 
-Make inputs smaller, larger, or full-width with an additional class.
-
-### Mini
+Use `.hl-input-line` for normal inline input style.
 
 {% example html %}
 <form>
-  <input class="input-mini" type="text" placeholder="Mini input">
+  <input class="hl-input-inline" type="text" placeholder="Inline input">
 </form>
 {% endexample %}
 
-### Large
+### States
+
+- Disabled `.hl-input-disabled`
+
+Use `.hl-input-disabled` for disabled input style. Do remember to add `disabled` to the input element.
 
 {% example html %}
 <form>
-  <input class="input-large" type="text" placeholder="Large input">
+  <input class="hl-input-disabled" type="text" placeholder="Disabled input" disabled>
 </form>
 {% endexample %}
 
-### Block
+- No border `.hl-input-noborder`
+- No padding `.hl-input-nopadding`
 
 {% example html %}
 <form>
-  <input class="input-block" type="text" placeholder="Full-width input">
+  <input class="hl-input-noborder hl-input-nopadding" type="text" placeholder="No Border input">
 </form>
 {% endexample %}
 
-## Selects
-
-Primer adds light `height` and `vertical-align` styles to `<select>`s for all browsers to render them consistently with textual inputs.
+## Select
 
 {% example html %}
 <form>
@@ -97,120 +82,173 @@ Primer adds light `height` and `vertical-align` styles to `<select>`s for all br
     <option>Choose an option</option>
     <option>Git</option>
     <option>Subversion</option>
-    <option>Social Coding</option>
-    <option>Beets</option>
-    <option>Bears</option>
-    <option>Battlestar Galactica</option>
   </select>
 </form>
 {% endexample %}
 
-### Custom
+### Sizing
 
-Custom `<select>`s are also available—just add `.select`. **Only available in latest WebKit, Firefox, and IE browsers.**
+Use the `.hl-select-sm`, `.hl-select-lg` class to resize select element.
+
+- Large `.hl-select-lg`
+- Small `.hl-select-sm`
 
 {% example html %}
-<form>
-  <select class="select">
+<select class="hl-select-sm">
+  <option>Choose an option</option>
+  <option>Git</option>
+  <option>Subversion</option>
+</select>
+
+<select class="hl-select-lg">
+  <option>Choose an option</option>
+  <option>Git</option>
+  <option>Subversion</option>
+</select>
+{% endexample %}
+
+### States
+
+- Select icon `.hl-select-icon`
+
+Custom `<select>`s are also available—just add `.hl-select-icon` to its parent element.
+
+{% example html %}
+<form class="hl-select-icon">
+  <select>
     <option>Choose an option</option>
     <option>Git</option>
     <option>Subversion</option>
-    <option>Social Coding</option>
-    <option>Beets</option>
-    <option>Bears</option>
-    <option>Battlestar Galactica</option>
   </select>
 </form>
 {% endexample %}
 
-### Small
-
-Use the `.select-sm` class to resize both default and custom `<select>`s to match the size of [our small buttons](/buttons/#default-buttons).
+- No border `.hl-select-noborder`
+- No padding `.hl-select-nopadding`
 
 {% example html %}
-<select class="select-sm">
-  <option>Choose an option</option>
-  <option>Git</option>
-  <option>Subversion</option>
-  <option>Social Coding</option>
-  <option>Beets</option>
-  <option>Bears</option>
-  <option>Battlestar Galactica</option>
-</select>
-
-<select class="select select-sm">
-  <option>Choose an option</option>
-  <option>Git</option>
-  <option>Subversion</option>
-  <option>Social Coding</option>
-  <option>Beets</option>
-  <option>Bears</option>
-  <option>Battlestar Galactica</option>
-</select>
+<form class="hl-select-icon">
+  <select class="hl-select-noborder hl-select-nopadding">
+    <option>Choose an option</option>
+    <option>Git</option>
+    <option>Subversion</option>
+  </select>
+</form>
 {% endexample %}
 
-## Form groups
+## Usage of input and select
 
 {% example html %}
-<form>
-  <dl class="form">
-    <dt><label>Example Text</label></dt>
-    <dd><input type="text" value="Example Value"></dd>
-  </dl>
-
-  <dl class="form">
-    <dt><label>Example Label</label></dt>
-    <dd>
-      <select class="select">
-        <option>Choose an option</option>
-        <option>Git</option>
-        <option>Subversion</option>
-        <option>Social Coding</option>
-        <option>Beets</option>
-        <option>Bears</option>
-        <option>Battlestar Galactica</option>
+<div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 选择银行卡类型
+</div>
+<div class="hl-list-group hl-list-group-pb">
+  <div class="hl-list-group-item">
+    <div class="hl-select-icon">
+      <select class="hl-select-nopadding hl-select-noborder">
+        <option>招商银行</option>
+        <option>工商银行</option>
+        <option>农业银行</option>
+        <option>建设银行</option>
+        <option>交通银行</option>
+        <option>中国银行</option>
       </select>
-    </dd>
-  </dl>
-</form>
+    </div>
+  </div>
+  <div class="hl-list-group-item">
+    <div class="hl-select-icon">
+      <select class="hl-select-nopadding hl-select-noborder">
+        <option>储蓄卡</option>
+        <option>信用卡</option>
+      </select>
+    </div>
+  </div>
+</div>
 {% endexample %}
 
-## Form group validation
-
-Convey errors and warnings for form groups. Add the appropriate class—either `.errored` or `.warn`—to the `<dl class="form">` to start. Then, house your error messaging in an additional `<dd>` with either `.error` or `.warning`.
-
 {% example html %}
-<form>
-  <dl class="form errored">
-    <dt><label>Example Text</label></dt>
-    <dd><input type="text" value="Example Value"></dd>
-    <dd class="error">This example input has an error.</dd>
-  </dl>
-  <br>
-  <dl class="form warn">
-    <dt><label>Example Text</label></dt>
-    <dd><input type="text" value="Example Value"></dd>
-    <dd class="warning">This example input has a warning.</dd>
-  </dl>
-</form>
+<div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 填写银行卡预留的身份信息
+</div>
+<div class="hl-list-group hl-list-group-pb">
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">手机号</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="tel" placeholder="请输入留存银行的手机号码">
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">姓名</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="text" placeholder="请输入持卡人姓名">
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">证件</div>
+    <div class="hl-col-8 hl-select-icon">
+      <select class="hl-select-noborder hl-select-nopadding">
+        <option>身份证</option>
+        <option>护照</option>
+        <option>军官证</option>
+        <option>警官证</option>
+        <option>港澳通行证</option>
+        <option>其他</option>
+      </select>
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">证件号</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="text" placeholder="请输入证件号码">
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">手机号</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="tel" placeholder="请输入留存银行的手机号码">
+    </div>
+  </div>
+</div>
 {% endexample %}
 
 ## Checkboxes and radios
 
 Utilities to spice up the alignment and styling of checkbox and radio controls.
 
+This part is just a usage of other components' styles.
+
 {% example html %}
-<form>
-  <div class="form-checkbox">
-    <label>
-      <input type="checkbox" checked="checked">
-      Available for hire
-    </label>
-    <p class="note">
-      This will do insanely <strong>awesome</strong> and <strong>amazing</strong> things!
-    </p>
+<div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 请选择群支付类型
+</div>
+<div class="hl-list-group hl-list-group-pl">
+  <div class="hl-list-group-item">
+    <span class="hl-icon-checkbox-circle hl-text-green"></span> 机票
   </div>
-</form>
+  <div class="hl-list-group-item">
+    <span class="hl-icon-checkbox-circle-outline hl-text-green"></span> 火车票
+  </div>
+  <div class="hl-list-group-item hl-disabled-text">
+    <span class="hl-icon-checkbox-circle-outline"></span> 专车
+  </div>
+</div>
+{% endexample %}
+
+{% example html %}
+ <div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 请选择群支付类型
+</div>
+<div class="hl-list-group hl-list-group-pl">
+  <div class="hl-list-group-item">
+    机票 <span class="hl-icon-checkbox-circle hl-text-blue hl-right"></span>
+  </div>
+  <div class="hl-list-group-item">
+    火车票 <span class="hl-icon-checkbox-circle-outline hl-text-blue hl-right"></span>
+  </div>
+  <div class="hl-list-group-item hl-disabled-text">
+    专车 <span class="hl-icon-checkbox-circle-outline hl-right"></span>
+  </div>
+</div>
 {% endexample %}
 
 You may also add emphasis to the label:
@@ -231,25 +269,10 @@ You may also add emphasis to the label:
 Attached an input and button to one another.
 
 {% example html %}
-<form>
-  <div class="input-group">
-    <input type="text" placeholder="Username">
-    <span class="input-group-button">
-      <button class="btn">
-        <span class="octicon octicon-clippy"></span>
-      </button>
-    </span>
-  </div>
-</form>
-{% endexample %}
-
-## Form actions
-
-Align buttons to the right—via `float: right` on the buttons—in forms with `.form-actions`. The floats are automatically cleared for you.
-
-{% example html %}
-<div class="form-actions">
-  <button type="button" class="btn btn-primary">Save changes</button>
-  <button type="button" class="btn">Cancel</button>
+<div class="hl-input-group">
+  <input type="text" placeholder="Username">
+  <span class="hl-input-group-button">
+    <button class="hl-btn hl-btn-primary">Confirm</button>
+  </span>
 </div>
 {% endexample %}

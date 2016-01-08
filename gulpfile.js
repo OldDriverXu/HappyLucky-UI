@@ -60,20 +60,24 @@ gulp.task('copy', function() {
 
 // Static server
 gulp.task('serve', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    },
-    //browser: "chromium-browser",
-    port: 8888,
-    reloadDelay: 2000     // Wait for 2 seconds before any browsers should try to inject/reload a file.
+  // browserSync.init({
+  //   server: {
+  //     baseDir: "./"
+  //   },
+  //   //browser: "chromium-browser",
+  //   port: 8888,
+  //   reloadDelay: 2000     // Wait for 2 seconds before any browsers should try to inject/reload a file.
+  // });
+
+  gulp.watch("./scss/*.scss", function() {
+    if (ENABLE_PREFIX) {
+      runSequence('sass','customPrefix', 'styles', 'copy');
+    } else {
+      runSequence('sass', 'styles', 'copy');
+    }
   });
 
-  gulp.watch("./scss/*.scss", ['sass']);
-  if (ENABLE_PREFIX) {
-    gulp.watch("./css/*.css", ['customPrefix']);
-  }
-  gulp.watch("./example/*.html").on('change', browserSync.reload);
+  // gulp.watch("./example/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['build']);

@@ -251,19 +251,6 @@ This part is just a usage of other components' styles.
 </div>
 {% endexample %}
 
-You may also add emphasis to the label:
-
-{% example html %}
-<form>
-  <div class="form-checkbox">
-    <label>
-      <input type="checkbox" checked="checked">
-      <em class="highlight">Available for hire</em>
-    </label>
-  </div>
-</form>
-{% endexample %}
-
 ## Input group
 
 Attached an input and button to one another.

@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
-var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var cssClassPrefix = require('gulp-css-class-prefix');
 var autoprefixer = require('gulp-autoprefixer');
@@ -58,17 +57,8 @@ gulp.task('copy', function() {
   .pipe(size({title: 'copy'}));
 });
 
-// Static server
+// Watch
 gulp.task('serve', function() {
-  // browserSync.init({
-  //   server: {
-  //     baseDir: "./"
-  //   },
-  //   //browser: "chromium-browser",
-  //   port: 8888,
-  //   reloadDelay: 2000     // Wait for 2 seconds before any browsers should try to inject/reload a file.
-  // });
-
   gulp.watch("./scss/*.scss", function() {
     if (ENABLE_PREFIX) {
       runSequence('sass','customPrefix', 'styles', 'copy');
@@ -76,8 +66,6 @@ gulp.task('serve', function() {
       runSequence('sass', 'styles', 'copy');
     }
   });
-
-  // gulp.watch("./example/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['build']);

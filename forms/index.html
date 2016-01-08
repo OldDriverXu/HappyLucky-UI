@@ -105,148 +105,119 @@
       Forms
     </h1>
     <div class="markdown-body">
-      <p>Style individual form controls and utilize common layouts.</p>
+      <p>Style individual form controls and utilize common layouts. We reset several elements’ default styles for cross browser consistency and easier manipulation later.</p>
 
 <div class="flash">
-  <strong>Heads up!</strong> Forms need some reworking to clean up the specificity and required markup. We'll get to that soon!
+  <strong>Heads up!</strong> We focus on mobile device, so the 'width' of `input` and `select` tags are set to '100%' and 'div'.
 </div>
 
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
-  <li><a href="#example-form" id="markdown-toc-example-form">Example form</a></li>
-  <li><a href="#form-contrast" id="markdown-toc-form-contrast">Form contrast</a></li>
-  <li><a href="#sizing" id="markdown-toc-sizing">Sizing</a>    <ul>
-      <li><a href="#mini" id="markdown-toc-mini">Mini</a></li>
-      <li><a href="#large" id="markdown-toc-large">Large</a></li>
-      <li><a href="#block" id="markdown-toc-block">Block</a></li>
+  <li><a href="#input" id="markdown-toc-input">Input</a>    <ul>
+      <li><a href="#sizing" id="markdown-toc-sizing">Sizing</a></li>
+      <li><a href="#states" id="markdown-toc-states">States</a></li>
     </ul>
   </li>
-  <li><a href="#selects" id="markdown-toc-selects">Selects</a>    <ul>
-      <li><a href="#custom" id="markdown-toc-custom">Custom</a></li>
-      <li><a href="#small" id="markdown-toc-small">Small</a></li>
+  <li><a href="#select" id="markdown-toc-select">Select</a>    <ul>
+      <li><a href="#sizing-1" id="markdown-toc-sizing-1">Sizing</a></li>
+      <li><a href="#states-1" id="markdown-toc-states-1">States</a></li>
     </ul>
   </li>
-  <li><a href="#form-groups" id="markdown-toc-form-groups">Form groups</a></li>
-  <li><a href="#form-group-validation" id="markdown-toc-form-group-validation">Form group validation</a></li>
+  <li><a href="#usage-of-input-and-select" id="markdown-toc-usage-of-input-and-select">Usage of input and select</a></li>
   <li><a href="#checkboxes-and-radios" id="markdown-toc-checkboxes-and-radios">Checkboxes and radios</a></li>
   <li><a href="#input-group" id="markdown-toc-input-group">Input group</a></li>
-  <li><a href="#form-actions" id="markdown-toc-form-actions">Form actions</a></li>
 </ul>
 
-<h2 id="overview">Overview</h2>
+<h2 id="input">Input</h2>
+
+<div class="docs-example clearfix"><form>
+  <p>请输入您的手机号，我们会通过短信向您发送验证码来确认您的身份。</p>
+  <input placeholder="您的手机号码" type="tel" />
+  <div class="hl-separator-blank"></div>
+  <input placeholder="输入验证码" type="tel" />
+  <div class="hl-btn hl-btn-submit hl-btn-primary hl-disabled">验证</div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;p&gt;</span>请输入您的手机号，我们会通过短信向您发送验证码来确认您的身份。<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"您的手机号码"</span> <span class="na">type=</span><span class="s">"tel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-separator-blank"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"输入验证码"</span> <span class="na">type=</span><span class="s">"tel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-submit hl-btn-primary hl-disabled"</span><span class="nt">&gt;</span>验证<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h3 id="sizing">Sizing</h3>
+
+<p>Make inputs smaller, larger, or inline-block with an additional class.</p>
 
 <ul>
-  <li>We reset several elements’ default styles for cross browser consistency and easier manipulation later. This includes <code class="highlighter-rouge">&lt;fieldset&gt;</code>s, WebKit validation bubbles, and most textual <code class="highlighter-rouge">&lt;input&gt;</code>s.</li>
-  <li>Specific types of textual <code class="highlighter-rouge">&lt;input&gt;</code>s are styled automatically, but <code class="highlighter-rouge">.form-control</code> is available should you need it.</li>
-  <li>Always declare a <code class="highlighter-rouge">type</code> on your <code class="highlighter-rouge">&lt;button&gt;</code>s.</li>
-  <li>Form layouts rely on form groups.</li>
+  <li>Large <code class="highlighter-rouge">.hl-input-lg</code></li>
+  <li>Small <code class="highlighter-rouge">.hl-input-sm</code></li>
 </ul>
 
-<h2 id="example-form">Example form</h2>
-
-<p>Form controls in Primer currently have no basic layout specified (this is by design). You’ll need to use <code class="highlighter-rouge">&lt;fieldset&gt;</code>s, <code class="highlighter-rouge">&lt;div&gt;</code>s, or other elements and styles to rearrange them.</p>
-
 <div class="docs-example clearfix"><form>
-  <label for="name">Name</label>
-  <input type="text" id="name" />
+  <input class="hl-input-lg" type="text" placeholder="Large Input" />
+</form>
 
-  <label for="email">Email address</label>
-  <input type="email" id="email" />
-
-  <label>
-    <input type="checkbox" /> Remember me
-  </label>
-
-  <label>
-    <input type="radio" id="herp" name="herpderp" checked="" /> Herp
-  </label>
-  <label>
-    <input type="radio" id="derp" name="herpderp" /> Derp
-  </label>
-
-  <button class="btn" type="submit">Submit</button>
+<form>
+  <input class="hl-input-sm" type="text" placeholder="Small Input" />
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-lg"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Large Input"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
 
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email"</span><span class="nt">&gt;</span>
-
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Remember me
-  <span class="nt">&lt;/label&gt;</span>
-
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"herp"</span> <span class="na">name=</span><span class="s">"herpderp"</span> <span class="na">checked</span><span class="nt">&gt;</span> Herp
-  <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"derp"</span> <span class="na">name=</span><span class="s">"herpderp"</span><span class="nt">&gt;</span> Derp
-  <span class="nt">&lt;/label&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-sm"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Small Input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="form-contrast">Form contrast</h2>
+<ul>
+  <li>Inline <code class="highlighter-rouge">.hl-input-line</code></li>
+</ul>
 
-<p>Textual form controls have a white background by default. You can change this to a light gray with <code class="highlighter-rouge">.input-contrast</code>.</p>
+<p>Use <code class="highlighter-rouge">.hl-input-line</code> for normal inline input style.</p>
 
 <div class="docs-example clearfix"><form>
-  <input type="text" placeholder="Default input" />
-  <input class="input-contrast" type="text" placeholder="Input with contrast" />
+  <input class="hl-input-inline" type="text" placeholder="Inline input" />
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Default input"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-contrast"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Input with contrast"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-inline"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Inline input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="sizing">Sizing</h2>
+<h3 id="states">States</h3>
 
-<p>Make inputs smaller, larger, or full-width with an additional class.</p>
+<ul>
+  <li>Disabled <code class="highlighter-rouge">.hl-input-disabled</code></li>
+</ul>
 
-<h3 id="mini">Mini</h3>
+<p>Use <code class="highlighter-rouge">.hl-input-disabled</code> for disabled input style. Do remember to add <code class="highlighter-rouge">disabled</code> to the input element.</p>
 
 <div class="docs-example clearfix"><form>
-  <input class="input-mini" type="text" placeholder="Mini input" />
+  <input class="hl-input-disabled" type="text" placeholder="Disabled input" disabled="" />
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-mini"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Mini input"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-disabled"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Disabled input"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="large">Large</h3>
+<ul>
+  <li>No border <code class="highlighter-rouge">.hl-input-noborder</code></li>
+  <li>No padding <code class="highlighter-rouge">.hl-input-nopadding</code></li>
+</ul>
 
 <div class="docs-example clearfix"><form>
-  <input class="input-large" type="text" placeholder="Large input" />
+  <input class="hl-input-noborder hl-input-nopadding" type="text" placeholder="No Border input" />
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-large"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Large input"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-noborder hl-input-nopadding"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"No Border input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="block">Block</h3>
-
-<div class="docs-example clearfix"><form>
-  <input class="input-block" type="text" placeholder="Full-width input" />
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-block"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Full-width input"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
-
-<h2 id="selects">Selects</h2>
-
-<p>Primer adds light <code class="highlighter-rouge">height</code> and <code class="highlighter-rouge">vertical-align</code> styles to <code class="highlighter-rouge">&lt;select&gt;</code>s for all browsers to render them consistently with textual inputs.</p>
+<h2 id="select">Select</h2>
 
 <div class="docs-example clearfix"><form>
   <select>
     <option>Choose an option</option>
     <option>Git</option>
     <option>Subversion</option>
-    <option>Social Coding</option>
-    <option>Beets</option>
-    <option>Bears</option>
-    <option>Battlestar Galactica</option>
   </select>
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
@@ -254,185 +225,285 @@
     <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Social Coding<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Beets<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Bears<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Battlestar Galactica<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="custom">Custom</h3>
+<h3 id="sizing-1">Sizing</h3>
 
-<p>Custom <code class="highlighter-rouge">&lt;select&gt;</code>s are also available—just add <code class="highlighter-rouge">.select</code>. <strong>Only available in latest WebKit, Firefox, and IE browsers.</strong></p>
+<p>Use the <code class="highlighter-rouge">.hl-select-sm</code>, <code class="highlighter-rouge">.hl-select-lg</code> class to resize select element.</p>
 
-<div class="docs-example clearfix"><form>
-  <select class="select">
+<ul>
+  <li>Large <code class="highlighter-rouge">.hl-select-lg</code></li>
+  <li>Small <code class="highlighter-rouge">.hl-select-sm</code></li>
+</ul>
+
+<div class="docs-example clearfix"><select class="hl-select-sm">
+  <option>Choose an option</option>
+  <option>Git</option>
+  <option>Subversion</option>
+</select>
+
+<select class="hl-select-lg">
+  <option>Choose an option</option>
+  <option>Git</option>
+  <option>Subversion</option>
+</select></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"hl-select-sm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"hl-select-lg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span></code></pre></div>
+
+<h3 id="states-1">States</h3>
+
+<ul>
+  <li>Select icon <code class="highlighter-rouge">.hl-select-icon</code></li>
+</ul>
+
+<p>Custom <code class="highlighter-rouge">&lt;select&gt;</code>s are also available—just add <code class="highlighter-rouge">.hl-select-icon</code> to its parent element.</p>
+
+<div class="docs-example clearfix"><form class="hl-select-icon">
+  <select>
     <option>Choose an option</option>
     <option>Git</option>
     <option>Subversion</option>
-    <option>Social Coding</option>
-    <option>Beets</option>
-    <option>Bears</option>
-    <option>Battlestar Galactica</option>
   </select>
 </form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"hl-select-icon"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select&gt;</span>
     <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Social Coding<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Beets<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Bears<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Battlestar Galactica<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h3 id="small">Small</h3>
+<ul>
+  <li>No border <code class="highlighter-rouge">.hl-select-noborder</code></li>
+  <li>No padding <code class="highlighter-rouge">.hl-select-nopadding</code></li>
+</ul>
 
-<p>Use the <code class="highlighter-rouge">.select-sm</code> class to resize both default and custom <code class="highlighter-rouge">&lt;select&gt;</code>s to match the size of <a href="/buttons/#default-buttons">our small buttons</a>.</p>
+<div class="docs-example clearfix"><form class="hl-select-icon">
+  <select class="hl-select-noborder hl-select-nopadding">
+    <option>Choose an option</option>
+    <option>Git</option>
+    <option>Subversion</option>
+  </select>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"hl-select-icon"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"hl-select-noborder hl-select-nopadding"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<div class="docs-example clearfix"><select class="select-sm">
-  <option>Choose an option</option>
-  <option>Git</option>
-  <option>Subversion</option>
-  <option>Social Coding</option>
-  <option>Beets</option>
-  <option>Bears</option>
-  <option>Battlestar Galactica</option>
-</select>
+<h2 id="usage-of-input-and-select">Usage of input and select</h2>
 
-<select class="select select-sm">
-  <option>Choose an option</option>
-  <option>Git</option>
-  <option>Subversion</option>
-  <option>Social Coding</option>
-  <option>Beets</option>
-  <option>Bears</option>
-  <option>Battlestar Galactica</option>
-</select></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select-sm"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Social Coding<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Beets<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Bears<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Battlestar Galactica<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
-
-<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select select-sm"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Social Coding<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Beets<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Bears<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Battlestar Galactica<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span></code></pre></div>
-
-<h2 id="form-groups">Form groups</h2>
-
-<div class="docs-example clearfix"><form>
-  <dl class="form">
-    <dt><label>Example Text</label></dt>
-    <dd><input type="text" value="Example Value" /></dd>
-  </dl>
-
-  <dl class="form">
-    <dt><label>Example Label</label></dt>
-    <dd>
-      <select class="select">
-        <option>Choose an option</option>
-        <option>Git</option>
-        <option>Subversion</option>
-        <option>Social Coding</option>
-        <option>Beets</option>
-        <option>Bears</option>
-        <option>Battlestar Galactica</option>
+<div class="docs-example clearfix"><div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 选择银行卡类型
+</div>
+<div class="hl-list-group hl-list-group-pb">
+  <div class="hl-list-group-item">
+    <div class="hl-select-icon">
+      <select class="hl-select-nopadding hl-select-noborder">
+        <option>招商银行</option>
+        <option>工商银行</option>
+        <option>农业银行</option>
+        <option>建设银行</option>
+        <option>交通银行</option>
+        <option>中国银行</option>
       </select>
-    </dd>
-  </dl>
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;dt&gt;&lt;label&gt;</span>Example Text<span class="nt">&lt;/label&gt;&lt;/dt&gt;</span>
-    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Example Value"</span><span class="nt">&gt;&lt;/dd&gt;</span>
-  <span class="nt">&lt;/dl&gt;</span>
-
-  <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;dt&gt;&lt;label&gt;</span>Example Label<span class="nt">&lt;/label&gt;&lt;/dt&gt;</span>
-    <span class="nt">&lt;dd&gt;</span>
-      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Choose an option<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Git<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Subversion<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Social Coding<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Beets<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Bears<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Battlestar Galactica<span class="nt">&lt;/option&gt;</span>
+    </div>
+  </div>
+  <div class="hl-list-group-item">
+    <div class="hl-select-icon">
+      <select class="hl-select-nopadding hl-select-noborder">
+        <option>储蓄卡</option>
+        <option>信用卡</option>
+      </select>
+    </div>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-tips"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-tips-icon hl-icon-dot"</span><span class="nt">&gt;&lt;/span&gt;</span> 选择银行卡类型
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-select-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"hl-select-nopadding hl-select-noborder"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option&gt;</span>招商银行<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>工商银行<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>农业银行<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>建设银行<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>交通银行<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>中国银行<span class="nt">&lt;/option&gt;</span>
       <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;/dd&gt;</span>
-  <span class="nt">&lt;/dl&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-select-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"hl-select-nopadding hl-select-noborder"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option&gt;</span>储蓄卡<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>信用卡<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="form-group-validation">Form group validation</h2>
-
-<p>Convey errors and warnings for form groups. Add the appropriate class—either <code class="highlighter-rouge">.errored</code> or <code class="highlighter-rouge">.warn</code>—to the <code class="highlighter-rouge">&lt;dl class="form"&gt;</code> to start. Then, house your error messaging in an additional <code class="highlighter-rouge">&lt;dd&gt;</code> with either <code class="highlighter-rouge">.error</code> or <code class="highlighter-rouge">.warning</code>.</p>
-
-<div class="docs-example clearfix"><form>
-  <dl class="form errored">
-    <dt><label>Example Text</label></dt>
-    <dd><input type="text" value="Example Value" /></dd>
-    <dd class="error">This example input has an error.</dd>
-  </dl>
-  <br />
-  <dl class="form warn">
-    <dt><label>Example Text</label></dt>
-    <dd><input type="text" value="Example Value" /></dd>
-    <dd class="warning">This example input has a warning.</dd>
-  </dl>
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form errored"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;dt&gt;&lt;label&gt;</span>Example Text<span class="nt">&lt;/label&gt;&lt;/dt&gt;</span>
-    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Example Value"</span><span class="nt">&gt;&lt;/dd&gt;</span>
-    <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"error"</span><span class="nt">&gt;</span>This example input has an error.<span class="nt">&lt;/dd&gt;</span>
-  <span class="nt">&lt;/dl&gt;</span>
-  <span class="nt">&lt;br&gt;</span>
-  <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form warn"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;dt&gt;&lt;label&gt;</span>Example Text<span class="nt">&lt;/label&gt;&lt;/dt&gt;</span>
-    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Example Value"</span><span class="nt">&gt;&lt;/dd&gt;</span>
-    <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>This example input has a warning.<span class="nt">&lt;/dd&gt;</span>
-  <span class="nt">&lt;/dl&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<div class="docs-example clearfix"><div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 填写银行卡预留的身份信息
+</div>
+<div class="hl-list-group hl-list-group-pb">
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">手机号</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="tel" placeholder="请输入留存银行的手机号码" />
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">姓名</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="text" placeholder="请输入持卡人姓名" />
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">证件</div>
+    <div class="hl-col-8 hl-select-icon">
+      <select class="hl-select-noborder hl-select-nopadding">
+        <option>身份证</option>
+        <option>护照</option>
+        <option>军官证</option>
+        <option>警官证</option>
+        <option>港澳通行证</option>
+        <option>其他</option>
+      </select>
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">证件号</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="text" placeholder="请输入证件号码" />
+    </div>
+  </div>
+  <div class="hl-list-group-item hl-row">
+    <div class="hl-col-4">手机号</div>
+    <div class="hl-col-8">
+      <input class="hl-input-noborder hl-input-nopadding" type="tel" placeholder="请输入留存银行的手机号码" />
+    </div>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-tips"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-tips-icon hl-icon-dot"</span><span class="nt">&gt;&lt;/span&gt;</span> 填写银行卡预留的身份信息
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4"</span><span class="nt">&gt;</span>手机号<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-noborder hl-input-nopadding"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"请输入留存银行的手机号码"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4"</span><span class="nt">&gt;</span>姓名<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-noborder hl-input-nopadding"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"请输入持卡人姓名"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4"</span><span class="nt">&gt;</span>证件<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-8 hl-select-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"hl-select-noborder hl-select-nopadding"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option&gt;</span>身份证<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>护照<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>军官证<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>警官证<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>港澳通行证<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>其他<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4"</span><span class="nt">&gt;</span>证件号<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-noborder hl-input-nopadding"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"请输入证件号码"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-4"</span><span class="nt">&gt;</span>手机号<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"hl-input-noborder hl-input-nopadding"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"请输入留存银行的手机号码"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
 
 <p>Utilities to spice up the alignment and styling of checkbox and radio controls.</p>
 
-<div class="docs-example clearfix"><form>
-  <div class="form-checkbox">
-    <label>
-      <input type="checkbox" checked="checked" />
-      Available for hire
-    </label>
-    <p class="note">
-      This will do insanely <strong>awesome</strong> and <strong>amazing</strong> things!
-    </p>
+<p>This part is just a usage of other components’ styles.</p>
+
+<div class="docs-example clearfix"><div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 请选择群支付类型
+</div>
+<div class="hl-list-group hl-list-group-pl">
+  <div class="hl-list-group-item">
+    <span class="hl-icon-checkbox-circle hl-text-green"></span> 机票
   </div>
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
-      Available for hire
-    <span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"note"</span><span class="nt">&gt;</span>
-      This will do insanely <span class="nt">&lt;strong&gt;</span>awesome<span class="nt">&lt;/strong&gt;</span> and <span class="nt">&lt;strong&gt;</span>amazing<span class="nt">&lt;/strong&gt;</span> things!
-    <span class="nt">&lt;/p&gt;</span>
+  <div class="hl-list-group-item">
+    <span class="hl-icon-checkbox-circle-outline hl-text-green"></span> 火车票
+  </div>
+  <div class="hl-list-group-item hl-disabled-text">
+    <span class="hl-icon-checkbox-circle-outline"></span> 专车
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-tips"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-tips-icon hl-icon-dot"</span><span class="nt">&gt;&lt;/span&gt;</span> 请选择群支付类型
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-checkbox-circle hl-text-green"</span><span class="nt">&gt;&lt;/span&gt;</span> 机票
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-checkbox-circle-outline hl-text-green"</span><span class="nt">&gt;&lt;/span&gt;</span> 火车票
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-disabled-text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-checkbox-circle-outline"</span><span class="nt">&gt;&lt;/span&gt;</span> 专车
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="docs-example clearfix"><div class="hl-tips">
+  <span class="hl-tips-icon hl-icon-dot"></span> 请选择群支付类型
+</div>
+<div class="hl-list-group hl-list-group-pl">
+  <div class="hl-list-group-item">
+    机票 <span class="hl-icon-checkbox-circle hl-text-blue hl-right"></span>
+  </div>
+  <div class="hl-list-group-item">
+    火车票 <span class="hl-icon-checkbox-circle-outline hl-text-blue hl-right"></span>
+  </div>
+  <div class="hl-list-group-item hl-disabled-text">
+    专车 <span class="hl-icon-checkbox-circle-outline hl-right"></span>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-tips"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-tips-icon hl-icon-dot"</span><span class="nt">&gt;&lt;/span&gt;</span> 请选择群支付类型
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group hl-list-group-pl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    机票 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-checkbox-circle hl-text-blue hl-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item"</span><span class="nt">&gt;</span>
+    火车票 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-checkbox-circle-outline hl-text-blue hl-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-list-group-item hl-disabled-text"</span><span class="nt">&gt;</span>
+    专车 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon-checkbox-circle-outline hl-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <p>You may also add emphasis to the label:</p>
 
@@ -457,38 +528,17 @@
 
 <p>Attached an input and button to one another.</p>
 
-<div class="docs-example clearfix"><form>
-  <div class="input-group">
-    <input type="text" placeholder="Username" />
-    <span class="input-group-button">
-      <button class="btn">
-        <span class="octicon octicon-clippy"></span>
-      </button>
-    </span>
-  </div>
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Username"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-button"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"octicon octicon-clippy"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
-
-<h2 id="form-actions">Form actions</h2>
-
-<p>Align buttons to the right—via <code class="highlighter-rouge">float: right</code> on the buttons—in forms with <code class="highlighter-rouge">.form-actions</code>. The floats are automatically cleared for you.</p>
-
-<div class="docs-example clearfix"><div class="form-actions">
-  <button type="button" class="btn btn-primary">Save changes</button>
-  <button type="button" class="btn">Cancel</button>
+<div class="docs-example clearfix"><div class="hl-input-group">
+  <input type="text" placeholder="Username" />
+  <span class="hl-input-group-button">
+    <button class="hl-btn hl-btn-primary">Confirm</button>
+  </span>
 </div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-actions"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-input-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Username"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-input-group-button"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>Confirm<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
@@ -499,7 +549,7 @@
 
       <footer class="footer">
         Copyright Happy Tech Inc 2016.<br>
-        Created and maintained by the CSS team at 航班管家. <strong>Currently v1.0.0.</strong>
+        Created and maintained by the H5 team at 航班管家. <strong>Currently v1.0.0.</strong>
       </footer>
     </div>
 

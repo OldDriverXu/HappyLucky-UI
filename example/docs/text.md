@@ -49,6 +49,16 @@ Textual alignment has 3 mode: **left**, **center**, **right**.
 <p class="hl-text-center">This is hl-text-center.</p>
 {% endexample %}
 
+## Textual Weight
+
+Use `.hl-text-bold` to make text become bold, so does `.hl-text-bolder`.
+
+{% example html %}
+<p class="">This is normal text.</p>
+<p class="hl-text-bold">This is hl-text-bold.</p>
+<p class="hl-text-bolder">This is hl-text-bolder.</p>
+{% endexample %}
+
 ## Textual Ellipsis
 
 If you want to hide textual content because of textual length, use `.hl-text-ellipsis` to decorate your textual element.

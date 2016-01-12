@@ -14,8 +14,6 @@
 
 // Colors
 //
-//
-
 $white:                      #fff !default; // for title text
 $black:                      #222222 !default; // for normal text
 $black-light:                #383838 !default;
@@ -39,22 +37,18 @@ $brand-info:                 #5bc0de !default;
 $brand-warning:              #f0ad4e !default;
 $brand-danger:               #d9534f !default;
 
-
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-
 $enable-flex:                false !default;
 $enable-rounded:             true !default;
 $enable-shadows:             false !default;
 $enable-transitions:         false !default;
 
-
 // Spacing
 //
 // Control the default styling of most elements by modifying these
 // variables. Mostly focused on spacing.
-
 $spacer:                     .6rem !default;
 $spacer-x:                   .75rem !default;
 $spacer-y:                   .75rem !default;
@@ -67,23 +61,19 @@ $html-bg:                   $gray-lightest !default;
 // Body
 //
 // Setting for the '<body>' element.
-//
 $body-bg:                    $white !default;
 $body-color:                 $black !default;
 
 // Links
 //
 // Style anchor elements.
-
 $link-color:                 $blue !default;
 $link-decoration:            none !default;
 $link-hover-decoration:      none !default;
 
-
 // Typography
 //
 //  Font, line-height, and color for body text, headings, and more.
-
 $font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -136,7 +126,7 @@ $btn-padding-y:              $spacer-y/2 !default;
 $btn-padding-x-sm:           $spacer-x !default;
 $btn-padding-y-sm:           $spacer-y/3 !default;
 
-$btn-padding-x-lg:           1.25rem !default;
+$btn-padding-x-lg:           $spacer-x*4/3 !default;
 $btn-padding-y-lg:           $spacer-y !default;
 
 $btn-font-weight:            normal !default;
@@ -193,11 +183,9 @@ $nav-tabs-bg:                #e8edf1 !default;
 $nav-tabs-active-color:      $black !default;
 $nav-tabs-active-bg:         $white !default;
 
-
 // Form states and alerts
 //
 // Define colors for form feedback states and, by default, alerts.
-
 $state-success-text:         #3c763d !default;
 $state-success-bg:           #dff0d8 !default;
 $state-success-border:       darken($state-success-bg, 5%) !default;
@@ -214,16 +202,15 @@ $state-danger-text:          #a94442 !default;
 $state-danger-bg:            #f2dede !default;
 $state-danger-border:        darken($state-danger-bg, 5%) !default;
 
-
 // Inputs
 $input-padding-x:            $spacer-x !default;
 $input-padding-y:            $spacer-y/2 !default;
 
 $input-color:                $gray-dark !default;
 $input-bg:                   $white !default;
-$input-bg-disabled:          $gray-lightest !default;
+$input-bg-disabled:          $gray-light !default;
 
-$input-border:               $gray-light !default;
+$input-border:               #ccc !default;
 $input-border-focus:         $blue !default;
 
 $input-color-placeholder:    #999 !default;
@@ -236,7 +223,6 @@ $box-border-color:           $border-color !default;
 
 $box-border-spacer-x:        $spacer-x !default;
 $box-border-spacer-y:        $spacer-y !default;
-
 
 // List group
 $list-group-bg:              $white !default;

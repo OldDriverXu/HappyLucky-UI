@@ -22,18 +22,26 @@
 }
 
 // Text alignment
-.text-left{
+.text-left {
   text-align: left;
 }
-.text-right{
+.text-right {
   text-align: right;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
 
+// bold
+.text-bold {
+  font-weight: bold;
+}
+.text-bolder {
+  font-weight: bolder;
+}
+
 // ellipsis
-.text-ellipsis{
+.text-ellipsis {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;

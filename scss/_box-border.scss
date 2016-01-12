@@ -14,11 +14,16 @@
   margin: 0;
   padding: $box-border-spacer-y $box-border-spacer-x;
   background-color: $box-border-bg;
-
 }
 
 .box-border-bottom {
   @include border(bottom, $border-color);
+  margin: 0;
+  padding: $box-border-spacer-y $box-border-spacer-x;
+  background-color: $box-border-bg;
+}
+
+.box-border-none {
   margin: 0;
   padding: $box-border-spacer-y $box-border-spacer-x;
   background-color: $box-border-bg;

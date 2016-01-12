@@ -1,7 +1,12 @@
+@import "variables";
+
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?xss7yg');
-  src: url('fonts/icomoon.eot?xss7yg#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?xss7yg') format('truetype'), url('fonts/icomoon.woff?xss7yg') format('woff'), url('fonts/icomoon.svg?xss7yg#icomoon') format('svg');
+  src: url($font-path + '/icomoon.eot?' + $font-postfix);
+  src: url($font-path + '/icomoon.eot?' + $font-postfix + '#iefix') format('embedded-opentype'),
+    url($font-path + '/icomoon.ttf?' + $font-postfix) format('truetype'),
+    url($font-path + '/icomoon.woff?' + $font-postfix) format('woff'),
+    url($font-path + '/icomoon.svg?' + $font-postfix) format('svg');
   font-weight: normal;
   font-style: normal;
 }

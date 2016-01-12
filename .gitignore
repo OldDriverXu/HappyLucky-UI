@@ -1,5 +1,4 @@
 node_modules
-/css
 /example/.bundle/config
 /example/bin/
 /example/vendor/

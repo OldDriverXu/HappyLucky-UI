@@ -66,13 +66,13 @@ In practice, your columns will look like the example below.
 
 ### Centered
 
-Columns can be [centered](/utilities/#centering-content) by adding `.hl-centered` to the `.hl-col-x` class.
+Columns can be [centered](/utilities/#position) by adding `.hl-center` to the `.hl-col-x` class.
 
 {% example html %}
 <div class="container grid-color">
   <div class="hl-row">
-    <div class="hl-col-6 hl-centered">
-      .hl-centered
+    <div class="hl-col-6 hl-center">
+      .hl-center
     </div>
   </div>
 </div>

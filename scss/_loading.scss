@@ -40,8 +40,8 @@
 
   .loading-icon {
     display: inline-block;
-    font-size: 1.5rem;
-    img {
+    font-size: 2rem;
+    .spinner {
       width: 2rem;
       height: 2rem;
       animation: spin 5s linear infinite;

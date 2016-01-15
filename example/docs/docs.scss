@@ -358,3 +358,100 @@ body {
 .swatch-gray-light { background-color: $brand-gray-light; }
 .swatch-gray { background-color: $brand-gray; }
 .swatch-gray-dark { background-color: $brand-gray-dark; }
+
+
+// for ico-font page
+.glyph {
+    font-size: 16px;
+    width: 15em;
+    padding-bottom: 1em;
+    margin-right: 4em;
+    margin-bottom: 1em;
+    float: left;
+    overflow: hidden;
+}
+.liga {
+    width: 80%;
+    width: calc(100% - 2.5em);
+}
+.talign-right {
+    text-align: right;
+}
+.talign-center {
+    text-align: center;
+}
+.bgc1 {
+    background: #f1f1f1;
+}
+.fgc1 {
+    color: #999;
+}
+.fgc0 {
+    color: #000;
+}
+.mvm {
+    margin-top: .75em;
+    margin-bottom: .75em;
+}
+.mtn {
+    margin-top: 0;
+}
+.mtl, .mal {
+    margin-top: 1.5em;
+}
+.mbl, .mal {
+    margin-bottom: 1.5em;
+}
+.mal, .mhl {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+.mhmm {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.mls {
+    margin-left: .25em;
+}
+.ptl {
+    padding-top: 1.5em;
+}
+.pbs, .pvs {
+    padding-bottom: .25em;
+}
+.pvs, .pts {
+    padding-top: .25em;
+}
+.unit {
+    float: left;
+}
+.unitRight {
+    float: right;
+}
+.size1of2 {
+    width: 50%;
+}
+.size1of1 {
+    width: 100%;
+}
+.hidden-true {
+    display: none;
+}
+.textbox0 {
+    width: 3em;
+    background: #f1f1f1;
+    padding: .25em .5em;
+    line-height: 1.5;
+    height: 1.5em;
+}
+#testDrive {
+    display: block;
+    padding-top: 24px;
+    line-height: 1.5;
+}
+.fs0 {
+    font-size: 16px;
+}
+.fs1 {
+    font-size: 32px;
+}

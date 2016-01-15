@@ -3,108 +3,81 @@ layout: page
 title: Utilities
 ---
 
-There are a handful of utilities in Primer for quick behaviors, floats, colors, alignment, and more.
+There are a handful of utilities for quick behaviors, display, floats, position, full height, fix, separator and more.
 
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Truncation
+## Display
 
-`.css-truncate` will shorten text with an ellipsis. The maximum width of the truncated text can be changed by overriding the max-width of the .css-truncate-target.
+- `.hl-show`: display block
+- `.hl-hide`: display none
+- `.hl-inline-block`: display inline-block
 
 {% example html %}
-<span class="branch-ref css-truncate css-truncate-target">
-  really-long-branch-name
-</span>
+<div class="hl-show">抬头见明月</div>
+<div class="hl-hide">下句呢？</div>
+<div class="hl-inline-block hl-separator">低头思故乡</div>
 {% endexample %}
 
-You can reveal the entire string on hover with the addition of `.expandable`.
+## Float
+
+- `.hl-left`: float left
+- `.hl-right`: float right
+- `.hl-clearfix`: clear float
 
 {% example html %}
-<span class="css-truncate expandable">
-  <span class="branch-ref css-truncate-target">this-is-a-really-long-branch-name</span>
-</span>
+<div class="hl-left">Float left</div>
+<div class="hl-clearfix"></div>
+<div class="hl-right">Float right</div>
 {% endexample %}
 
-## Counter
+## Position
 
-Add a number or unread indicator to navs and more with a counter.
+- `.hl-relative`: Sets position relative.
+- `.hl-center`: Centers content **horizontally**. Can be used inside or outside the grid.
+- `.hl-middle`: Centers content **vertically**. Must have a relative parent.
+- `.hl-middle-R`: Centers content **vertically** and to the parent's right.
 
-{% example html %}
-<span class="counter">9</span>
-{% endexample %}
-
-## Floats
-
-Quickly float something to the left or right, and clear them later.
+**Hands up!** `.hl-text-center｀ is for text alignment.
 
 {% example html %}
-<div class="clearfix">
-  <code class="left">.left</code>
-  <code class="right">.right</code>
-</div>
-{% endexample %}
-
-## Centering content
-
-Easily center **block level content** if it's not taking up the full width of the parent. Can be used [on grid columns](/layout/#centered) or any other elements.
-
-{% example html %}
-<nav class="menu centered">
-  <a class="menu-item selected" href="#">Account</a>
-  <a class="menu-item" href="#">Profile</a>
-  <a class="menu-item" href="#">Emails</a>
-  <a class="menu-item" href="#">Notifications</a>
-</nav>
-{% endexample %}
-
-
-## Text alignment
-
-Change the `text-align` on elements with a class.
-
-{% example html %}
-<p class="text-left">Left aligned text.</p>
-<p class="text-right">Right aligned text.</p>
-<p class="text-center">Center aligned text.</p>
-{% endexample %}
-
-## Text color
-
-Change the `color` of elements with a class.
-
-{% example html %}
-<p class="text-open">Green/open text</p>
-<p class="text-closed">Red/closed text</p>
-<p class="text-merged">Merged text</p>
-<p class="text-pending">Pending text</p>
-{% endexample %}
-
-`.text-closed` and `.text-failure` are the same, as well as `.text-open` and `.text-success`.
-
-## Muted link
-
-When you need a hyperlink to not be `$brand-blue`, use a `.muted-link`.
-
-{% example html %}
-Here is some example text. <a class="muted-link" href="#">And a muted link.</a>
-{% endexample %}
-
-## Flex table
-
-Flex table is a module for creating dynamically resizable elements that always sit on the same horizontal line (e.g., they never break to a new line). Using table styles in our CSS means it's cross browser friendly back to at least IE9.
-
-Additional `margin` or `padding` may be required to properly space content.
-
-{% example html %}
-<div class="flex-table">
-  <div class="flex-table-item flex-table-item-primary">
-    <input class="input-block" type="text" placeholder="Long flexible input form">
-  </div>
-  <div class="flex-table-item">
-    <button class="btn" type="button">Button</button>
+<div class="hl-box-border">
+  <div class="hl-row hl-relative">
+    <div class="hl-col-6 hl-center" style="background: #2190e7">明日复明日</div>
+    <div>明日何其多</div>
+    <div class="hl-middle-R">我生待明日，万事成蹉跎。</div>
   </div>
 </div>
+{% endexample %}
+
+## Full height
+
+- `.hl-full-height`: A container has a full height.
+- `.hl-full-height-R`: A container has a full height and to the parent's right.
+
+## Fix
+
+- `.hl-fix-top`: Fix to the top of screen.
+- `.hl-fix-bottom`: Fix to the bottom of screen.
+
+{% example html %}
+<div class="hl-text-green">请看屏幕最上面和最下面</div>
+<div class="hl-fix-top">青青子衿，悠悠我心。</div>
+<div class="hl-fix-bottom">长亭外，古道边，芳草碧连天。</div>
+{% endexample %}
+
+## Separator
+
+- `hl-separator`: separates conponents with min-height.
+- `hl-separator-blank`: has no background color and default font color.
+
+{% example html %}
+<div class="hl-box-border">我愿顺流而下，找寻她的踪迹。</div>
+<div class="hl-separator"></div>
+<div class="hl-box-border">却见仿佛依稀，她在水中伫立。</div>
+<div class="hl-separator-blank"></div>
+<div class="hl-box-border">有位佳人，在水一方</div>
 {% endexample %}

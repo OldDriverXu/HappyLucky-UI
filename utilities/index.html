@@ -63,20 +63,23 @@
   <a class="menu-item " href="/HappyLucky-UI/list-group/">
     List Group
   </a>
+  <a class="menu-item " href="/HappyLucky-UI/box-border/">
+    Box Border
+  </a>
   <a class="menu-item " href="/HappyLucky-UI/forms/">
     Forms
   </a>
   <a class="menu-item " href="/HappyLucky-UI/nav/">
     Navigation
   </a>
-  <a class="menu-item " href="/HappyLucky-UI/alerts/">
-    Alerts
+  <a class="menu-item " href="/HappyLucky-UI/popup/">
+    Popup
   </a>
-  <a class="menu-item " href="/HappyLucky-UI/blankslate/">
-    Blankslate
+  <a class="menu-item " href="/HappyLucky-UI/loading/">
+    Loading
   </a>
-  <a class="menu-item " href="/HappyLucky-UI/states/">
-    States
+  <a class="menu-item " href="/HappyLucky-UI/icon-font/">
+    Icon-Font
   </a>
   <a class="menu-item " href="/HappyLucky-UI/tips/">
     Tips
@@ -105,134 +108,114 @@
       Utilities
     </h1>
     <div class="markdown-body">
-      <p>There are a handful of utilities in Primer for quick behaviors, floats, colors, alignment, and more.</p>
+      <p>There are a handful of utilities for quick behaviors, display, floats, position, full height, fix, separator and more.</p>
 
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#truncation" id="markdown-toc-truncation">Truncation</a></li>
-  <li><a href="#counter" id="markdown-toc-counter">Counter</a></li>
-  <li><a href="#floats" id="markdown-toc-floats">Floats</a></li>
-  <li><a href="#centering-content" id="markdown-toc-centering-content">Centering content</a></li>
-  <li><a href="#text-alignment" id="markdown-toc-text-alignment">Text alignment</a></li>
-  <li><a href="#text-color" id="markdown-toc-text-color">Text color</a></li>
-  <li><a href="#muted-link" id="markdown-toc-muted-link">Muted link</a></li>
-  <li><a href="#flex-table" id="markdown-toc-flex-table">Flex table</a></li>
+  <li><a href="#display" id="markdown-toc-display">Display</a></li>
+  <li><a href="#float" id="markdown-toc-float">Float</a></li>
+  <li><a href="#position" id="markdown-toc-position">Position</a></li>
+  <li><a href="#full-height" id="markdown-toc-full-height">Full height</a></li>
+  <li><a href="#fix" id="markdown-toc-fix">Fix</a></li>
+  <li><a href="#separator" id="markdown-toc-separator">Separator</a></li>
 </ul>
 
-<h2 id="truncation">Truncation</h2>
+<h2 id="display">Display</h2>
 
-<p><code class="highlighter-rouge">.css-truncate</code> will shorten text with an ellipsis. The maximum width of the truncated text can be changed by overriding the max-width of the .css-truncate-target.</p>
+<ul>
+  <li><code class="highlighter-rouge">.hl-show</code>: display block</li>
+  <li><code class="highlighter-rouge">.hl-hide</code>: display none</li>
+  <li><code class="highlighter-rouge">.hl-inline-block</code>: display inline-block</li>
+</ul>
 
-<div class="docs-example clearfix"><span class="branch-ref css-truncate css-truncate-target">
-  really-long-branch-name
-</span></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"branch-ref css-truncate css-truncate-target"</span><span class="nt">&gt;</span>
-  really-long-branch-name
-<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<div class="docs-example clearfix"><div class="hl-show">抬头见明月</div>
+<div class="hl-hide">下句呢？</div>
+<div class="hl-inline-block hl-separator">低头思故乡</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-show"</span><span class="nt">&gt;</span>抬头见明月<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-hide"</span><span class="nt">&gt;</span>下句呢？<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-inline-block hl-separator"</span><span class="nt">&gt;</span>低头思故乡<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>You can reveal the entire string on hover with the addition of <code class="highlighter-rouge">.expandable</code>.</p>
+<h2 id="float">Float</h2>
 
-<div class="docs-example clearfix"><span class="css-truncate expandable">
-  <span class="branch-ref css-truncate-target">this-is-a-really-long-branch-name</span>
-</span></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"css-truncate expandable"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"branch-ref css-truncate-target"</span><span class="nt">&gt;</span>this-is-a-really-long-branch-name<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<ul>
+  <li><code class="highlighter-rouge">.hl-left</code>: float left</li>
+  <li><code class="highlighter-rouge">.hl-right</code>: float right</li>
+  <li><code class="highlighter-rouge">.hl-clearfix</code>: clear float</li>
+</ul>
 
-<h2 id="counter">Counter</h2>
+<div class="docs-example clearfix"><div class="hl-left">Float left</div>
+<div class="hl-clearfix"></div>
+<div class="hl-right">Float right</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-left"</span><span class="nt">&gt;</span>Float left<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-clearfix"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-right"</span><span class="nt">&gt;</span>Float right<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>Add a number or unread indicator to navs and more with a counter.</p>
+<h2 id="position">Position</h2>
 
-<div class="docs-example clearfix"><span class="counter">9</span></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"counter"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<ul>
+  <li><code class="highlighter-rouge">.hl-relative</code>: Sets position relative.</li>
+  <li><code class="highlighter-rouge">.hl-center</code>: Centers content <strong>horizontally</strong>. Can be used inside or outside the grid.</li>
+  <li><code class="highlighter-rouge">.hl-middle</code>: Centers content <strong>vertically</strong>. Must have a relative parent.</li>
+  <li><code class="highlighter-rouge">.hl-middle-R</code>: Centers content <strong>vertically</strong> and to the parent’s right.</li>
+</ul>
 
-<h2 id="floats">Floats</h2>
+<p><strong>Hands up!</strong> `.hl-text-center｀ is for text alignment.</p>
 
-<p>Quickly float something to the left or right, and clear them later.</p>
-
-<div class="docs-example clearfix"><div class="clearfix">
-  <code class="left">.left</code>
-  <code class="right">.right</code>
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>.left<span class="nt">&lt;/code&gt;</span>
-  <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>.right<span class="nt">&lt;/code&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="centering-content">Centering content</h2>
-
-<p>Easily center <strong>block level content</strong> if it’s not taking up the full width of the parent. Can be used <a href="/layout/#centered">on grid columns</a> or any other elements.</p>
-
-<div class="docs-example clearfix"><nav class="menu centered">
-  <a class="menu-item selected" href="#">Account</a>
-  <a class="menu-item" href="#">Profile</a>
-  <a class="menu-item" href="#">Emails</a>
-  <a class="menu-item" href="#">Notifications</a>
-</nav></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu centered"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item selected"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/nav&gt;</span></code></pre></div>
-
-<h2 id="text-alignment">Text alignment</h2>
-
-<p>Change the <code class="highlighter-rouge">text-align</code> on elements with a class.</p>
-
-<div class="docs-example clearfix"><p class="text-left">Left aligned text.</p>
-<p class="text-right">Right aligned text.</p>
-<p class="text-center">Center aligned text.</p></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-left"</span><span class="nt">&gt;</span>Left aligned text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-right"</span><span class="nt">&gt;</span>Right aligned text.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Center aligned text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
-
-<h2 id="text-color">Text color</h2>
-
-<p>Change the <code class="highlighter-rouge">color</code> of elements with a class.</p>
-
-<div class="docs-example clearfix"><p class="text-open">Green/open text</p>
-<p class="text-closed">Red/closed text</p>
-<p class="text-merged">Merged text</p>
-<p class="text-pending">Pending text</p></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-open"</span><span class="nt">&gt;</span>Green/open text<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-closed"</span><span class="nt">&gt;</span>Red/closed text<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-merged"</span><span class="nt">&gt;</span>Merged text<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-pending"</span><span class="nt">&gt;</span>Pending text<span class="nt">&lt;/p&gt;</span></code></pre></div>
-
-<p><code class="highlighter-rouge">.text-closed</code> and <code class="highlighter-rouge">.text-failure</code> are the same, as well as <code class="highlighter-rouge">.text-open</code> and <code class="highlighter-rouge">.text-success</code>.</p>
-
-<h2 id="muted-link">Muted link</h2>
-
-<p>When you need a hyperlink to not be <code class="highlighter-rouge">$brand-blue</code>, use a <code class="highlighter-rouge">.muted-link</code>.</p>
-
-<div class="docs-example clearfix">Here is some example text. <a class="muted-link" href="#">And a muted link.</a></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html">Here is some example text. <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"muted-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>And a muted link.<span class="nt">&lt;/a&gt;</span></code></pre></div>
-
-<h2 id="flex-table">Flex table</h2>
-
-<p>Flex table is a module for creating dynamically resizable elements that always sit on the same horizontal line (e.g., they never break to a new line). Using table styles in our CSS means it’s cross browser friendly back to at least IE9.</p>
-
-<p>Additional <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> may be required to properly space content.</p>
-
-<div class="docs-example clearfix"><div class="flex-table">
-  <div class="flex-table-item flex-table-item-primary">
-    <input class="input-block" type="text" placeholder="Long flexible input form" />
-  </div>
-  <div class="flex-table-item">
-    <button class="btn" type="button">Button</button>
+<div class="docs-example clearfix"><div class="hl-box-border">
+  <div class="hl-row hl-relative">
+    <div class="hl-col-6 hl-center" style="background: #2190e7">明日复明日</div>
+    <div>明日何其多</div>
+    <div class="hl-middle-R">我生待明日，万事成蹉跎。</div>
   </div>
 </div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table-item flex-table-item-primary"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-block"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Long flexible input form"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-box-border"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-row hl-relative"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-col-6 hl-center"</span> <span class="na">style=</span><span class="s">"background: #2190e7"</span><span class="nt">&gt;</span>明日复明日<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>明日何其多<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-middle-R"</span><span class="nt">&gt;</span>我生待明日，万事成蹉跎。<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="full-height">Full height</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">.hl-full-height</code>: A container has a full height.</li>
+  <li><code class="highlighter-rouge">.hl-full-height-R</code>: A container has a full height and to the parent’s right.</li>
+</ul>
+
+<h2 id="fix">Fix</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">.hl-fix-top</code>: Fix to the top of screen.</li>
+  <li><code class="highlighter-rouge">.hl-fix-bottom</code>: Fix to the bottom of screen.</li>
+</ul>
+
+<div class="docs-example clearfix"><div class="hl-text-green">请看屏幕最上面和最下面</div>
+<div class="hl-fix-top">青青子衿，悠悠我心。</div>
+<div class="hl-fix-bottom">长亭外，古道边，芳草碧连天。</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-text-green"</span><span class="nt">&gt;</span>请看屏幕最上面和最下面<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-fix-top"</span><span class="nt">&gt;</span>青青子衿，悠悠我心。<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-fix-bottom"</span><span class="nt">&gt;</span>长亭外，古道边，芳草碧连天。<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="separator">Separator</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">hl-separator</code>: separates conponents with min-height.</li>
+  <li><code class="highlighter-rouge">hl-separator-blank</code>: has no background color and default font color.</li>
+</ul>
+
+<div class="docs-example clearfix"><div class="hl-box-border">我愿顺流而下，找寻她的踪迹。</div>
+<div class="hl-separator"></div>
+<div class="hl-box-border">却见仿佛依稀，她在水中伫立。</div>
+<div class="hl-separator-blank"></div>
+<div class="hl-box-border">有位佳人，在水一方</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-box-border"</span><span class="nt">&gt;</span>我愿顺流而下，找寻她的踪迹。<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-separator"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-box-border"</span><span class="nt">&gt;</span>却见仿佛依稀，她在水中伫立。<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-separator-blank"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-box-border"</span><span class="nt">&gt;</span>有位佳人，在水一方<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
     </div>
@@ -242,7 +225,7 @@
 
       <footer class="footer">
         Copyright Happy Tech Inc 2016.<br>
-        Created and maintained by the H5 team at 航班管家. <strong>Currently v1.1.0.</strong>
+        Created and maintained by the H5 team at 航班管家. <strong>Currently v1.2.0.</strong>
       </footer>
     </div>
 

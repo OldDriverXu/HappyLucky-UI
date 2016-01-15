@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Loading &middot; HappyLucky UI
+    </title>
+
+    <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
+    <link rel="stylesheet" href="/HappyLucky-UI/css/hl-ui.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/HappyLucky-UI/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/HappyLucky-UI/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/HappyLucky-UI/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          HappyLucky UI
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/HappyLucky-UI/scaffolding">Docs</a>
+          <a  href="/HappyLucky-UI/about">About</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git" target="_blank">GitHub</a>
+          <a href="http://jp.rsscc.com/hangban/flights" target="_blank">Application</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/typography/">
+    Typography
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/text/">
+    Text
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/list-group/">
+    List Group
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/box-border/">
+    Box Border
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/popup/">
+    Popup
+  </a>
+  <a class="menu-item selected" href="/HappyLucky-UI/loading/">
+    Loading
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/icon-font/">
+    Icon-Font
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/tips/">
+    Tips
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Loading
+    </h1>
+    <div class="markdown-body">
+      <p>I know you know it.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#basic-example" id="markdown-toc-basic-example">Basic example</a></li>
+  <li><a href="#with-mask-and-text" id="markdown-toc-with-mask-and-text">With mask and text</a></li>
+</ul>
+
+<h2 id="basic-example">Basic example</h2>
+
+<p>Use <code class="highlighter-rouge">.hl-active</code> to activate it.</p>
+
+<div class="docs-example clearfix"><div id="loading-wrap1" class="hl-loading-wrap">
+  <div class="hl-loading">
+    <div class="hl-loading-icon hl-text-blue">
+      <span class="hl-spinner hl-icon hl-icon-spinner-curve"></span>
+    </div>
+  </div>
+</div>
+<button id="loading1" class="hl-btn hl-btn-primary-outline">Show Loading</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loading-wrap1"</span> <span class="na">class=</span><span class="s">"hl-loading-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-icon hl-text-blue"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">'hl-spinner hl-icon hl-icon-spinner-curve'</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"loading1"</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary-outline"</span><span class="nt">&gt;</span>Show Loading<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="with-mask-and-text">With mask and text</h2>
+
+<p>Use <code class="highlighter-rouge">.hl-active</code> to activate it.</p>
+
+<div class="docs-example clearfix"><div id="loading-wrap2" class="hl-loading-wrap">
+  <div class="hl-loading-mask">
+    <div class="hl-loading">
+      <div class="hl-loading-icon hl-text-orange">
+        <span class="hl-spinner hl-icon hl-icon-spinner-sun"></span>
+      </div>
+      <div class="hl-loading-content">数据正在加载中，请耐心等待</div>
+    </div>
+  </div>
+</div>
+<button id="loading2" class="hl-btn hl-btn-primary-outline">Show Loading</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loading-wrap2"</span> <span class="na">class=</span><span class="s">"hl-loading-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-mask"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-icon hl-text-orange"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">'hl-spinner hl-icon hl-icon-spinner-sun'</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-content"</span><span class="nt">&gt;</span>数据正在加载中，请耐心等待<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"loading2"</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary-outline"</span><span class="nt">&gt;</span>Show Loading<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<div class="docs-example clearfix"><div>Javascript code for the click event of the buttons, please ignore it</div>
+<script>
+  document.getElementById('loading1').addEventListener('click', function() {
+    var target = document.getElementById('loading-wrap1');
+    toggle(target);
+  }, false);
+
+  document.getElementById('loading2').addEventListener('click', function() {
+    var target = document.getElementById('loading-wrap2');
+    toggle(target);
+  }, false);
+
+  function toggle(target) {
+    var className = target.className;
+
+    if (className.search(/hl-active/i) < 0) {
+      className = className + ' hl-active';
+    } else {
+      className = className.replace(/hl-active/i, '');
+      className = trim(className);
+    }
+
+    target.className = className;
+  }
+
+  function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+  }
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>Javascript code for the click event of the buttons, please ignore it<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'loading1'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'loading-wrap1'</span><span class="p">);</span>
+    <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'loading2'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'loading-wrap2'</span><span class="p">);</span>
+    <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+
+  <span class="kd">function</span> <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="nx">target</span><span class="p">.</span><span class="nx">className</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">className</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/hl-active/i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span> <span class="o">+</span> <span class="s1">' hl-active'</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/hl-active/i</span><span class="p">,</span> <span class="s1">''</span><span class="p">);</span>
+      <span class="nx">className</span> <span class="o">=</span> <span class="nx">trim</span><span class="p">(</span><span class="nx">className</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">target</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">trim</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">^</span><span class="se">\s</span><span class="sr">*</span><span class="se">)</span><span class="sr">|</span><span class="se">(\s</span><span class="sr">*$</span><span class="se">)</span><span class="sr">/g</span><span class="p">,</span> <span class="s2">""</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Happy Tech Inc 2016.<br>
+        Created and maintained by the H5 team at 航班管家. <strong>Currently v1.2.0.</strong>
+      </footer>
+    </div>
+
+    <script src="/HappyLucky-UI/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

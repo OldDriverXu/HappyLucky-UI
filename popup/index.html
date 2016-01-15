@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Popup &middot; HappyLucky UI
+    </title>
+
+    <link rel="stylesheet" href="/HappyLucky-UI/docs.css">
+    <link rel="stylesheet" href="/HappyLucky-UI/css/hl-ui.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/HappyLucky-UI/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/HappyLucky-UI/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/HappyLucky-UI/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          HappyLucky UI
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/HappyLucky-UI/scaffolding">Docs</a>
+          <a  href="/HappyLucky-UI/about">About</a>
+          <a href="https://github.com/fatsheepcn/HappyLucky-UI.git" target="_blank">GitHub</a>
+          <a href="http://jp.rsscc.com/hangban/flights" target="_blank">Application</a>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="columns docs-layout">
+  <div class="one-fourth column">
+    
+      <nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/typography/">
+    Typography
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/text/">
+    Text
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/list-group/">
+    List Group
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/box-border/">
+    Box Border
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/nav/">
+    Navigation
+  </a>
+  <a class="menu-item selected" href="/HappyLucky-UI/popup/">
+    Popup
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/loading/">
+    Loading
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/icon-font/">
+    Icon-Font
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/tips/">
+    Tips
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/utilities/">
+    Utilities
+  </a>
+</nav>
+
+<nav class="menu docs-menu">
+  <a class="menu-item " href="/HappyLucky-UI/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/HappyLucky-UI/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="three-fourths column markdown-body">
+    <h1 class="page-title">
+      Popup
+    </h1>
+    <div class="markdown-body">
+      <p>Flash messages, or alerts, inform users of successful or pending actions. Use them sparingly. Don’t show more than one at a time.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#alert" id="markdown-toc-alert">Alert</a></li>
+  <li><a href="#confirm" id="markdown-toc-confirm">Confirm</a></li>
+</ul>
+
+<h2 id="alert">Alert</h2>
+
+<p>Alert dialog, has one button.</p>
+
+<p>Use <code class="highlighter-rouge">.hl-active</code> to activate popup.</p>
+
+<div class="docs-example clearfix"><div id="popup-alert" class="hl-overlay">
+  <div class="hl-popup">
+    <div class="hl-popup-header">管家提示</div>
+    <div class="hl-popup-body">网络超时，请稍后重试</div>
+    <div class="hl-popup-footer">
+      <a id="alert-btn" class="hl-popup-alert">确定</a>
+    </div>
+  </div>
+</div>
+<button id="alert-trigger" class="hl-btn hl-btn-primary">Alert Dialog</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"popup-alert"</span> <span class="na">class=</span><span class="s">"hl-overlay"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup-header"</span><span class="nt">&gt;</span>管家提示<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup-body"</span><span class="nt">&gt;</span>网络超时，请稍后重试<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup-footer"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"alert-btn"</span> <span class="na">class=</span><span class="s">"hl-popup-alert"</span><span class="nt">&gt;</span>确定<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"alert-trigger"</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary"</span><span class="nt">&gt;</span>Alert Dialog<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="confirm">Confirm</h2>
+
+<p>Confirm dialog, has two button.</p>
+
+<p>Use <code class="highlighter-rouge">.hl-active</code> to activate popup.</p>
+
+<div class="docs-example clearfix"><div id="popup-confirm" class="hl-overlay">
+  <div class="hl-popup">
+    <div class="hl-popup-header">管家提示</div>
+    <div class="hl-popup-body">确定要删除联系人吗?</div>
+    <div class="hl-popup-footer">
+      <a id="confirm-btn-yes" class="hl-popup-cancel">取消</a>
+      <a id="confirm-btn-no" class="hl-popup-confirm">确定</a>
+    </div>
+  </div>
+</div>
+<button id="confirm-trigger" class="hl-btn hl-btn-danger">Confirm Dialog</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"popup-confirm"</span> <span class="na">class=</span><span class="s">"hl-overlay"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup-header"</span><span class="nt">&gt;</span>管家提示<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup-body"</span><span class="nt">&gt;</span>确定要删除联系人吗?<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-popup-footer"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"confirm-btn-yes"</span> <span class="na">class=</span><span class="s">"hl-popup-cancel"</span><span class="nt">&gt;</span>取消<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"confirm-btn-no"</span> <span class="na">class=</span><span class="s">"hl-popup-confirm"</span><span class="nt">&gt;</span>确定<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"confirm-trigger"</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-danger"</span><span class="nt">&gt;</span>Confirm Dialog<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<div class="docs-example clearfix"><div>Javascript code for the click event of the buttons, please ignore it</div>
+<script>
+  document.getElementById('alert-trigger').addEventListener('click', function() {
+    var target = document.getElementById('popup-alert');
+    toggle(target);
+  }, false);
+
+  document.getElementById('alert-btn').addEventListener('click', function() {
+    var target = document.getElementById('popup-alert');
+    toggle(target);
+  }, false);
+
+  document.getElementById('confirm-trigger').addEventListener('click', function() {
+    var target = document.getElementById('popup-confirm');
+    toggle(target);
+  }, false);
+
+  document.getElementById('confirm-btn-yes').addEventListener('click', function() {
+    var target = document.getElementById('popup-confirm');
+    toggle(target);
+  }, false);
+
+  document.getElementById('confirm-btn-no').addEventListener('click', function() {
+    var target = document.getElementById('popup-confirm');
+    toggle(target);
+  }, false);
+
+  function toggle(target) {
+    var className = target.className;
+
+    if (className.search(/hl-active/i) < 0) {
+      className = className + ' hl-active';
+    } else {
+      className = className.replace(/hl-active/i, '');
+      className = trim(className);
+    }
+
+    target.className = className;
+  }
+
+  function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+  }
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>Javascript code for the click event of the buttons, please ignore it<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'alert-trigger'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'popup-alert'</span><span class="p">);</span>
+    <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'alert-btn'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'popup-alert'</span><span class="p">);</span>
+    <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'confirm-trigger'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'popup-confirm'</span><span class="p">);</span>
+    <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'confirm-btn-yes'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'popup-confirm'</span><span class="p">);</span>
+    <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'confirm-btn-no'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'popup-confirm'</span><span class="p">);</span>
+    <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+
+  <span class="kd">function</span> <span class="nx">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="nx">target</span><span class="p">.</span><span class="nx">className</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">className</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/hl-active/i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span> <span class="o">+</span> <span class="s1">' hl-active'</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/hl-active/i</span><span class="p">,</span> <span class="s1">''</span><span class="p">);</span>
+      <span class="nx">className</span> <span class="o">=</span> <span class="nx">trim</span><span class="p">(</span><span class="nx">className</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">target</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">trim</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">^</span><span class="se">\s</span><span class="sr">*</span><span class="se">)</span><span class="sr">|</span><span class="se">(\s</span><span class="sr">*$</span><span class="se">)</span><span class="sr">/g</span><span class="p">,</span> <span class="s2">""</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Happy Tech Inc 2016.<br>
+        Created and maintained by the H5 team at 航班管家. <strong>Currently v1.2.0.</strong>
+      </footer>
+    </div>
+
+    <script src="/HappyLucky-UI/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>

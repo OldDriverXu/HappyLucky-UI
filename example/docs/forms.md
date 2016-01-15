@@ -251,6 +251,18 @@ This part is just a usage of other components' styles.
 </div>
 {% endexample %}
 
+## Input search box
+
+Input element with a search icon
+
+{% example html %}
+<div class="hl-input-search">
+  <span class="hl-input-search-icon hl-icon hl-icon-search"></span>
+  <input>
+</div>
+{% endexample %}
+
+
 ## Input group
 
 Attached an input and button to one another.

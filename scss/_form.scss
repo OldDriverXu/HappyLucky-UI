@@ -97,17 +97,18 @@ textarea {
 // input with a search icon
 // example:
 // <div class="input-search">
+//   <span class="input-search-icon">
 //   <input>
 // </div>
 .input-search {
-  @include border(top-bottom, $list-group-border-color);
+  @include border(top-bottom, $border-color);
   position: relative;
-  padding: .4rem .75rem;
-  background-color: #F5F9FA;
+  padding: $input-padding-y $input-padding-x;
+  background-color: $input-search-bg;
 
   input {
     box-sizing: border-box;
-    box-shadow: 0 0 1px 0 $gray;
+    box-shadow: 0 0 1px 0 $input-border;
     border-radius: 1rem;
     width: 100%;
     height: 2rem;
@@ -116,14 +117,12 @@ textarea {
     overflow: hidden;
   }
 
-  &:after {
+  .input-search-icon {
     position: absolute;
-    top: .8rem;
-    left: 1rem;
-    font-family: 'icomoon';
-    content: "\e838";
+    top: .4rem;
+    left: 1.2rem;
     font-size: 1.4rem;
-    color: #2190e7;
+    color: $blue-light;
   }
 }
 

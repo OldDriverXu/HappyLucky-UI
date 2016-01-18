@@ -51,8 +51,9 @@ gulp.task('styles', function() {
 gulp.task('copy', function() {
   return gulp.src([
     './css/*.css',
-    './fonts/**'])
+    './hl-ui/fonts/**'])
   .pipe(gulpif('*.css', gulp.dest('./example/docs/css')))
+  .pipe(gulpif(['*.eot', '*.svg', '*.ttf', '*.woff'], gulp.dest('./fonts')))
   .pipe(gulpif(['*.eot', '*.svg', '*.ttf', '*.woff'], gulp.dest('./example/docs/fonts')))
   .pipe(size({title: 'copy'}));
 });

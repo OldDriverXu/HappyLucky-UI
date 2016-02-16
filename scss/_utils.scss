@@ -87,3 +87,36 @@
 .separator-blank {
   height: 1.2rem;
 }
+
+// Mask (for loading and popup)
+.mask {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 500;
+
+  &.active {
+    display: block;
+  }
+}
+
+.mask-transparent {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 500;
+
+  &.active {
+    display: block;
+  }
+}

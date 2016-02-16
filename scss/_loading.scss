@@ -1,29 +1,12 @@
 @import "variables";
 @import "mixins";
 
-.loading-wrap {
-  display: none;
-
+.mask {
   &.active {
-    display: block;
-  }
-}
-
-.loading-mask {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  opacity: 1;
-  transition: 0.5s;
-  z-index: 500;
-
-  .loading {
-    background-color: #fff;
+    .loading {
+      opacity: 1;
+      background-color: #fff;
+    }
   }
 }
 
@@ -53,23 +36,5 @@
     margin: 0 1rem;
     padding-top: 1rem;
     word-wrap: break-word;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

@@ -16,7 +16,8 @@
   }
 }
 
-.fade {
+// Effects
+.effect-fade {
   opacity: 0;
   transition: opacity .15s linear;
 
@@ -25,11 +26,18 @@
   }
 }
 
-.collapsing {
+.effect-collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
   transition-timing-function: ease;
   transition-duration: .35s;
   transition-property: height;
+}
+
+// Actions
+.action-spinning {
+  display: inline-block;
+  animation: spin 5s infinite linear;
+  -webkit-font-smoothing: antialiased;
 }

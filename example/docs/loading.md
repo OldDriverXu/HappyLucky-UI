@@ -15,10 +15,12 @@ I know you know it.
 Use `.hl-active` to activate it.
 
 {% example html %}
-<div id="loading-wrap1" class="hl-loading-wrap">
+<div id="loading-wrap1" class="hl-mask hl-mask-transparent">
   <div class="hl-loading">
     <div class="hl-loading-icon hl-text-blue">
-      <span class='hl-spinner hl-icon hl-icon-spinner-curve'></span>
+      <div class="hl-spinner">
+        <span class="hl-icon hl-icon-spinner-curve"></span>
+      </div>
     </div>
   </div>
 </div>
@@ -30,14 +32,14 @@ Use `.hl-active` to activate it.
 Use `.hl-active` to activate it.
 
 {% example html %}
-<div id="loading-wrap2" class="hl-loading-wrap">
-  <div class="hl-loading-mask">
-    <div class="hl-loading">
-      <div class="hl-loading-icon hl-text-orange">
-        <span class='hl-spinner hl-icon hl-icon-spinner-sun'></span>
+<div id="loading-wrap2" class="hl-mask">
+  <div class="hl-loading">
+    <div class="hl-loading-icon hl-text-orange">
+      <div class="hl-spinner">
+        <span class="hl-icon hl-icon-spinner-sun"></span>
       </div>
-      <div class="hl-loading-content">数据正在加载中，请耐心等待</div>
     </div>
+    <div class="hl-loading-content">数据正在加载中，请耐心等待</div>
   </div>
 </div>
 <button id="loading2" class="hl-btn hl-btn-primary-outline">Show Loading</button>

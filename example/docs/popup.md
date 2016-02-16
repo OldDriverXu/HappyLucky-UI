@@ -17,7 +17,7 @@ Alert dialog, has one button.
 Use `.hl-active` to activate popup.
 
 {% example html %}
-<div id="popup-alert" class="hl-overlay">
+<div id="popup-alert" class="hl-mask">
   <div class="hl-popup">
     <div class="hl-popup-header">管家提示</div>
     <div class="hl-popup-body">网络超时，请稍后重试</div>
@@ -36,7 +36,7 @@ Confirm dialog, has two button.
 Use `.hl-active` to activate popup.
 
 {% example html %}
-<div id="popup-confirm" class="hl-overlay">
+<div id="popup-confirm" class="hl-mask">
   <div class="hl-popup">
     <div class="hl-popup-header">管家提示</div>
     <div class="hl-popup-body">确定要删除联系人吗?</div>

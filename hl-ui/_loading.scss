@@ -5,8 +5,15 @@
   &.active {
     .loading {
       opacity: 1;
+      pointer-events: none;
       background-color: #fff;
     }
+  }
+}
+
+.mask.mask-transparent.active {
+  .loading {
+    background-color: transparent;
   }
 }
 
@@ -19,6 +26,8 @@
   margin-left: -35%;
   text-align: center;
   border-radius: 0.3rem;
+  opacity: 0;
+  transition: .5s;
   z-index: 999;
 
   .loading-icon {
@@ -27,6 +36,7 @@
     .spinner {
       width: 2rem;
       height: 2rem;
+      line-height: 1;
       animation: spin 5s linear infinite;
     }
   }

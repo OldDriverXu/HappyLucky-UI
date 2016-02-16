@@ -122,18 +122,22 @@
 
 <p>Use <code class="highlighter-rouge">.hl-active</code> to activate it.</p>
 
-<div class="docs-example clearfix"><div id="loading-wrap1" class="hl-loading-wrap">
+<div class="docs-example clearfix"><div id="loading-wrap1" class="hl-mask hl-mask-transparent">
   <div class="hl-loading">
     <div class="hl-loading-icon hl-text-blue">
-      <span class="hl-spinner hl-icon hl-icon-spinner-curve"></span>
+      <div class="hl-spinner">
+        <span class="hl-icon hl-icon-spinner-curve"></span>
+      </div>
     </div>
   </div>
 </div>
 <button id="loading1" class="hl-btn hl-btn-primary-outline">Show Loading</button></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loading-wrap1"</span> <span class="na">class=</span><span class="s">"hl-loading-wrap"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loading-wrap1"</span> <span class="na">class=</span><span class="s">"hl-mask hl-mask-transparent"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-icon hl-text-blue"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">'hl-spinner hl-icon hl-icon-spinner-curve'</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-spinner"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon hl-icon-spinner-curve"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -143,25 +147,25 @@
 
 <p>Use <code class="highlighter-rouge">.hl-active</code> to activate it.</p>
 
-<div class="docs-example clearfix"><div id="loading-wrap2" class="hl-loading-wrap">
-  <div class="hl-loading-mask">
-    <div class="hl-loading">
-      <div class="hl-loading-icon hl-text-orange">
-        <span class="hl-spinner hl-icon hl-icon-spinner-sun"></span>
+<div class="docs-example clearfix"><div id="loading-wrap2" class="hl-mask">
+  <div class="hl-loading">
+    <div class="hl-loading-icon hl-text-orange">
+      <div class="hl-spinner">
+        <span class="hl-icon hl-icon-spinner-sun"></span>
       </div>
-      <div class="hl-loading-content">数据正在加载中，请耐心等待</div>
     </div>
+    <div class="hl-loading-content">数据正在加载中，请耐心等待</div>
   </div>
 </div>
 <button id="loading2" class="hl-btn hl-btn-primary-outline">Show Loading</button></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loading-wrap2"</span> <span class="na">class=</span><span class="s">"hl-loading-wrap"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-mask"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-icon hl-text-orange"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">'hl-spinner hl-icon hl-icon-spinner-sun'</span><span class="nt">&gt;&lt;/span&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"loading-wrap2"</span> <span class="na">class=</span><span class="s">"hl-mask"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-icon hl-text-orange"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-spinner"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hl-icon hl-icon-spinner-sun"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-content"</span><span class="nt">&gt;</span>数据正在加载中，请耐心等待<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hl-loading-content"</span><span class="nt">&gt;</span>数据正在加载中，请耐心等待<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"loading2"</span> <span class="na">class=</span><span class="s">"hl-btn hl-btn-primary-outline"</span><span class="nt">&gt;</span>Show Loading<span class="nt">&lt;/button&gt;</span></code></pre></div>

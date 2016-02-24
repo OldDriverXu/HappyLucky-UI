@@ -48,6 +48,46 @@
   transform: translateY(-50%);
 }
 
+
+// Margin
+.margin-right {
+  margin-right: $font-size-base / 2;
+  &-xl {
+    margin-right: $font-size-xl / 2;
+  }
+  &-lg {
+    margin-right: $font-size-xl / 2;
+  }
+  &-md {
+    margin-right: $font-size-base /2;
+  }
+  &-sm {
+    margin-right: $font-size-sm /2;
+  }
+  &-xs {
+    margin-right: $font-size-xs /2;
+  }
+}
+.margin-left {
+  margin-left: $font-size-base / 2;
+  &-xl {
+    margin-left: $font-size-xl / 2;
+  }
+  &-lg {
+    margin-left: $font-size-xl / 2;
+  }
+  &-md {
+    margin-left: $font-size-base /2;
+  }
+  &-sm {
+    margin-left: $font-size-sm /2;
+  }
+  &-xs {
+    margin-left: $font-size-xs /2;
+  }
+}
+
+
 // Full Height
 .full-height {
   position: absolute;

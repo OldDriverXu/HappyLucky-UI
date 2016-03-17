@@ -1,12 +1,12 @@
 @import "variables";
 
 @font-face {
-  font-family: 'holi';
-  src: url($font-path + 'holi.eot?' + $font-postfix);
-  src: url($font-path + 'holi.eot?' + $font-postfix + '#iefix') format('embedded-opentype'),
-    url($font-path + 'holi.ttf?' + $font-postfix) format('truetype'),
-    url($font-path + 'holi.woff?' + $font-postfix) format('woff'),
-    url($font-path + 'holi.svg?' + $font-postfix) format('svg');
+  font-family: 'hl';
+  src: url($font-path + 'hl.eot?' + $font-postfix);
+  src: url($font-path + 'hl.eot?' + $font-postfix + '#iefix') format('embedded-opentype'),
+    url($font-path + 'hl.ttf?' + $font-postfix) format('truetype'),
+    url($font-path + 'hl.woff?' + $font-postfix) format('woff'),
+    url($font-path + 'hl.svg?' + $font-postfix) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 .icon,
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'holi';
+  font-family: 'hl';
   speak: none;
   font-style: normal;
   font-weight: normal;

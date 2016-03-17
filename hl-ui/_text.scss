@@ -48,6 +48,17 @@
   text-overflow: ellipsis;
 }
 
+// decoration
+.text-underline {
+  text-decoration: underline;
+}
+.text-overline {
+  text-decoration: overline;
+}
+.text-linethrough {
+  text-decoration: line-through;
+}
+
 // Generate contextual modifier classes for colorizing the text.
 .text-black {
   @include text-color-variant($black);

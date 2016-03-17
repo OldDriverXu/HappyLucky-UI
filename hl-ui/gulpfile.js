@@ -1,7 +1,7 @@
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
 var gulp = require('gulp');
-var fontName = 'holi';
+var fontName = 'hl';
 
 var runTimestamp = Math.round(Date.now()/1000);
 

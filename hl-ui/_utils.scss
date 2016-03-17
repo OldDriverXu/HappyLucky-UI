@@ -85,6 +85,42 @@
     margin-left: $font-size-xs / 2;
   }
 }
+.padding-right {
+  padding-right: $font-size-base / 2;
+  &-xl {
+    padding-right: $font-size-xl / 2;
+  }
+  &-lg {
+    padding-right: $font-size-lg / 2;
+  }
+  &-md {
+    padding-right: $font-size-base / 2;
+  }
+  &-sm {
+    padding-right: $font-size-sm / 2;
+  }
+  &-xs {
+    padding-right: $font-size-xs / 2;
+  }
+}
+.padding-left {
+  padding-left: $font-size-base / 2;
+  &-xl {
+    padding-left: $font-size-xl / 2;
+  }
+  &-lg {
+    padding-left: $font-size-lg / 2;
+  }
+  &-md {
+    padding-left: $font-size-base / 2;
+  }
+  &-sm {
+    padding-left: $font-size-sm / 2;
+  }
+  &-xs {
+    padding-left: $font-size-xs / 2;
+  }
+}
 
 // Full Height
 .full-height {

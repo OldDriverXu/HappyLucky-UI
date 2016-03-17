@@ -53,6 +53,34 @@ There are a handful of utilities for quick behaviors, display, floats, position,
 </div>
 {% endexample %}
 
+## Margin/Padding
+
+It is recommended to use margin/padding utils styles along with text styles.
+
+{% example html %}
+<p>
+  <span class="hl-icon hl-icon-edit hl-margin-right"></span>
+  <span class="hl-text-lg hl-margin-left-lg">古诗词赏析</span>
+</p>
+<p>
+  <span class="hl-margin-left">君不见</span>
+  <span class="hl-margin-left">黄河之水天上来</span>
+  <span class="hl-margin-left">奔流到海不复回</span>
+</p>
+<p>
+  <span class="hl-text-sm hl-margin-right-sm">君不见</span>
+  <span class="hl-text-lg hl-margin-right-lg">高堂明镜悲白发</span>
+  <span class="hl-text-xl hl-margin-right-xl">朝如青丝暮成雪</span>
+</p>
+<p>
+  <span class="hl-text-xs hl-padding-right-xs">五花马</span>
+  <span class="hl-text-sm hl-padding-right-sm">千金裘</span>
+  <span class="hl-text-lg hl-padding-right-lg">呼儿将出换美酒</span>
+  <span class="hl-text-xl hl-padding-right-xl">与尔同销万古愁</span>
+</p>
+
+{% endexample %}
+
 ## Full height
 
 - `.hl-full-height`: A container has a full height.

@@ -69,3 +69,13 @@ If you want to hide textual content because of textual length, use `.hl-text-ell
 </div>
 {% endexample %}
 
+## Textual Decoration
+
+Textual decoration has 3 mode: **underline**, **overline**, **linethrough**.
+
+{% example html %}
+<p class="hl-text-underline">This is hl-text-underline.</p>
+<p class="hl-text-overline">This is hl-text-overline.</p>
+<p class="hl-text-linethrough">This is hl-text-linethrough.</p>
+{% endexample %}
+

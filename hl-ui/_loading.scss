@@ -1,6 +1,5 @@
 @import "variables";
 @import "mixins";
-
 .mask {
   &.active {
     .loading {
@@ -29,7 +28,6 @@
   opacity: 0;
   transition: .5s;
   z-index: 999;
-
   .loading-icon {
     display: inline-block;
     font-size: 2rem;
@@ -38,9 +36,12 @@
       height: 2rem;
       line-height: 1;
       animation: spin 5s linear infinite;
+       :only-child {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
-
   .loading-content {
     color: $gray-light;
     margin: 0 1rem;

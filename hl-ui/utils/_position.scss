@@ -1,0 +1,40 @@
+// Position
+.relative {
+  position: relative;
+}
+
+// Centers content horizontally. Can be used inside or outside the grid.
+.center {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Centers content vertically. Must have a relative parent.
+.middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.middle-R {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+// Full Height
+.full-height {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.full-height-R {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}

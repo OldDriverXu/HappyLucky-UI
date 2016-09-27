@@ -1,0 +1,77 @@
+@import "../variables";
+@import "../mixins";
+.margin-right {
+  margin-right: $font-size-base / 2;
+  &-xl {
+    margin-right: $font-size-xl / 2;
+  }
+  &-lg {
+    margin-right: $font-size-lg / 2;
+  }
+  &-md {
+    margin-right: $font-size-base / 2;
+  }
+  &-sm {
+    margin-right: $font-size-sm / 2;
+  }
+  &-xs {
+    margin-right: $font-size-xs / 2;
+  }
+}
+
+.margin-left {
+  margin-left: $font-size-base / 2;
+  &-xl {
+    margin-left: $font-size-xl / 2;
+  }
+  &-lg {
+    margin-left: $font-size-lg / 2;
+  }
+  &-md {
+    margin-left: $font-size-base / 2;
+  }
+  &-sm {
+    margin-left: $font-size-sm / 2;
+  }
+  &-xs {
+    margin-left: $font-size-xs / 2;
+  }
+}
+
+.margin-top {
+  margin-top: $font-size-base / 2;
+  &-xl {
+    margin-top: $font-size-xl / 2;
+  }
+  &-lg {
+    margin-top: $font-size-lg / 2;
+  }
+  &-md {
+    margin-top: $font-size-base / 2;
+  }
+  &-sm {
+    margin-top: $font-size-sm / 2;
+  }
+  &-xs {
+    margin-top: $font-size-xs / 2;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: $font-size-base / 2;
+  &-xl {
+    margin-bottom: $font-size-xl / 2;
+  }
+  &-lg {
+    margin-bottom: $font-size-lg / 2;
+  }
+  &-md {
+    margin-bottom: $font-size-base / 2;
+  }
+  &-sm {
+    margin-bottom: $font-size-sm / 2;
+  }
+  &-xs {
+    margin-bottom: $font-size-xs / 2;
+  }
+}

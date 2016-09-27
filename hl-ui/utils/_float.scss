@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../mixins";
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  @include clearfix(); // Clear floats
+}

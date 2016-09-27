@@ -1,0 +1,77 @@
+@import "../variables";
+@import "../mixins";
+.padding-right {
+  padding-right: $font-size-base / 2;
+  &-xl {
+    padding-right: $font-size-xl / 2;
+  }
+  &-lg {
+    padding-right: $font-size-lg / 2;
+  }
+  &-md {
+    padding-right: $font-size-base / 2;
+  }
+  &-sm {
+    padding-right: $font-size-sm / 2;
+  }
+  &-xs {
+    padding-right: $font-size-xs / 2;
+  }
+}
+
+.padding-left {
+  padding-left: $font-size-base / 2;
+  &-xl {
+    padding-left: $font-size-xl / 2;
+  }
+  &-lg {
+    padding-left: $font-size-lg / 2;
+  }
+  &-md {
+    padding-left: $font-size-base / 2;
+  }
+  &-sm {
+    padding-left: $font-size-sm / 2;
+  }
+  &-xs {
+    padding-left: $font-size-xs / 2;
+  }
+}
+
+.padding-top {
+  padding-top: $font-size-base / 2;
+  &-xl {
+    padding-top: $font-size-xl / 2;
+  }
+  &-lg {
+    padding-top: $font-size-lg / 2;
+  }
+  &-md {
+    padding-top: $font-size-base / 2;
+  }
+  &-sm {
+    padding-top: $font-size-sm / 2;
+  }
+  &-xs {
+    padding-top: $font-size-xs / 2;
+  }
+}
+
+.padding-bottom {
+  padding-bottom: $font-size-base / 2;
+  &-xl {
+    padding-bottom: $font-size-xl / 2;
+  }
+  &-lg {
+    padding-bottom: $font-size-lg / 2;
+  }
+  &-md {
+    padding-bottom: $font-size-base / 2;
+  }
+  &-sm {
+    padding-bottom: $font-size-sm / 2;
+  }
+  &-xs {
+    padding-bottom: $font-size-xs / 2;
+  }
+}

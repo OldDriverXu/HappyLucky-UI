@@ -1,140 +1,27 @@
 @import "variables";
 @import "mixins";
-
 // Display & Hide
 .show {
   display: block;
 }
+
 .hide {
   display: none;
 }
+
 .inline-block {
   display: inline-block;
   vertical-align: middle;
 }
 
 // Float
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
-.clearfix {
-  @include clearfix(); // Clear floats
-}
-
+@import "./utils/float";
 // Position
-.relative {
-  position: relative;
-}
-// Centers content horizontally. Can be used inside or outside the grid.
-.center {
-  display: block;
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-}
-// Centers content vertically. Must have a relative parent.
-.middle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.middle-R {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
+@import "./utils/position";
 // Margin
-.margin-right {
-  margin-right: $font-size-base / 2;
-  &-xl {
-    margin-right: $font-size-xl / 2;
-  }
-  &-lg {
-    margin-right: $font-size-lg / 2;
-  }
-  &-md {
-    margin-right: $font-size-base / 2;
-  }
-  &-sm {
-    margin-right: $font-size-sm / 2;
-  }
-  &-xs {
-    margin-right: $font-size-xs / 2;
-  }
-}
-.margin-left {
-  margin-left: $font-size-base / 2;
-  &-xl {
-    margin-left: $font-size-xl / 2;
-  }
-  &-lg {
-    margin-left: $font-size-lg / 2;
-  }
-  &-md {
-    margin-left: $font-size-base / 2;
-  }
-  &-sm {
-    margin-left: $font-size-sm / 2;
-  }
-  &-xs {
-    margin-left: $font-size-xs / 2;
-  }
-}
-.padding-right {
-  padding-right: $font-size-base / 2;
-  &-xl {
-    padding-right: $font-size-xl / 2;
-  }
-  &-lg {
-    padding-right: $font-size-lg / 2;
-  }
-  &-md {
-    padding-right: $font-size-base / 2;
-  }
-  &-sm {
-    padding-right: $font-size-sm / 2;
-  }
-  &-xs {
-    padding-right: $font-size-xs / 2;
-  }
-}
-.padding-left {
-  padding-left: $font-size-base / 2;
-  &-xl {
-    padding-left: $font-size-xl / 2;
-  }
-  &-lg {
-    padding-left: $font-size-lg / 2;
-  }
-  &-md {
-    padding-left: $font-size-base / 2;
-  }
-  &-sm {
-    padding-left: $font-size-sm / 2;
-  }
-  &-xs {
-    padding-left: $font-size-xs / 2;
-  }
-}
-
-// Full Height
-.full-height {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-.full-height-R {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
+@import "./utils/margin";
+// Padding
+@import "./utils/padding";
 // Fix
 .fix-top {
   position: fixed;
@@ -143,6 +30,7 @@
   right: 0;
   z-index: 10;
 }
+
 .fix-bottom {
   position: fixed;
   bottom: 0;
@@ -162,26 +50,5 @@
   height: 1.2rem;
 }
 
-// Mask (for loading and popup)
-.mask {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.4);
-  transition: 0.5s;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 500;
-
-  &.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  &.mask-transparent {
-    background: rgba(0, 0, 0, 0);
-  }
-}
+// Mask
+@import "./utils/mask";

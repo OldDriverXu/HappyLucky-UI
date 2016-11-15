@@ -5,7 +5,10 @@ var cssClassPrefix = require('gulp-css-class-prefix');
 var autoprefixer = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
 var size = require('gulp-size');
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
 var runSequence = require('run-sequence');
+var runTimestamp = Math.round(Date.now() / 1000);
 
 var AUTOPREFIXER_BROWSERS = [
   // 'ie >= 10',
@@ -19,8 +22,27 @@ var AUTOPREFIXER_BROWSERS = [
   // 'bb >= 10'
 ];
 
-var ENABLE_PREFIX  = true;
+var ENABLE_PREFIX = true;
 var PREFIX = 'hl-';
+var fontName = 'hl';
+
+// Generate iconfont
+gulp.task('iconfont', function() {
+  gulp.src(['svg/*.svg'])
+    .pipe(iconfontCss({
+      fontName: fontName,
+      path: './scss/templates/_icon-font.scss',
+      targetPath: './scss/_icon-font.scss'
+    }))
+    .pipe(iconfont({
+      fontName: fontName,
+      normalize: true,
+      fontHeight: 600,
+      appendUnicode: true,
+      timestamp: runTimestamp
+    }))
+    .pipe(gulp.dest('./fonts/'));
+});
 
 // Compile Sass into CSS
 gulp.task('sass', function() {
@@ -44,25 +66,25 @@ gulp.task('styles', function() {
     // Concatenate and Minify Styles
     .pipe(gulpif('*.css', csso(true)))
     .pipe(gulp.dest('./css'))
-    .pipe(size({title: 'styles'}));
+    .pipe(size({ title: 'styles' }));
 });
 
 // Copy to docs directory
 gulp.task('copy', function() {
   return gulp.src([
-    './css/*.css',
-    './hl-ui/fonts/**'])
-  .pipe(gulpif('*.css', gulp.dest('./example/docs/css')))
-  .pipe(gulpif(['*.eot', '*.svg', '*.ttf', '*.woff'], gulp.dest('./fonts')))
-  .pipe(gulpif(['*.eot', '*.svg', '*.ttf', '*.woff'], gulp.dest('./example/docs/fonts')))
-  .pipe(size({title: 'copy'}));
+      './css/*.css',
+      './fonts/**'
+    ])
+    .pipe(gulpif('*.css', gulp.dest('./example/docs/css')))
+    .pipe(gulpif(['*.eot', '*.svg', '*.ttf', '*.woff'], gulp.dest('./example/docs/fonts')))
+    .pipe(size({ title: 'copy' }));
 });
 
 // Watch
 gulp.task('serve', function() {
   gulp.watch("./scss/*.scss", function() {
     if (ENABLE_PREFIX) {
-      runSequence('sass','customPrefix', 'styles', 'copy');
+      runSequence('sass', 'customPrefix', 'styles', 'copy');
     } else {
       runSequence('sass', 'styles', 'copy');
     }
@@ -73,16 +95,16 @@ gulp.task('default', ['build']);
 
 gulp.task('build', function() {
   if (ENABLE_PREFIX) {
-    runSequence('sass', 'customPrefix', 'styles', 'copy');
+    runSequence('iconfont', 'sass', 'customPrefix', 'styles', 'copy');
   } else {
-    runSequence('sass', 'styles', 'copy');
+    runSequence('iconfont', 'sass', 'styles', 'copy');
   }
 });
 
 gulp.task('dev', function() {
   if (ENABLE_PREFIX) {
-    runSequence('sass', 'customPrefix', 'copy');
+    runSequence('iconfont', 'sass', 'customPrefix', 'copy');
   } else {
-    runSequence('sass', 'copy');
+    runSequence('iconfont', 'sass', 'copy');
   }
 });

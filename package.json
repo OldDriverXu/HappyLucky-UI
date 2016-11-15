@@ -24,6 +24,8 @@
     "gulp-if": "^2.0.0",
     "gulp-sass": "^2.0.4",
     "gulp-size": "^2.0.0",
+    "gulp-iconfont": "^5.0.1",
+    "gulp-iconfont-css": "^2.0.0",
     "run-sequence": "^1.1.4"
   },
   "engines": {

@@ -1,30 +1,26 @@
 // Core variables and mixins
-@import "../hl-ui/variables";
-@import "../hl-ui/mixins";
-
+@import "./variables";
+@import "./mixins";
 // Reset
-@import "../hl-ui/normalize";
-
+@import "./normalize";
 // Core Css
-@import "../hl-ui/boot";
-@import "../hl-ui/layout";
-@import "../hl-ui/utils";
-@import "../hl-ui/text";
-@import "../hl-ui/border";
-
+@import "./boot";
+@import "./layout";
+@import "./utils";
+@import "./text";
+@import "./border";
 // Animation
-@import "../hl-ui/animation";
-
+@import "./animation";
 // Components
-// @import "fixbar";
-@import "../hl-ui/nav";
-@import "../hl-ui/button";
-@import "../hl-ui/list-group";
-@import "../hl-ui/box-border";
-// @import "module";
-@import "../hl-ui/tips";
-@import "../hl-ui/form";
-// @import "popup";
-// @import "loading";
-@import "../hl-ui/collapse";
-@import "../hl-ui/icon-font";
+// @import "./fixbar";
+@import "./nav";
+@import "./button";
+@import "./list-group";
+@import "./box-border";
+// @import "./module";
+@import "./tips";
+@import "./form";
+// @import "./popup";
+// @import "./loading";
+@import "./collapse";
+@import "./icon-font";

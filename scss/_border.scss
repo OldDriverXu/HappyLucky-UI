@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
-.border {
+.border-all {
+  @include border(all, $border-color);
+}
+
+.border-tb {
   @include border(top-bottom, $border-color);
 }
 

@@ -1,0 +1,39 @@
+@import "variables";
+@import "mixins";
+// Text Styles
+// Generate contextual modifier classes for svg size.
+// 5 Grades: Extra large, Large, Medium, Small, Extra small
+.svg-xl {
+  svg {
+    width: $svg-size-xl;
+    height: $svg-size-xl;
+  }
+}
+
+.svg-lg {
+  svg {
+    width: $svg-size-lg;
+    height: $svg-size-lg;
+  }
+}
+
+.svg-md {
+  svg {
+    width: $svg-size-md;
+    height: $svg-size-md;
+  }
+}
+
+.svg-sm {
+  svg {
+    width: $svg-size-sm;
+    height: $svg-size-sm;
+  }
+}
+
+.svg-xs {
+  svg {
+    width: $svg-size-xs;
+    height: $svg-size-xs;
+  }
+}

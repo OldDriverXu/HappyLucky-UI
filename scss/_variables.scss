@@ -62,12 +62,12 @@ $spacer-y:                   .75rem !default;
 // HTML
 //
 // Setting for the '<html>' element
-$html-bg:                   $gray-lightest !default;
+$html-bg:                    $gray-lightest !default;
 
 // Body
 //
 // Setting for the '<body>' element.
-$body-bg:                    $white !default;
+$body-bg:                    $gray-lightest !default;
 $body-color:                 $black !default;
 
 // Links
@@ -128,7 +128,7 @@ $component-active-bg:        $brand-primary !default;
 $fix-bar-header-height:      $component-row-height !default;
 $fix-bar-header-bg:          $blue-dark !default;
 
-$fix-bar-footer-height:      3.2rem !default;
+$fix-bar-footer-height:      4rem !default;
 $fix-bar-footer-bg:          #e8edf1 !default;
 
 // Buttons

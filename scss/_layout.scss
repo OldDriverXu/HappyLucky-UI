@@ -52,3 +52,6 @@
   width: 91.66666667%;
   float: left;
 }
+[class*="col-"] {
+  min-height: 1px;
+}

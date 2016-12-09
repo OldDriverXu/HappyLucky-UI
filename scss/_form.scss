@@ -8,14 +8,12 @@ textarea {
   margin: 0;
   padding: $input-padding-y $input-padding-x;
   // outline: 0;
+  vertical-align: middle;
   background-color: $input-bg;
   -webkit-appearance: none; // fix ios input box-shadow bug
   border-radius: .2rem;
   border: none;
   box-shadow: none;
-  &:focus {
-    box-shadow: inset 0 0 1px $input-border-focus, 0 0 2px 0 $input-border-focus;
-  }
 }
 
 // Size
@@ -44,13 +42,23 @@ textarea {
 }
 
 .input-border,
-.select-border {
+.select-border,
+.textarea-border {
   border: 1px solid #ccc;
   box-shadow: inset 0 0 1px 0 $input-border;
 }
 
+.input-focus-border,
+.select-focus-border,
+.textarea-focus-border {
+  &:focus {
+    box-shadow: inset 0 0 1px $input-border-focus, 0 0 2px 0 $input-border-focus;
+  }
+}
+
 .input-nopadding,
-.select-nopadding {
+.select-nopadding,
+.textarea-nopadding {
   padding: 0;
 }
 

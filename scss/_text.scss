@@ -4,22 +4,39 @@
 // Text Styles
 
 // Generate contextual modifier classes for font size and weight.
-// 5 Grades: Extra large, Large, Medium, Small, Extra small
-.text-xl {
-  @include text-size-variant($font-size-xl, $line-height-lg);
+
+.text-38{
+  @include text-size-variant(19px, $line-height);
 }
-.text-lg {
-  @include text-size-variant($font-size-lg, $line-height);
+.text-36, .text-lg {
+  @include text-size-variant(18px, $line-height);
 }
-.text-md {
-  @include text-size-variant($font-size-base, $line-height);
+.text-34 {
+  @include text-size-variant(17px, $line-height);
 }
-.text-sm {
-  @include text-size-variant($font-size-sm, $line-height);
+.text-32, .text-md {
+  @include text-size-variant(16px, $line-height);
 }
-.text-xs {
-  @include text-size-variant($font-size-xs, $line-height-sm);
+.text-30 {
+  @include text-size-variant(15px, $line-height);
 }
+.text-28, .text-sm {
+  @include text-size-variant(14px, $line-height);
+}
+.text-26  {
+  @include text-size-variant(13px, $line-height);
+}
+.text-24, .text-xs{
+  @include text-size-variant(12px, $line-height);
+}
+.text-22{
+  @include text-size-variant(11px, $line-height);
+}
+.text-20, .text-xxs{
+  @include text-size-variant(10px, $line-height);
+}
+
+
 
 // Text alignment
 .text-left {

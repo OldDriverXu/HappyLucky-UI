@@ -36,7 +36,7 @@
 
 // Has icon
 .list-group-indent {
-  padding-left: 3rem;
+  padding-left: 3rem*12/50;
 
   .list-group-item {
     padding-left: 0;
@@ -46,8 +46,8 @@
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translate(-2.2rem, -50%);
-    font-size: 1.5rem;
+    transform: translate(-2.2rem*12/50, -50%);
+    font-size: 1.5rem*12/50;
   }
 }
 

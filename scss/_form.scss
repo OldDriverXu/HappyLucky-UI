@@ -11,7 +11,7 @@ textarea {
   vertical-align: middle;
   background-color: $input-bg;
   -webkit-appearance: none; // fix ios input box-shadow bug
-  border-radius: .2rem;
+  border-radius: .2rem*12/50;
   border: none;
   box-shadow: none;
 }
@@ -75,9 +75,9 @@ textarea {
     height: 0;
     color: $blue;
     content: "";
-    border-top: .4rem solid;
-    border-right: .4rem solid transparent;
-    border-left: .4rem solid transparent;
+    border-top: .4rem*12/50 solid;
+    border-right: .4rem*12/50 solid transparent;
+    border-left: .4rem*12/50 solid transparent;
     z-index: 10;
   }
 }
@@ -106,18 +106,18 @@ textarea {
   input {
     box-sizing: border-box;
     box-shadow: 0 0 1px 0 $input-border;
-    border-radius: 1rem;
+    border-radius: 1rem*12/50;
     width: 100%;
-    height: 2rem;
-    font-size: .9rem;
-    padding-left: 2rem;
+    height: 2rem*12/50;
+    font-size: .9rem*12/50;
+    padding-left: 2rem*12/50;
     overflow: hidden;
   }
   .input-search-icon {
     position: absolute;
-    top: .4rem;
-    left: 1.2rem;
-    font-size: 1.4rem;
+    top: .4rem*12/50;
+    left: 1.2rem*12/50;
+    font-size: 1.4rem*12/50;
     color: $blue-light;
   }
 }
@@ -127,7 +127,7 @@ textarea {
   display: table;
   input {
     position: relative;
-    min-height: 2.375rem;
+    min-height: 2.375rem*12/50;
     &:focus {
       z-index: 2;
     }

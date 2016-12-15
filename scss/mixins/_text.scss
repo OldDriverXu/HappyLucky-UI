@@ -5,6 +5,16 @@
 }
 
 @mixin text-size-variant($size, $height) {
-  font-size: $size;
+  // according to team design guide,
+  // font-size:12px in iPhone 5 will scale to:
+  // font-size:13px in iPhone 6 (+1px)
+  // font-size:14px in iPhone 6 Plus (+2px)
+  font-size: $size; // iPhone 5
+  @media (min-width: 375px) { // >= iPhone 6
+    font-size: $size + 1px
+  }
+  @media (min-width: 414px) { // >= iPhone 6 Plus
+    font-size: $size + 2px
+  }
   line-height: $height;
 }

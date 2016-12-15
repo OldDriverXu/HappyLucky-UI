@@ -14,14 +14,14 @@
   vertical-align: middle;
 }
 
-// Float
-@import "./utils/float";
-// Position
-@import "./utils/position";
 // Margin
 @import "./utils/margin";
 // Padding
 @import "./utils/padding";
+// Float
+@import "./utils/float";
+// Position
+@import "./utils/position";
 // Fix
 .fix-top {
   position: fixed;
@@ -41,13 +41,13 @@
 
 // Separator
 .separator {
-  min-height: 1.2rem;
+  min-height: 1.2rem*12/50;
   background-color: $gray-lightest;
   color: $gray-lighter;
 }
 
 .separator-blank {
-  height: 1.2rem;
+  height: 1.2rem*12/50;
 }
 
 // Mask

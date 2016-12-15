@@ -8,19 +8,19 @@
 
   .tips-icon {
     color: $green-light;
-    font-size: .6rem;
-    margin-right: .5rem;
+    font-size: .6rem*12/50;
+    margin-right: .5rem*12/50;
   }
 }
 
 .icon-dot {
   &:before {
     display: inline-block;
-    width: .4rem;
-    height: .4rem;
-    border-radius: .2rem;
+    width: .4rem*12/50;
+    height: .4rem*12/50;
+    border-radius: .2rem*12/50;
     vertical-align: top;
-    margin-top: .4rem;
+    margin-top: .4rem*12/50;
 
     content: "";
     background-color: $green-light;

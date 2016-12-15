@@ -49,18 +49,18 @@
 }
 
 .popup-header {
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem*12/50 1rem*12/50 0 1rem*12/50;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.1rem*12/50;
 }
 
 .popup-icon {
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem*12/50 1rem*12/50 0 1rem*12/50;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.5rem*12/50;
   img {
-    width: 2rem;
-    height: 2rem;
+    width: 2rem*12/50;
+    height: 2rem*12/50;
     animation: spin 5s linear infinite;
   }
 }
@@ -69,8 +69,8 @@
   @include border(bottom, $border-color);
   margin: 0;
   line-height: 1.2;
-  font-size: .9rem;
-  padding: 1.25rem 1.5rem;
+  font-size: .9rem*12/50;
+  padding: 1.25rem*12/50 1.5rem*12/50;
   word-break: break-all;
   text-align: center;
 }
@@ -78,6 +78,6 @@
 .popup-footer {
   color: $blue;
   text-align: center;
-  line-height: 3.125rem;
-  font-size: 1.1rem;
+  line-height: 3.125rem*12/50;
+  font-size: 1.1rem*12/50;
 }

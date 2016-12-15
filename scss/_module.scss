@@ -10,30 +10,30 @@
 
 .module-ticket {
   .ticket-header {
-    font-size: .9rem;
+    font-size: .9rem*12/50;
     line-height: 1.2;
-    margin-bottom: .5rem;
+    margin-bottom: .5rem*12/50;
   }
 
   .ticket-time {
-    font-size: 1.4rem;
+    font-size: 1.4rem*12/50;
     line-height: 1.2;
   }
 
   .ticket-place {
-    font-size: .9rem;
+    font-size: .9rem*12/50;
     line-height: 1.2;
   }
 
   .ticket-footer {
-    margin-top: .5rem;
-    font-size: .9rem;
+    margin-top: .5rem*12/50;
+    font-size: .9rem*12/50;
     line-height: 1.2;
   }
 
   .ticket-accessory {
-    margin-top: 1rem;
-    font-size: .8rem;
+    margin-top: 1rem*12/50;
+    font-size: .8rem*12/50;
     line-height: 1.2;
     color: $gray;
   }
@@ -42,17 +42,17 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    padding: 0 .4rem;
+    padding: 0 .4rem*12/50;
     border: 1px solid #A1D6EE;
-    border-radius: 1rem;
-    font-size: .7rem;
+    border-radius: 1rem*12/50;
+    font-size: .7rem*12/50;
     line-height: 1.5;
     color: #49B2E2;
 
     &:before {
       content: " ";
       position: absolute;
-      width: 3rem;
+      width: 3rem*12/50;
       border-bottom: 1px solid #A1D6EE;
       top: 50%;
       right: 100%;
@@ -61,7 +61,7 @@
     &:after {
       content: " ";
       position: absolute;
-      width: 3rem;
+      width: 3rem*12/50;
       border-bottom: 1px solid #A1D6EE;
       top: 50%;
       left: 100%;

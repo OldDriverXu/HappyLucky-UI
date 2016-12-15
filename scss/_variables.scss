@@ -1,6 +1,4 @@
 // Variables
-
-
 // Table of Contents
 //
 // Fonts
@@ -11,239 +9,205 @@
 // Links
 // Fonts
 // Components
-
-
 // Fonts
 //
-$font-path:                 '../fonts/' !default; // font path
-$font-postfix:              'xx7yg' !default;  // font postfix
-
+$font-path: '../fonts/' !default; // font path
+$font-postfix: 'xx7yg' !default; // font postfix
 // Colors
 //
-$white:                      #fff !default; // for title text
-$black:                      #222222 !default; // for normal text
-$black-light:                #383838 !default;
-$gray-dark:                  #808080 !default;
-$gray:                       #999999 !default;
-$gray-light:                 #a8adae !default; // for description text
-$gray-lighter:               #b2b2b2 !default; // for tips text
-$gray-lightest:              #F5F9FA !default; // for separator bg
-
-$blue-dark:                  #567fbc !default; // for fix-bar bg
-$blue:                       #1190ea !default; // for link text
-$blue-light:                 #2190e7 !default; // for flight ticket promotion text
-$orange:                     #fd7222 !default; // for price text
-$red:                        #f33531 !default;
-$green:                      #2caa3f !default; // for price discount tag text
-$green-light:                #4CD864 !default; // for success text
-
-$brand-primary:              #138EEA !default;
-$brand-success:              #5cb85c !default;
-$brand-info:                 #5bc0de !default;
-$brand-warning:              #f0ad4e !default;
-$brand-danger:               #d9534f !default;
-
+$white: #fff !default; // for title text
+$black: #222222 !default; // for normal text
+$black-light: #383838 !default;
+$gray-dark: #808080 !default;
+$gray: #999999 !default;
+$gray-light: #a8adae !default; // for description text
+$gray-lighter: #b2b2b2 !default; // for tips text
+$gray-lightest: #F5F9FA !default; // for separator bg
+$blue-dark: #567fbc !default; // for fix-bar bg
+$blue: #1190ea !default; // for link text
+$blue-light: #2190e7 !default; // for flight ticket promotion text
+$orange: #fd7222 !default; // for price text
+$red: #f33531 !default;
+$green: #2caa3f !default; // for price discount tag text
+$green-light: #4CD864 !default; // for success text
+$brand-primary: #138EEA !default;
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-$enable-flex:                false !default;
-$enable-rounded:             true !default;
-$enable-shadows:             false !default;
-$enable-transitions:         false !default;
-
+$enable-flex: false !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-transitions: false !default;
 // Spacing
 //
 // Control the default styling of most elements by modifying these
 // variables. Mostly focused on spacing.
-$spacer:                     .6rem !default;
-$spacer-x:                   .75rem !default;
-$spacer-y:                   .75rem !default;
-
+$spacer: .6rem*12/50 !default;
+$spacer-x: .75rem*12/50 !default;
+$spacer-y: .75rem*12/50 !default;
 // HTML
 //
 // Setting for the '<html>' element
-$html-bg:                    $gray-lightest !default;
-
+$html-bg: $gray-lightest !default;
 // Body
 //
 // Setting for the '<body>' element.
-$body-bg:                    $gray-lightest !default;
-$body-color:                 $black !default;
-
+$body-bg: $gray-lightest !default;
+$body-color: $black !default;
 // Links
 //
 // Style anchor elements.
-$link-color:                 $blue !default;
-$link-decoration:            none !default;
-$link-hover-decoration:      none !default;
-
+$link-color: $blue !default;
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
 // Typography
 //
 //  Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:           $font-family-sans-serif !default;
-
+$font-family-sans-serif: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-family-serif: Georgia,
+"Times New Roman",
+Times,
+serif !default;
+$font-family-monospace: Menlo,
+Monaco,
+Consolas,
+"Courier New",
+monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root:             16px !default;
-$font-size-base:             1rem !default;
-$font-size-xl:               1.4rem !default;
-$font-size-lg:               1.25rem !default;
-$font-size-sm:               .85rem !default;
-$font-size-xs:               .75rem !default;
 
-$font-size-h1:               2.5rem !default;
-$font-size-h2:               2rem !default;
-$font-size-h3:               1.75rem !default;
-$font-size-h4:               1.5rem !default;
-$font-size-h5:               1.25rem !default;
-$font-size-h6:               1rem !default;
+$font-size-root: 50px !default;
+$font-size-base: 16px !default;
+$font-size-xl: 20px !default;
+$font-size-lg: 18px !default;
+$font-size-md: 16px !default;
+$font-size-sm: 14px !default;
+$font-size-xs: 12px !default;
 
-$svg-size-xl:                1.4rem !default;
-$svg-size-lg:                1.25rem !default;
-$svg-size-md:                1rem !default;
-$svg-size-sm:                .85rem !default;
-$svg-size-xs:                .75rem !default;
 
-$line-height:                1.5 !default;
-$line-height-lg:             1.75 !default;
-$line-height-sm:             1.25 !default;
+
+$font-size-h1: 2.5rem*12/50 !default;
+$font-size-h2: 2rem*12/50 !default;
+$font-size-h3: 1.75rem*12/50 !default;
+$font-size-h4: 1.5rem*12/50 !default;
+$font-size-h5: 1.25rem*12/50 !default;
+$font-size-h6: 1rem*12/50 !default;
+$svg-size-xl: 1.4rem*12/50 !default;
+$svg-size-lg: 1.25rem*12/50 !default;
+$svg-size-md: 1rem*12/50 !default;
+$svg-size-sm: .85rem*12/50 !default;
+$svg-size-xs: .75rem*12/50 !default;
+$line-height: 1.5 !default;
+$line-height-lg: 1.75 !default;
+$line-height-sm: 1.25 !default;
 
 /* Components */
+
 // Define common padding and border radius sizes and more.
-
 // Border
-$border-color:               #D8D7DC !default; // 1px border color
-$border-radius:              .2rem !default;
-$border-radius-lg:           .3125rem !default;
-$border-radius-sm:           .15rem !default;
-$border-width:               1px !default;
-
-$component-row-height:       2.8125rem !default;  // height for one row
-$component-active-color:     $white !default;
-$component-active-bg:        $brand-primary !default;
-
+$border-color: #D8D7DC !default; // 1px border color
+$border-radius: .2rem*12/50 !default;
+$border-radius-lg: .3125rem*12/50 !default;
+$border-radius-sm: .15rem*12/50 !default;
+$border-width: 1px !default;
+$component-row-height: 2.8125rem*12/50 !default; // height for one row
+$component-active-color: $white !default;
+$component-active-bg: $brand-primary !default;
 // Fix-bar
-$fix-bar-header-height:      $component-row-height !default;
-$fix-bar-header-bg:          $blue-dark !default;
-
-$fix-bar-footer-height:      4rem !default;
-$fix-bar-footer-bg:          #e8edf1 !default;
-
+$fix-bar-header-height: $component-row-height !default;
+$fix-bar-header-bg: $blue-dark !default;
+$fix-bar-footer-height: 4rem*12/50 !default;
+$fix-bar-footer-bg: #e8edf1 !default;
 // Buttons
-$btn-padding-x:              $spacer-x !default;
-$btn-padding-y:              $spacer-y/2 !default;
-
-$btn-padding-x-sm:           $spacer-x !default;
-$btn-padding-y-sm:           $spacer-y/3 !default;
-
-$btn-padding-x-lg:           $spacer-x*4/3 !default;
-$btn-padding-y-lg:           $spacer-y !default;
-
-$btn-font-weight:            normal !default;
-
-$btn-primary-color:          $white !default;
-$btn-primary-bg:             $brand-primary !default;
-$btn-primary-border:         $btn-primary-bg !default;
-
-$btn-plain-color:            $gray-dark !default;
-$btn-plain-bg:               $white !default;
-$btn-plain-border:           #ccc !default;
-
-$btn-success-color:          $white !default;
-$btn-success-bg:             $brand-success !default;
-$btn-success-border:         $btn-success-bg !default;
-
-$btn-info-color:             $white !default;
-$btn-info-bg:                $brand-info !default;
-$btn-info-border:            $btn-info-bg !default;
-
-$btn-warning-color:          $white !default;
-$btn-warning-bg:             $brand-warning !default;
-$btn-warning-border:         $btn-warning-bg !default;
-
-$btn-danger-color:           $white !default;
-$btn-danger-bg:              $brand-danger !default;
-$btn-danger-border:          $btn-danger-bg !default;
-
-$btn-link-disabled-color:    $gray-light !default;
-
+$btn-padding-x: $spacer-x !default;
+$btn-padding-y: $spacer-y/2 !default;
+$btn-padding-x-sm: $spacer-x !default;
+$btn-padding-y-sm: $spacer-y/3 !default;
+$btn-padding-x-lg: $spacer-x*4/3 !default;
+$btn-padding-y-lg: $spacer-y !default;
+$btn-font-weight: normal !default;
+$btn-primary-color: $white !default;
+$btn-primary-bg: $brand-primary !default;
+$btn-primary-border: $btn-primary-bg !default;
+$btn-plain-color: $gray-dark !default;
+$btn-plain-bg: $white !default;
+$btn-plain-border: #ccc !default;
+$btn-success-color: $white !default;
+$btn-success-bg: $brand-success !default;
+$btn-success-border: $btn-success-bg !default;
+$btn-info-color: $white !default;
+$btn-info-bg: $brand-info !default;
+$btn-info-border: $btn-info-bg !default;
+$btn-warning-color: $white !default;
+$btn-warning-bg: $brand-warning !default;
+$btn-warning-border: $btn-warning-bg !default;
+$btn-danger-color: $white !default;
+$btn-danger-bg: $brand-danger !default;
+$btn-danger-border: $btn-danger-bg !default;
+$btn-link-disabled-color: $gray-light !default;
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:          $border-radius !default;
-$btn-border-radius-lg:       $border-radius-lg !default;
-$btn-border-radius-sm:       $border-radius-sm !default;
-
+$btn-border-radius: $border-radius !default;
+$btn-border-radius-lg: $border-radius-lg !default;
+$btn-border-radius-sm: $border-radius-sm !default;
 // toggle button
-$btn-toggle-bg:              $white !default;
-$btn-toggle-dot-bg:          $white !default;
-$btn-toggle-active-color:    $green-light !default;
-
+$btn-toggle-bg: $white !default;
+$btn-toggle-dot-bg: $white !default;
+$btn-toggle-active-color: $green-light !default;
 // Nav
-$nav-item-color:             $gray !default;
-$nav-item-bg:                $white !default;
-$nav-item-border:            $border-color !default;
-
-$nav-pagination-color:       $gray !default;
-$nav-pagination-bg:          #e8edf1 !default;
-
-$nav-pointer-active-color:   $blue !default;
-$nav-pointer-active-bg:      $white !default;
-
-$nav-tabs-color:             $gray-dark !default;
-$nav-tabs-bg:                #e8edf1 !default;
-$nav-tabs-active-color:      $black !default;
-$nav-tabs-active-bg:         $white !default;
-
+$nav-item-color: $gray !default;
+$nav-item-bg: $white !default;
+$nav-item-border: $border-color !default;
+$nav-pagination-color: $gray !default;
+$nav-pagination-bg: #e8edf1 !default;
+$nav-pointer-active-color: $blue !default;
+$nav-pointer-active-bg: $white !default;
+$nav-tabs-color: $gray-dark !default;
+$nav-tabs-bg: #e8edf1 !default;
+$nav-tabs-active-color: $black !default;
+$nav-tabs-active-bg: $white !default;
 // Form states and alerts
 //
 // Define colors for form feedback states and, by default, alerts.
-$state-success-text:         #3c763d !default;
-$state-success-bg:           #dff0d8 !default;
-$state-success-border:       darken($state-success-bg, 5%) !default;
-
-$state-info-text:            #31708f !default;
-$state-info-bg:              #d9edf7 !default;
-$state-info-border:          darken($state-info-bg, 7%) !default;
-
-$state-warning-text:         #8a6d3b !default;
-$state-warning-bg:           #fcf8e3 !default;
-$state-warning-border:       darken($state-warning-bg, 5%) !default;
-
-$state-danger-text:          #a94442 !default;
-$state-danger-bg:            #f2dede !default;
-$state-danger-border:        darken($state-danger-bg, 5%) !default;
-
+$state-success-text: #3c763d !default;
+$state-success-bg: #dff0d8 !default;
+$state-success-border: darken($state-success-bg, 5%) !default;
+$state-info-text: #31708f !default;
+$state-info-bg: #d9edf7 !default;
+$state-info-border: darken($state-info-bg, 7%) !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+$state-warning-border: darken($state-warning-bg, 5%) !default;
+$state-danger-text: #a94442 !default;
+$state-danger-bg: #f2dede !default;
+$state-danger-border: darken($state-danger-bg, 5%) !default;
 // Inputs
-$input-padding-x:            $spacer-x !default;
-$input-padding-y:            $spacer-y/2 !default;
-
-$input-color:                $gray-dark !default;
-$input-bg:                   $white !default;
-$input-bg-disabled:          #eee !default;
-
-$input-border:               #ccc !default;
-$input-border-focus:         $blue !default;
-
-$input-search-bg:            $gray-lightest !default;
-$input-search-icon:          $blue-light !default;
-
+$input-padding-x: $spacer-x !default;
+$input-padding-y: $spacer-y/2 !default;
+$input-color: $gray-dark !default;
+$input-bg: $white !default;
+$input-bg-disabled: #eee !default;
+$input-border: #ccc !default;
+$input-border-focus: $blue !default;
+$input-search-bg: $gray-lightest !default;
+$input-search-icon: $blue-light !default;
 // Box-border
-$box-border-bg:              $white !default;
-$box-border-color:           $border-color !default;
-
-$box-border-spacer-x:        $spacer-x !default;
-$box-border-spacer-y:        $spacer-y !default;
-
+$box-border-bg: $white !default;
+$box-border-color: $border-color !default;
+$box-border-spacer-x: $spacer-x !default;
+$box-border-spacer-y: $spacer-y !default;
 // List group
-$list-group-bg:              $white !default;
-$list-group-border-color:    $border-color !default;
-
-$list-group-spacer-x:        $spacer-x !default;
-$list-group-spacer-y:        $spacer-y !default;
-
-$list-group-disabled-bg:     #f0f0f0 !default;
-$list-group-disabled-color:  $gray-light !default;
-
-$list-group-active-bg:       $component-active-bg !default;
-$list-group-active-color:    $component-active-color !default;
+$list-group-bg: $white !default;
+$list-group-border-color: $border-color !default;
+$list-group-spacer-x: $spacer-x !default;
+$list-group-spacer-y: $spacer-y !default;
+$list-group-disabled-bg: #f0f0f0 !default;
+$list-group-disabled-color: $gray-light !default;
+$list-group-active-bg: $component-active-bg !default;
+$list-group-active-color: $component-active-color !default;

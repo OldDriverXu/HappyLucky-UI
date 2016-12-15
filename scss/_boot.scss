@@ -14,8 +14,14 @@
 }
 
 html {
-  // Sets a specific default `font-size` for user with `rem` type scales.
-  font-size: $font-size-root;
+  // By setting special root font size, `1rem` will map to:
+  // - `100ppx` in iPhone 5 (team design base) / iPhone 6
+  // - `150ppx` in iPhone 6 Plus
+  // ...allowing easy implementation of design metric
+  font-size: 50px; // iPhone 5, iPhone 6
+  @media (min-width: 414px) { // >= iPhone 6 Plus
+    font-size: 57.5px;
+  }
   // Changes the default tap highlight to be completely transparent in iOS.
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   background-color: $html-bg;
@@ -24,8 +30,7 @@ html {
 body {
   // Make the `body` use the `font-size-root`
   font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height;
+  @include text-size-variant(16px, $line-height);
   // Go easy on the eyes and use something other than `#000` for text
   color: $body-color;
   // By default, `<body>` has no `background-color` so we set one as a best practice.
@@ -42,7 +47,7 @@ body {
 // margin for easier control within type scales as it avoids margin collapsing.
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: .5rem*12/50;
 }
 
 // Reset margins on paragraphs
@@ -51,11 +56,11 @@ h1, h2, h3, h4, h5, h6 {
 // bottom margin to use `rem` units instead of `em`.
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem*12/50;
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem*12/50;
   font-style: normal;
   line-height: inherit;
 }
@@ -64,7 +69,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem*12/50;
 }
 
 ol ol,
@@ -79,12 +84,12 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: .5rem*12/50;
   margin-left: 0; // Undo browser default
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 1rem*12/50;
 }
 
 //
@@ -110,7 +115,7 @@ pre {
   margin-top: 0;
   margin-bottom: 0;
   // Reset browser default of `1em` to use `rem`s
-  padding-bottom: 1rem;
+  padding-bottom: 1rem*12/50;
   word-break: break-all; // webkit
   word-wrap: break-word;
   white-space: pre;
@@ -128,7 +133,7 @@ pre {
 figure {
   // Normalize adds `margin` to `figure`s as browsers apply it inconsistently.
   // We reset that to create a better flow in-page.
-  margin: 0 0 1rem;
+  margin: 0 0 1rem*12/50;
 }
 
 
@@ -199,8 +204,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
+  margin-bottom: .5rem*12/50;
+  font-size: 1.5rem*12/50;
   line-height: inherit;
 //  border: 0;
 }

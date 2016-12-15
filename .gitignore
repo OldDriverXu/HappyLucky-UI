@@ -5,3 +5,4 @@ node_modules
 /example/.sass-cache/
 _site/
 /example/node_modules/
+scss/**/*.css

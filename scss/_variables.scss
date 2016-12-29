@@ -66,9 +66,19 @@ $link-hover-decoration: none !default;
 // Typography
 //
 //  Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-sans-serif: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-family-serif: Georgia,
+"Times New Roman",
+Times,
+serif !default;
+$font-family-monospace: Menlo,
+Monaco,
+Consolas,
+"Courier New",
+monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 50px !default;
@@ -150,11 +160,11 @@ $nav-item-color: $gray !default;
 $nav-item-bg: $white !default;
 $nav-item-border: $border-color !default;
 $nav-pagination-color: $gray !default;
-$nav-pagination-bg: #e8edf1 !default;
+$nav-pagination-bg: #f4f7f8 !default;
 $nav-pointer-active-color: $blue !default;
 $nav-pointer-active-bg: $white !default;
 $nav-tabs-color: $gray-dark !default;
-$nav-tabs-bg: #e8edf1 !default;
+$nav-tabs-bg: #f4f7f8 !default;
 $nav-tabs-active-color: $black !default;
 $nav-tabs-active-bg: $white !default;
 // Form states and alerts

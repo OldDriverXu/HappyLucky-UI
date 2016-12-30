@@ -1,50 +1,66 @@
 @import "variables";
 @import "mixins";
-
 // Text Styles
-
 // Generate contextual modifier classes for font size and weight.
+.text-40,
+.text-xl {
+  @include text-size-variant(20px, $line-height);
+}
 
-.text-38{
+.text-38 {
   @include text-size-variant(19px, $line-height);
 }
-.text-36, .text-lg {
+
+.text-36,
+.text-lg {
   @include text-size-variant(18px, $line-height);
 }
+
 .text-34 {
   @include text-size-variant(17px, $line-height);
 }
-.text-32, .text-md {
+
+.text-32,
+.text-md {
   @include text-size-variant(16px, $line-height);
 }
+
 .text-30 {
   @include text-size-variant(15px, $line-height);
 }
-.text-28, .text-sm {
+
+.text-28,
+.text-sm {
   @include text-size-variant(14px, $line-height);
 }
-.text-26  {
+
+.text-26 {
   @include text-size-variant(13px, $line-height);
 }
-.text-24, .text-xs{
+
+.text-24,
+.text-xs {
   @include text-size-variant(12px, $line-height);
 }
-.text-22{
+
+.text-22 {
   @include text-size-variant(11px, $line-height);
 }
-.text-20, .text-xxs{
+
+.text-20,
+.text-xxs {
   @include text-size-variant(10px, $line-height);
 }
-
-
 
 // Text alignment
 .text-left {
   text-align: left;
 }
+
 .text-right {
   text-align: right;
 }
+
 .text-center {
   text-align: center;
 }
@@ -53,6 +69,7 @@
 .text-bold {
   font-weight: bold;
 }
+
 .text-bolder {
   font-weight: bolder;
 }
@@ -69,9 +86,11 @@
 .text-underline {
   text-decoration: underline;
 }
+
 .text-overline {
   text-decoration: overline;
 }
+
 .text-linethrough {
   text-decoration: line-through;
 }
@@ -80,33 +99,43 @@
 .text-black {
   @include text-color-variant($black);
 }
+
 .text-blacklight {
   @include text-color-variant($black-light);
 }
+
 .text-white {
   @include text-color-variant($white);
 }
+
 .text-gray {
   @include text-color-variant($gray);
 }
+
 .text-graylight {
   @include text-color-variant($gray-light);
 }
+
 .text-blue {
   @include text-color-variant($blue);
 }
+
 .text-bluelight {
   @include text-color-variant($blue-light);
 }
+
 .text-red {
   @include text-color-variant($red);
 }
+
 .text-orange {
   @include text-color-variant($orange);
 }
+
 .text-green {
   @include text-color-variant($green);
 }
+
 .text-greenlight {
   @include text-color-variant($green-light);
 }

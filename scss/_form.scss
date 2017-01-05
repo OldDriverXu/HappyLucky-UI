@@ -8,7 +8,7 @@ textarea {
   margin: 0;
   padding: $input-padding-y $input-padding-x;
   // outline: 0;
-  vertical-align: middle;
+  // vertical-align: middle;
   background-color: $input-bg;
   -webkit-appearance: none; // fix ios input box-shadow bug
   border-radius: .2rem*12/50;

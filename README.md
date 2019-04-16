@@ -2,7 +2,7 @@
 
 HappyLucky UI is a set of UI components for mobile device.
 
-[**Read the HappyLucky-UI documentation**](http://fatsheepcn.github.io/HappyLucky-UI/) to learn more.
+[**Read the HappyLucky-UI documentation**](http://oceanxuy.github.io/HappyLucky-UI/) to learn more.
 
 ## Contents
 
